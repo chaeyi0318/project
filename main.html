@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1600px;
+            height: 960px;
+            border: black 1px solid;
+        }
+        
+        header {
+            width: 100%;
+            height: 10%;
+            /* border: 1px solid red; */
+        }
+        
+        header>img {
+            width: 350px;
+            height: 100%;
+            border: springgreen solid 1px;
+            float: left;
+        }
+
+        header>#button {
+            width: 350px;
+            height: 100%;
+            border: steelblue solid 1px;
+            float: left;
+            text-align: center;
+        }
+
+        header>#button>input {
+            margin-top: 7px;
+        }
+
+        header>#notice {
+            width: 600px;
+            height: 100%;
+            border: violet 1px solid;
+            float: left;
+            text-align: center;
+        }
+
+        header>#notice>a {
+            margin: auto;
+            float: center;
+        }
+
+        header>#user {
+            width: 292px;
+            height: 100%;
+            border: saddlebrown 1px solid;
+            float: right;
+        }
+
+        .body>#box {
+            width: 340px;
+            height: 800px;
+            border: thistle 1px solid;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .body>#main {
+            width: 1245px;
+            height: 800px;
+            border: yellowgreen 1px solid;
+            float: right;
+        }
+
+        .body>form {
+            margin: 5px;
+        }
+
+        footer {
+            width: 1598px;
+            height: 20px;
+            border: tomato 1px solid;
+            margin-top: 5px;
+            text-align: center;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <img src="http://placehold.it/350x95">
+            <section id="button">
+                <input type="button" value="삭제" style="WIDTH: 80px; HEIGHT: 80px">
+                <input type="button" value="조회" style="WIDTH: 80px; HEIGHT: 80px">
+                <input type="button" value="인쇄" style="WIDTH: 80px; HEIGHT: 80px">
+            </section>
+            <section id="notice">
+                <a href="#">공지사항</a>
+            </section>
+            <section id="user">사용자 : userName <button>로그아웃</button></section>
+        </header>
+        <div class="body">
+            <form action="" width="350px">
+                <input type="search" name="key" size="35px"> <input type="submit" style="WIDTH: 45px; HEIGHT: 20px" value="검색">
+            </form>
+            <div id="box">
+                <li class="main">
+                    test
+                    <ul class="sub" style="display:none">
+                        <li>test 1</li>
+                        <il>test 2</il>
+                    </ul>
+                </li>
+            </div>
+            <script>
+                $(".main").click(function(){
+                    if($(".sub").is(":visible")){
+                        $(".sub").slideUp();
+                    }
+                    else{
+                        $(".sub").slideDown();
+                    }
+                })
+            </script>
+            <section id="main">
+                화면 구현할 곳
+            </section>
+        </div>
+        <footer>화물운송시스템</footer>
+    </div>
+</body>
+</html>
