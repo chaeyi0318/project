@@ -36,7 +36,7 @@
          <tiles:insertAttribute name="header"/>
       </div>
       <div id="sidebar-left">
-          <tiles:insertAttribute name="side"/> 
+          <tiles:insertAttribute name="side"/>
       </div>
       <div id="content">
           <tiles:insertAttribute name="body"/>

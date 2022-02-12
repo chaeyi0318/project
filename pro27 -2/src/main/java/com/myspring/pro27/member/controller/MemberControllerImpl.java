@@ -39,6 +39,18 @@ public class MemberControllerImpl   implements MemberController {
 	private ItemVO itemVO;
 	
 	@Override
+	@RequestMapping(value = "/member/company.do", method = RequestMethod.GET)
+	public ModelAndView company(CompanyVO company, RedirectAttributes rAttr, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		String viewName = getViewName(request);
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName(viewName);
+		String site = mav.getViewName();
+		System.out.println("getViewName은 " + site + " 입니다.");
+		return mav;
+	}
+	
+	@Override
 	@RequestMapping(value="/member/qualityTest.do" ,method = RequestMethod.GET)
 	public ModelAndView qualityTest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String viewName = getViewName(request);
@@ -202,6 +214,7 @@ public class MemberControllerImpl   implements MemberController {
 		mav.addObject("result",result);
 		mav.setViewName(viewName);
 		return mav;
+		
 	}
 	
 
@@ -235,19 +248,4 @@ public class MemberControllerImpl   implements MemberController {
 		}
 		return viewName;
 	}
-
-	@RequestMapping(value = "/member/company.do", method = RequestMethod.GET)
-	@Override
-	public ModelAndView company(CompanyVO company, RedirectAttributes rAttr, HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
-		String viewName = getViewName(request);
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName(viewName);
-		return mav;
-	}
-
-
-	
-	
-
 }
