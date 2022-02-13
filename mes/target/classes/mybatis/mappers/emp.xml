@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.emp">
+	<resultMap type="empVO" id="empResult">
+		<result property="eCode" column="eCode"/>
+		<result property="eName" column="eName"/>
+		<result property="dCode" column="dCode"/>
+		<result property="dName" column="dName"/>
+		<result property="joinDate" column="joinDate"/>
+		<result property="quitDate" column="quitDate"/>
+		<result property="pwd" column="pwd"/>
+	</resultMap>
+	
+	<select id="selectEmp">
+		<![CDATA[
+			select * from emp
+		]]>
+	</select>
+</mapper>

@@ -2,27 +2,30 @@ package com.spring.mes.system.vo;
 
 import java.sql.Date;
 
+import org.springframework.stereotype.Component;
+
+@Component("companyVO")
 public class CompanyVO {
-	private String	comName;
-	private String	classification;
+	private String comName;
+	private String classification;
 	private int	cardinal;
-	private Date	startDate;
-	private Date	endDate;
-	private String	BRNum;
-	private String	CRNum;
-	private String	CEOName;
-	private String	forign;
-	private String	residentNum;
+	private Date startDate;
+	private Date endDate;
+	private String BRNum;
+	private String CRNum;
+	private String CEOName;
+	private String forign;
+	private String residentNum;
 	private int	zipCode;
-	private String	address;
-	private String	addressDetails;
-	private String	comNumber;
-	private String	faxNumber;
-	private String	businessCondition;
-	private String	businessType;
-	private Date	foundationDate;
-	private Date	openDate;
-	private Date	closeDate;
+	private String address;
+	private String addressDetails;
+	private String comNumber;
+	private String faxNumber;
+	private String businessCondition;
+	private String businessType;
+	private Date foundationDate;
+	private Date openDate;
+	private Date closeDate;
 	
 	public CompanyVO() {
 		

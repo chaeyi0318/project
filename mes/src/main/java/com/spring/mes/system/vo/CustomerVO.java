@@ -2,6 +2,9 @@ package com.spring.mes.system.vo;
 
 import java.sql.Date;
 
+import org.springframework.stereotype.Component;
+
+@Component("customerVO")
 public class CustomerVO {
 	private String	customerCode;
 	private String	customerName;

@@ -14,7 +14,7 @@
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <style>
 #box {
-            width: 300px;
+            width: 340px;
             height: 800px;
             border: thistle 1px solid;
             float: left;
@@ -31,27 +31,49 @@
 <body>
 	<form action="" width="350px">
                 <input type="search" name="key" size="35px"> <input type="submit" style="WIDTH: 45px; HEIGHT: 25px" value="검색">
-            </form>
+    </form>
             <div id="box">
-                <li class="main">
-                    관리메뉴
+                <li class="side1">
+                    시스템관리
                     <ul class="sub" style="display:none">
-                    	<li><a href="${contextPath}/member/companyInfo.do" class="no-underline">회사정보등록</a></li>
-                    	<li><a href="${contextPath}/member/deptList.do"  class="no-underline">부서관리</a><br></li>
-                        <li><a href="${contextPath}/member/empList.do"  class="no-underline">사원관리</a><br></li>
-                        <li><a href="${contextPath}/member/itemInfo.do"  class="no-underline">품목등록</a><br></li>
-                        <li><a href="${contextPath}/member/qualityTest.do"  class="no-underline">출고전검사</a><br></li>
-                        <li><a href="${contextPath}/member/carList.do"  class="no-underline">차량관리</a><br></li>
+                    	<li><a href="#" class="no-underline">회사등록</a></li>
+                    	<li><a href="#"  class="no-underline">부서등록</a><br></li>
+                        <li><a href="#"  class="no-underline">사원등록</a><br></li>
+                        <li><a href="#"  class="no-underline">품목등록</a><br></li>
+                        <li><a href="#"  class="no-underline">창고/공정등록</a><br></li>
+                        <li><a href="#"  class="no-underline">검사유형등록</a><br></li>
+                    </ul>
+                </li>
+                <li class="side2">
+                    생산관리
+                    <ul class="sub2" style="display:none">
+                    	<li><a href="#" class="no-underline">생산계획등록</a></li>
+                    	<li><a href="#"  class="no-underline">작업지시등록</a><br></li>
+                        <li><a href="#"  class="no-underline">작업지시확정</a><br></li>
+                        <li><a href="#"  class="no-underline">생산자재출고</a><br></li>
+                        <li><a href="#"  class="no-underline">작업실적등록</a><br></li>
+                        <li><a href="#"  class="no-underline">생산자재사용등록</a><br></li>
+                        <li><a href="#"  class="no-underline">생산실적검사</a><br></li>
+                        <li><a href="#"  class="no-underline">생산품창고입고처리</a><br></li>
+                        <li><a href="#"  class="no-underline">작업지시마감처리</a><br></li>
                     </ul>
                 </li>
             </div>
             <script>
-                $(".main").click(function(){
+                $(".side1").click(function(){
                     if($(".sub").is(":visible")){
                         $(".sub").slideUp();
                     }
                     else{
                         $(".sub").slideDown();
+                    }
+                })
+                $(".side2").click(function(){
+                    if($(".sub2").is(":visible")){
+                        $(".sub2").slideUp();
+                    }
+                    else{
+                        $(".sub2").slideDown();
                     }
                 })
             </script>

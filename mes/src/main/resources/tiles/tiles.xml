@@ -19,7 +19,7 @@
 		<put-attribute name="home" value="/WEB-INF/views/home.jsp"/>
 	</definition>
 	
-	<definition name="/system/company" extends="baseLayout">
+	<definition name="/system/companyInfo" extends="baseLayout">
 		<put-attribute name="title" value="회사등록"/>
 		<put-attribute name="body" value="/WEB-INF/views/system/company.jsp"/>	
 	</definition>
