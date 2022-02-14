@@ -8,42 +8,55 @@
 <head>
 <meta charset="UTF-8">
 <style>
-	#container {
-		margin: 0 auto;
-        width: 1600px;
-        height: 960px;
-        border: black 1px solid;
-	}
-	
-	#header{
-	 	width: 100%;
+	* {
+        margin: 0 auto;
+        padding: 0;
+    }
+	.container {
+        margin-top: 10px;
+        width: 1500px;
+        height: 900px;
+    }
+    .header {
+        border: 1px solid lightblue;
+        width: 100%;
         height: 10%;
-	}
-	
-	#sidebar-left {
-		
-	}
-	
-	#footer {
-	
-	}
+    }
+    .side {
+        border: 1px solid lightpink;
+        width: 295px;
+        height: 88%;
+        float: left;
+    }
+    .content {
+        border: 1px solid plum;
+        width: 1200px;
+        height: 88%;
+        float: right;
+    }
+    .footer {
+        border: 1px solid lightgreen;
+        width: 100%;
+        height: 2%;
+        clear: both;
+    }
 </style>
 <title><tiles:insertAttribute name="title" /></title>
 </head>
 <body>
-<div id="container">
-      <div id="header">
-         <tiles:insertAttribute name="header"/>
-      </div>
-      <div id="sidebar-left">
-          <tiles:insertAttribute name="side"/> 
-      </div>
-      <div id="content">
-          <tiles:insertAttribute name="body"/>
-      </div>
-      <div id="footer">
-          <tiles:insertAttribute name="footer"/>
-      </div>
+<div class="container">
+	<div class="header">
+       <tiles:insertAttribute name="header"/>
     </div>
+    <div class="side">
+        <tiles:insertAttribute name="side"/> 
+    </div>
+    <div class="content">
+        <tiles:insertAttribute name="body"/>
+    </div>
+    <div class="footer">
+        <tiles:insertAttribute name="footer"/>
+    </div>
+</div>
 </body>
 </html>

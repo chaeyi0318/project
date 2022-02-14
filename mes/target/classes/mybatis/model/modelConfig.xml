@@ -5,8 +5,5 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="com.spring.mes.system.vo.CompanyVO" alias="companyVO" />
-		<typeAlias type="com.spring.mes.system.vo.CustomerVO" alias="customerVO" />
-		<typeAlias type="com.spring.mes.system.vo.DeptVO" alias="deptVO" />
-		<typeAlias type="com.spring.mes.system.vo.EmpVO" alias="empVO" />
 	</typeAliases>
 </configuration>

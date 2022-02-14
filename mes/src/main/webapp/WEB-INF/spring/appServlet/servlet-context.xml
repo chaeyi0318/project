@@ -43,4 +43,14 @@
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView" />
 	</beans:bean>
+<!-- 인터셉터 설정 -->
+<!--     
+    
+   <mvc:interceptors>
+    	<mvc:interceptor>
+	      <mvc:mapping path="/*/*.do"/>
+	   <beans:bean class="com.spring.mes.system.interceptor.ViewNameInterceptor" />
+	</mvc:interceptor>
+</mvc:interceptors>
+ -->
 </beans:beans>

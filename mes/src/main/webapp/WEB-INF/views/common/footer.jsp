@@ -5,20 +5,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>하단 부분</title>
-  <style>
-    p {
-            width: 1598px;
-            height: 20px;
-            border: tomato 1px solid;
-            margin-top: 5px;
-            text-align: center;
-            float: right;
-        }
-  </style>
+<meta charset="UTF-8">
+<title>하단 부분</title>
+<style>
+	p {
+		font-size: 10pt; 
+		text-align: center;
+	}
+</style>
 </head>
 <body>
-<p>생산관리시스템
+	<p>생산관리시스템</p>
 </body>
 </html>

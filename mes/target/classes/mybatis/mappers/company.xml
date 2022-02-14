@@ -3,11 +3,11 @@
       PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.company">
-	<resultMap type="companyVO" id="comResult">
+	<resultMap id="comResult" type="companyVO">
 		<result property="comName" column="comName" />
 		<result property="classification" column="classification" />
 		<result property="cardinal" column="cardinal" />
-		<result property="startDate" column="startDate" />
+		<result property="startDate" column="cardstartDateinal" />
 		<result property="endDate" column="endDate" />
 		<result property="BRNum" column="BRNum" />
 		<result property="CRNum" column="CRNum" />
@@ -31,4 +31,13 @@
 			select * from company
 		]]>
 	</select>
+	
+	<insert id="insertCompany" parameterType="java.util.Map">
+		<![CDATA[
+			insert info company(comName, classification, cardinal, startDate, endDate, BRNum, CRNum, CEOName, forign, residentNum, zipCode,
+								address, addressDetails, comNumber, faxNumber, businessCondition, businessType, foundationDate, openDate, closeDate)
+						values(#{comName}, #{classification}, #{cardinal}, #{startDate}, #{endDate}, #{BRNum}, #{CRNum}, #{CEOName}, #{forign}, #{residentNum}, #{zipCode},
+								#{address}, #{addressDetails}, #{comNumber}, #{faxNumber}, #{businessCondition}, #{businessType}, #{foundationDate}, #{openDate}, #{closeDate})
+		]]>
+	</insert>
 </mapper>
