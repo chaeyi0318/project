@@ -1,31 +1,38 @@
 package com.spring.mes.system.vo;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
 @Component("companyVO")
 public class CompanyVO {
-	private String comName;
-	private String classification;
-	private int	cardinal;
-	private Date startDate;
-	private Date endDate;
-	private String BRNum;
-	private String CRNum;
-	private String CEOName;
-	private String forign;
-	private String residentNum;
-	private int	zipCode;
-	private String address;
-	private String addressDetails;
-	private String comNumber;
-	private String faxNumber;
-	private String businessCondition;
-	private String businessType;
-	private Date foundationDate;
-	private Date openDate;
-	private Date closeDate;
+	private String comName;		//회사명
+	private String classification;		//구분
+	private int	cardinal;		//기수
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDate startDate;		//회계년도 시작일
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDate endDate;		//회계년도 마감일
+	private String BRNum;		//사업자등록번호
+	private String CRNum;		//법인등록번호
+	private String CEOName;		//대표명
+	private String forign;		//외국인구분
+	private String residentNum;		//주민번호
+	private int	zipCode;		//우편번호
+	private String address;		//주소
+	private String addressDetails;		//상세주소
+	private String comNumber;		//전화번호
+	private String faxNumber;		//fax번호
+	private String businessCondition;		//업태
+	private String businessType;		//종목
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDate foundationDate;		//설립연월일
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDate openDate;		//개업연월일
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDate closeDate;		//폐업연월일
 	
 	public CompanyVO() {
 		
@@ -61,19 +68,19 @@ public class CompanyVO {
 		this.cardinal = cardinal;
 	}
 	
-	public Date getStartDate() {
+	public LocalDate getStartDate() {
 		return startDate;
 	}
 	
-	public void setStartDate(Date startDate) {
+	public void setStartDate(LocalDate startDate) {
 		this.startDate = startDate;
 	}
 	
-	public Date getEndDate() {
+	public LocalDate getEndDate() {
 		return endDate;
 	}
 	
-	public void setEndDate(Date endDate) {
+	public void setEndDate(LocalDate endDate) {
 		this.endDate = endDate;
 	}
 	
@@ -174,27 +181,27 @@ public class CompanyVO {
 		this.businessType = businessType;
 	}
 	
-	public Date getFoundationDate() {
+	public LocalDate getFoundationDate() {
 		return foundationDate;
 	}
 	
-	public void setFoundationDate(Date foundationDate) {
+	public void setFoundationDate(LocalDate foundationDate) {
 		this.foundationDate = foundationDate;
 	}
 	
-	public Date getOpenDate() {
+	public LocalDate getOpenDate() {
 		return openDate;
 	}
 	
-	public void setOpenDate(Date openDate) {
+	public void setOpenDate(LocalDate openDate) {
 		this.openDate = openDate;
 	}
 	
-	public Date getCloseDate() {
+	public LocalDate getCloseDate() {
 		return closeDate;
 	}
 	
-	public void setCloseDate(Date closeDate) {
+	public void setCloseDate(LocalDate closeDate) {
 		this.closeDate = closeDate;
 	}
 }

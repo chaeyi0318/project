@@ -34,10 +34,14 @@
 	
 	<insert id="insertCompany" parameterType="java.util.Map">
 		<![CDATA[
-			insert info company(comName, classification, cardinal, startDate, endDate, BRNum, CRNum, CEOName, forign, residentNum, zipCode,
-								address, addressDetails, comNumber, faxNumber, businessCondition, businessType, foundationDate, openDate, closeDate)
-						values(#{comName}, #{classification}, #{cardinal}, #{startDate}, #{endDate}, #{BRNum}, #{CRNum}, #{CEOName}, #{forign}, #{residentNum}, #{zipCode},
-								#{address}, #{addressDetails}, #{comNumber}, #{faxNumber}, #{businessCondition}, #{businessType}, #{foundationDate}, #{openDate}, #{closeDate})
+			insert info company(comName, classification, cardinal, startDate, endDate, BRNum, CRNum, CEOName, 
+								forign, residentNum, zipCode, address, addressDetails,
+								comNumber, faxNumber, businessCondition, businessType, 
+								foundationDate, openDate, closeDate)
+						values(#{comName}, #{classification}, #{cardinal}, #{startDate}, #{endDate}, #{BRNum}, #{CRNum}, #{CEOName}, 
+								#{forign}, #{residentNum}, #{zipCode}, #{address}, #{addressDetails},
+								#{comNumber}, #{faxNumber}, #{businessCondition}, #{businessType},
+								#{foundationDate}, #{openDate}, #{closeDate})
 		]]>
 	</insert>
 </mapper>

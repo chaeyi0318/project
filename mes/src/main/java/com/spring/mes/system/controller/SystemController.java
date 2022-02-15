@@ -1,5 +1,7 @@
 package com.spring.mes.system.controller;
 
+import java.sql.Date;
+
 import javax.servlet.http.HttpServletRequest;
 
 import javax.servlet.http.HttpServletResponse;
@@ -15,5 +17,8 @@ import com.spring.mes.system.vo.CompanyVO;
 
 public interface SystemController {
 	public ModelAndView companyInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
-	public ModelAndView insertCompany(@ModelAttribute("info") CompanyVO companyVO,HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO companyVO,
+									@RequestParam(value="closeDate", required=false) Date closeDate,
+									RedirectAttributes rAttr,
+									HttpServletRequest request, HttpServletResponse response) throws Exception;
 }

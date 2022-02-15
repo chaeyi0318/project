@@ -22,8 +22,7 @@ public class SystemDAOImpl implements SystemDAO {
 
 	@Override
 	public int insertCompany(CompanyVO companyVO) throws DataAccessException {
-		int result = sqlSession.insert("mapper.member.insertCompany", companyVO);
+		int result = sqlSession.insert("mapper.company.insertCompany", companyVO);
 		return result;
 	}
-
 }

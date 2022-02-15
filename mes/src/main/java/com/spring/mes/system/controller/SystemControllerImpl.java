@@ -1,5 +1,6 @@
 package com.spring.mes.system.controller;
 
+import java.sql.Date;
 import java.util.List;
 
 
@@ -77,14 +78,16 @@ public class SystemControllerImpl   implements SystemController {
 	}
 
 	@Override
-	@RequestMapping(value="/system/insertCompany.do")
-	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO companyVO, HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
+	@RequestMapping(value="/system/insertCompany.do", method=RequestMethod.POST)
+	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO company,
+						@RequestParam(value="closeDate", required=false) Date closeDate,
+						RedirectAttributes rAttr, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html/text;charset=utf-8");
 		int result = 0;
-		result = systemService.insertCompany(companyVO);
-		ModelAndView mav = new ModelAndView();
+		result = systemService.insertCompany(company);
+		ModelAndView mav = new ModelAndView("redirect:/system/companyInfo.do");
 		return mav;
 	}
+
 }
