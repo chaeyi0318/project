@@ -1,40 +1,54 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="contextPath"  value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>부서 등록</title>
 <style>
-    p {
+    h3 {
         text-align: center;
+        margin-top: 5px;
     }
-    form {
-        text-align: center;
+    .button {
+        width: 1200px;
+        height: 35px;
+    }
+    .button>input {
+        float: right;
+        margin: 7px;
     }
 </style>
 </head>
 <body>
-    <form method="post">
-        <p>부서등록</p>
-        <table width="700px" align="center">
-            <tr align="center">
-                <td><input type="checkbox"></td>
-                <td>부서코드</td>
-                <td>부서명</td>
-                <td>회사명</td>
-                <td>사용기간</td>
-                <td>사용기간</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="date"></td>
-            </tr>
-        </table>
+	<form class="button">
+        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp; <input type="submit" value="조회"> &nbsp;
     </form>
+    <h3>부서등록</h3><br>
+    <form method="post" action="${contextPath }/system/departmentInfo.do">
+    <%-- <table width="700px" align="center">
+		<tr align="center">
+			<td><input type="checkbox"></td>
+			<td>부서코드</td>
+		  	<td>부서명</td>
+		  	<td>회사명</td>
+		  	<td>사용기간</td>
+		  	<td>사용기간</td>
+		</tr>
+		<c:forEach var="dept" items="${deptList }">
+			<tr>
+		   		<td><input type="checkbox"></td>
+		    	<td><input type="text" name="dCode"></td>
+		    	<td><input type="text" name="dNAme"></td>
+		    	<td><input type="text" name="comName"></td>
+		    	<td><input type="date" name="useDate"></td>
+		    	<td><input type="date" name="endDate"></td>
+		<tr>
+		</c:forEach>
+	</table> --%>
+	</form>
 </body>
 </html>

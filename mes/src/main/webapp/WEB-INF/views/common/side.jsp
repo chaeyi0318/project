@@ -34,8 +34,8 @@
         시스템관리
         <ul class="sub" style="display:none">
             <li><a href="${contextPath}/system/companyInfo.do" class="no-underline">회사등록</a></li>
-            <li><a href="${contextPath}/system/companyInfo.do"  class="no-underline">부서등록</a><br></li>
-            <li><a href="${contextPath}/system/companyInfo.do"  class="no-underline">사원등록</a><br></li>
+            <li><a href="${contextPath}/system/departmentInfo.do"  class="no-underline">부서등록</a><br></li>
+            <li><a href="${contextPath}/system/employeeInfo.do"  class="no-underline">사원등록</a><br></li>
             <li><a href="#"  class="no-underline">품목등록</a><br></li>
             <li><a href="#"  class="no-underline">창고/공정등록</a><br></li>
             <li><a href="#"  class="no-underline">검사유형등록</a><br></li>

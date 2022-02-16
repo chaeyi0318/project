@@ -13,12 +13,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.mes.system.vo.CompanyVO;
 
-
-
 public interface SystemController {
 	public ModelAndView companyInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO companyVO,
-									@RequestParam(value="closeDate", required=false) Date closeDate,
-									RedirectAttributes rAttr,
+//									@RequestParam(value="closeDate", required=false) Date closeDate,
 									HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView departmentInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
 }

@@ -25,4 +25,9 @@
    		<put-attribute name="title" value="회사등록"/>
    		<put-attribute name="body" value="/WEB-INF/views/system/company.jsp"/>
    </definition>
+   
+   <definition name="/system/departmentInfo" extends="baseLayout">
+   		<put-attribute name="title" value="부서등록"/>
+   		<put-attribute name="body" value="/WEB-INF/views/system/department.jsp"/>
+   </definition>
 </tiles-definitions>

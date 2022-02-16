@@ -9,6 +9,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
 import com.spring.mes.system.vo.CompanyVO;
+import com.spring.mes.system.vo.DeptVO;
 
 @Repository("systemDAO")
 public class SystemDAOImpl implements SystemDAO {
@@ -24,5 +25,12 @@ public class SystemDAOImpl implements SystemDAO {
 	public int insertCompany(CompanyVO companyVO) throws DataAccessException {
 		int result = sqlSession.insert("mapper.company.insertCompany", companyVO);
 		return result;
+	}
+
+	@Override
+	public List departmentInfo() throws DataAccessException {
+		List<DeptVO> deptList = null;
+		deptList = sqlSession.selectList("mapper.dept.selectAllDepartment");
+		return deptList;
 	}
 }

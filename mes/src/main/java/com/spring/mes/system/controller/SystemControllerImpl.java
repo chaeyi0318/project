@@ -23,19 +23,20 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.spring.mes.system.service.SystemService;
 import com.spring.mes.system.vo.CompanyVO;
 import com.spring.mes.system.vo.CustomerVO;
-
-
+import com.spring.mes.system.vo.DeptVO;
 
 @Controller("systemController")
-public class SystemControllerImpl   implements SystemController {
+public class SystemControllerImpl implements SystemController {
 	private static final Logger logger = LoggerFactory.getLogger(SystemControllerImpl.class);
 	@Autowired
 	private SystemService systemService;
 	@Autowired
 	private CompanyVO companyVO;
+	@Autowired
+	private DeptVO deptVO;
 	
 	@Override
-	@RequestMapping(value="/system/companyInfo.do" ,method = RequestMethod.GET)
+	@RequestMapping(value="/system/companyInfo.do", method = RequestMethod.GET)
 	public ModelAndView companyInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String viewName = getViewName(request);
 		System.out.println("viewName: " +viewName);
@@ -78,10 +79,10 @@ public class SystemControllerImpl   implements SystemController {
 	}
 
 	@Override
-	@RequestMapping(value="/system/insertCompany.do", method=RequestMethod.POST)
+	@RequestMapping(value="/system/insertCompany.do", method = RequestMethod.POST)
 	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO company,
-						@RequestParam(value="closeDate", required=false) Date closeDate,
-						RedirectAttributes rAttr, HttpServletRequest request, HttpServletResponse response) throws Exception {
+//						@RequestParam(value="closeDate", required=false) Date closeDate,
+						HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html/text;charset=utf-8");
 		int result = 0;
@@ -90,4 +91,15 @@ public class SystemControllerImpl   implements SystemController {
 		return mav;
 	}
 
+	@Override
+	@RequestMapping(value="/system/departmentInfo.do", method = RequestMethod.GET)
+	public ModelAndView departmentInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("html/text;charset=utf-8");
+		String viewName = (String)request.getAttribute("viewName");
+		List deptList = systemService.departmentInfo();
+		ModelAndView mav = new ModelAndView(viewName);
+		mav.addObject("deptList", deptList);
+		return mav;
+	}
 }

@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 @Component("deptVO")
 public class DeptVO {
 	private int	dCode;
-	private String	dName;
-	private String	comName;
-	private Date	useDate;
-	private Date	endDate;
+	private String dName;
+	private String comName;
+	private Date useDate;
+	private Date endDate;
 
 	public DeptVO() {
 		

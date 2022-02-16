@@ -9,16 +9,16 @@ import org.springframework.stereotype.Component;
 @Component("companyVO")
 public class CompanyVO {
 	private String comName;		//회사명
-	private String classification;		//구분
-	private int	cardinal;		//기수
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private LocalDate startDate;		//회계년도 시작일
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private LocalDate endDate;		//회계년도 마감일
+//	private String classification;		//구분
+//	private int	cardinal;		//기수
+//	@DateTimeFormat(pattern = "yyyy-MM-dd")
+//	private LocalDate startDate;		//회계년도 시작일
+//	@DateTimeFormat(pattern = "yyyy-MM-dd")
+//	private LocalDate endDate;		//회계년도 마감일
 	private String BRNum;		//사업자등록번호
 	private String CRNum;		//법인등록번호
 	private String CEOName;		//대표명
-	private String forign;		//외국인구분
+//	private String forign;		//외국인구분
 	private String residentNum;		//주민번호
 	private int	zipCode;		//우편번호
 	private String address;		//주소
@@ -27,22 +27,28 @@ public class CompanyVO {
 	private String faxNumber;		//fax번호
 	private String businessCondition;		//업태
 	private String businessType;		//종목
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private LocalDate foundationDate;		//설립연월일
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private LocalDate openDate;		//개업연월일
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private LocalDate closeDate;		//폐업연월일
+//	@DateTimeFormat(pattern = "yyyy-MM-dd")
+//	private LocalDate foundationDate;		//설립연월일
+//	@DateTimeFormat(pattern = "yyyy-MM-dd")
+//	private LocalDate openDate;		//개업연월일
+//	@DateTimeFormat(pattern = "yyyy-MM-dd")
+//	private LocalDate closeDate;		//폐업연월일
 	
 	public CompanyVO() {
 		
 	}
 	
-	public CompanyVO(String	comName, String	classification, int	cardinal, Date	startDate, Date	endDate, String	BRNum, String	CRNum,
-					 String	CEOName, String	forign, String residentNum, int zipCode, String	address, String	addressDetails, String	comNumber,
-					 String	faxNumber, String businessCondition, String	businessType, Date foundationDate, Date openDate, Date	closeDate) {
-		
-	}
+//	public CompanyVO(String	comName, String	classification, int	cardinal, Date	startDate, Date	endDate, String	BRNum, String	CRNum,
+//					 String	CEOName, String	forign, String residentNum, int zipCode, String	address, String	addressDetails, String	comNumber,
+//					 String	faxNumber, String businessCondition, String	businessType, Date foundationDate, Date openDate, Date	closeDate) {
+//		
+//	}
+	
+	public CompanyVO(String	comName, String	classification, String	BRNum, String	CRNum,
+			 String	CEOName, String	forign, String residentNum, int zipCode, String	address, String	addressDetails, String	comNumber,
+			 String	faxNumber, String businessCondition, String	businessType) {
+
+}
 	
 	public String getComName() {
 		return comName;
@@ -52,37 +58,37 @@ public class CompanyVO {
 		this.comName = comName;
 	}
 	
-	public String getClassification() {
-		return classification;
-	}
-	
-	public void setClassfication(String classfication) {
-		this.classification = classfication;
-	}
-	
-	public int getCardinal() {
-		return cardinal;
-	}
-	
-	public void setCardinal(int cardinal) {
-		this.cardinal = cardinal;
-	}
-	
-	public LocalDate getStartDate() {
-		return startDate;
-	}
-	
-	public void setStartDate(LocalDate startDate) {
-		this.startDate = startDate;
-	}
-	
-	public LocalDate getEndDate() {
-		return endDate;
-	}
-	
-	public void setEndDate(LocalDate endDate) {
-		this.endDate = endDate;
-	}
+//	public String getClassification() {
+//		return classification;
+//	}
+//	
+//	public void setClassfication(String classfication) {
+//		this.classification = classfication;
+//	}
+//	
+//	public int getCardinal() {
+//		return cardinal;
+//	}
+//	
+//	public void setCardinal(int cardinal) {
+//		this.cardinal = cardinal;
+//	}
+//	
+//	public LocalDate getStartDate() {
+//		return startDate;
+//	}
+//	
+//	public void setStartDate(LocalDate startDate) {
+//		this.startDate = startDate;
+//	}
+//	
+//	public LocalDate getEndDate() {
+//		return endDate;
+//	}
+//	
+//	public void setEndDate(LocalDate endDate) {
+//		this.endDate = endDate;
+//	}
 	
 	public String getBRNum() {
 		return BRNum;
@@ -108,13 +114,13 @@ public class CompanyVO {
 		this.CEOName = CEOName;
 	}
 	
-	public String getForign() {
-		return forign;
-	}
-	
-	public void setForign(String forign) {
-		this.forign = forign;
-	}
+//	public String getForign() {
+//		return forign;
+//	}
+//	
+//	public void setForign(String forign) {
+//		this.forign = forign;
+//	}
 	
 	public String getResidentNum() {
 		return residentNum;
@@ -181,27 +187,27 @@ public class CompanyVO {
 		this.businessType = businessType;
 	}
 	
-	public LocalDate getFoundationDate() {
-		return foundationDate;
-	}
-	
-	public void setFoundationDate(LocalDate foundationDate) {
-		this.foundationDate = foundationDate;
-	}
-	
-	public LocalDate getOpenDate() {
-		return openDate;
-	}
-	
-	public void setOpenDate(LocalDate openDate) {
-		this.openDate = openDate;
-	}
-	
-	public LocalDate getCloseDate() {
-		return closeDate;
-	}
-	
-	public void setCloseDate(LocalDate closeDate) {
-		this.closeDate = closeDate;
-	}
+//	public LocalDate getFoundationDate() {
+//		return foundationDate;
+//	}
+//	
+//	public void setFoundationDate(LocalDate foundationDate) {
+//		this.foundationDate = foundationDate;
+//	}
+//	
+//	public LocalDate getOpenDate() {
+//		return openDate;
+//	}
+//	
+//	public void setOpenDate(LocalDate openDate) {
+//		this.openDate = openDate;
+//	}
+//	
+//	public LocalDate getCloseDate() {
+//		return closeDate;
+//	}
+//	
+//	public void setCloseDate(LocalDate closeDate) {
+//		this.closeDate = closeDate;
+//	}
 }

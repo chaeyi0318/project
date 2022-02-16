@@ -5,14 +5,14 @@
 <mapper namespace="mapper.company">
 	<resultMap id="comResult" type="companyVO">
 		<result property="comName" column="comName" />
-		<result property="classification" column="classification" />
-		<result property="cardinal" column="cardinal" />
+		<!--<result property="classification" column="classification" />
+		 <result property="cardinal" column="cardinal" />
 		<result property="startDate" column="cardstartDateinal" />
-		<result property="endDate" column="endDate" />
+		<result property="endDate" column="endDate" /> -->
 		<result property="BRNum" column="BRNum" />
 		<result property="CRNum" column="CRNum" />
 		<result property="CEOName" column="CEOName" />
-		<result property="forign" column="forign" />
+		<!-- <result property="forign" column="forign" /> -->
 		<result property="residentNum" column="residentNum" />
 		<result property="zipCode" column="zipCode" />
 		<result property="address" column="address" />
@@ -21,9 +21,9 @@
 		<result property="faxNumber" column="faxNumber" />
 		<result property="businessCondition" column="businessCondition" />
 		<result property="businessType" column="businessType" />
-		<result property="foundationDate" column="foundationDate" />
+		<!-- <result property="foundationDate" column="foundationDate" />
 		<result property="openDate" column="openDate" />
-		<result property="closeDate" column="closeDate" />
+		<result property="closeDate" column="closeDate" /> -->
 	</resultMap>
 	
 	<select id="selectCompany" resultMap="comResult">
@@ -32,9 +32,9 @@
 		]]>
 	</select>
 	
-	<insert id="insertCompany" parameterType="java.util.Map">
+<!-- 	<insert id="insertCompany" parameterType="java.util.Map">
 		<![CDATA[
-			insert info company(comName, classification, cardinal, startDate, endDate, BRNum, CRNum, CEOName, 
+			insert into company(comName, classification, cardinal, startDate, endDate, BRNum, CRNum, CEOName, 
 								forign, residentNum, zipCode, address, addressDetails,
 								comNumber, faxNumber, businessCondition, businessType, 
 								foundationDate, openDate, closeDate)
@@ -42,6 +42,17 @@
 								#{forign}, #{residentNum}, #{zipCode}, #{address}, #{addressDetails},
 								#{comNumber}, #{faxNumber}, #{businessCondition}, #{businessType},
 								#{foundationDate}, #{openDate}, #{closeDate})
+		]]>
+	</insert> -->
+	
+	<insert id="insertCompany" parameterType="companyVO">
+		<![CDATA[
+			insert into company(comName, BRNum, CRNum, CEOName, 
+								residentNum, zipCode, address, addressDetails,
+								comNumber, faxNumber, businessCondition, businessType)
+						values(#{comName}, #{BRNum}, #{CRNum}, #{CEOName}, 
+								 #{residentNum}, #{zipCode}, #{address}, #{addressDetails},
+								#{comNumber}, #{faxNumber}, #{businessCondition}, #{businessType})
 		]]>
 	</insert>
 </mapper>
