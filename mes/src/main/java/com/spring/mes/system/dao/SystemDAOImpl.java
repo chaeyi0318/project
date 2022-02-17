@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.spring.mes.system.vo.CompanyVO;
 import com.spring.mes.system.vo.DeptVO;
+import com.spring.mes.system.vo.EmpVO;
 
 @Repository("systemDAO")
 public class SystemDAOImpl implements SystemDAO {
@@ -32,5 +33,12 @@ public class SystemDAOImpl implements SystemDAO {
 		List<DeptVO> deptList = null;
 		deptList = sqlSession.selectList("mapper.dept.selectAllDepartment");
 		return deptList;
+	}
+
+	@Override
+	public List employeeInfo() throws DataAccessException {
+		List<EmpVO> empList = null;
+		empList = sqlSession.selectList("mapper.emp.selectAllEmployee");
+		return empList;
 	}
 }

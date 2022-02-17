@@ -13,7 +13,7 @@
 	
 	<select id="selectAllDepartment" resultMap="deptResult">
 		<![CDATA[
-			select * from department
+			select * from department order by dCode
 		]]>
 	</select>
 </mapper>

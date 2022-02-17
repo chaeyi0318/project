@@ -46,13 +46,13 @@
         </table>
     </div>
     <div class="section">
-        <p>품목등록</p>
+        품목등록
         <br>
-        <p>품번 <input type="text"></p>
-        <p>품명 <input type="text"></p>
-        <p>규격 <input type="text"></p>
-        <p>일별생산량 <input type="text"></p>
-        <p>계정구분 <select>
+        품번 <input type="text"><br>
+        품명 <input type="text"><br>
+        규격 <input type="text"><br>
+        일별생산량 <input type="text"><br>
+        계정구분 <select>
             <option vlaue="">원재료</option>
             <option value="">반제품</option>
             <option value="">제품</option>
@@ -60,21 +60,21 @@
             조달구분 <select>
                 <option vlaue="">생산</option>
                 <option value="">구매</option>
-               </select></p>
-        <p>재고단위 <input type="text"></p>
-        <p>검사여부 <select>
-                        <option value="">무검사</option>
-                        <option value="">검사</option>
-                   </select>&nbsp&nbsp
-           사용여부 <select>
-                        <option value="">사용</option>
-                        <option value="">미사용</option>
-                    </select></p>
-        <p>폭 <input type="text" size="8"> 길이 <input type="text" size="8"></p>
-        <p>높이 <input type="text" size="8"> 밀도 <input type="text" size="8"></p>
-        <p>부피 <input type="text"> <input type="button" value="부피계산"></p>
-        <p>중량 <input type="text"> <input type="button" value="중량계산"></p>
-        <p>면적 <input type="text"> <input type="button" value="면적계산"></p>
+               </select><br>
+        재고단위 <input type="text"><br>
+        검사여부 <select>
+                     <option value="">무검사</option>
+                     <option value="">검사</option>
+                </select>&nbsp&nbsp
+        사용여부 <select>
+                     <option value="">사용</option>
+                     <option value="">미사용</option>
+                 </select><br>
+        폭 <input type="text" size="8"> 길이 <input type="text" size="8"><br>
+        높이 <input type="text" size="8"> 밀도 <input type="text" size="8"><br>
+        부피 <input type="text"> <input type="button" value="부피계산"><br>
+        중량 <input type="text"> <input type="button" value="중량계산"><br>
+        면적 <input type="text"> <input type="button" value="면적계산"><br>
     </div>
 </body>
 </html>

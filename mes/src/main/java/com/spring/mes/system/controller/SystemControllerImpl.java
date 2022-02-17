@@ -38,44 +38,13 @@ public class SystemControllerImpl implements SystemController {
 	@Override
 	@RequestMapping(value="/system/companyInfo.do", method = RequestMethod.GET)
 	public ModelAndView companyInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		String viewName = getViewName(request);
+		String viewName = (String)request.getAttribute("viewName");
 		System.out.println("viewName: " +viewName);
 		companyVO = systemService.companyInfo(companyVO);
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName(viewName);
 		mav.addObject("company", companyVO);
 		return mav;
-	}
-
-	private String getViewName(HttpServletRequest request) throws Exception {
-		String contextPath = request.getContextPath();
-		String uri = (String) request.getAttribute("javax.servlet.include.request_uri");
-		if (uri == null || uri.trim().equals("")) {
-			uri = request.getRequestURI();
-		}
-
-		int begin = 0;
-		if (!((contextPath == null) || ("".equals(contextPath)))) {
-			begin = contextPath.length();
-		}
-
-		int end;
-		if (uri.indexOf(";") != -1) {
-			end = uri.indexOf(";");
-		} else if (uri.indexOf("?") != -1) {
-			end = uri.indexOf("?");
-		} else {
-			end = uri.length();
-		}
-
-		String viewName = uri.substring(begin, end);
-		if (viewName.indexOf(".") != -1) {
-			viewName = viewName.substring(0, viewName.lastIndexOf("."));
-		}
-		if (viewName.lastIndexOf("/") != -1) {
-			viewName = viewName.substring(viewName.lastIndexOf("/", 1), viewName.length());
-		}
-		return viewName;
 	}
 
 	@Override
@@ -100,6 +69,18 @@ public class SystemControllerImpl implements SystemController {
 		List deptList = systemService.departmentInfo();
 		ModelAndView mav = new ModelAndView(viewName);
 		mav.addObject("deptList", deptList);
+		return mav;
+	}
+
+	@Override
+	@RequestMapping(value="/system/employeeInfo.do", method = RequestMethod.GET)
+	public ModelAndView employeeInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("html;text/charset=utf-8");
+		String viewName = (String)request.getAttribute("viewName");
+		List empList = systemService.employeeInfo();
+		ModelAndView mav = new ModelAndView(viewName);
+		mav.addObject("empList",empList);
 		return mav;
 	}
 }

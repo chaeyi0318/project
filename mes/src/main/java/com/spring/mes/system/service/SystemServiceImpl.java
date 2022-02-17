@@ -37,4 +37,11 @@ public class SystemServiceImpl implements SystemService {
 		deptList = systemDAO.departmentInfo();
 		return deptList;
 	}
+
+	@Override
+	public List employeeInfo() throws DataAccessException {
+		List empList = null;
+		empList = systemDAO.employeeInfo();
+		return empList;
+	}
 }

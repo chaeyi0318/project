@@ -13,4 +13,5 @@ public interface SystemService {
 	public CompanyVO companyInfo(CompanyVO companyVO) throws DataAccessException;
 	public int insertCompany(CompanyVO companyVO) throws DataAccessException;
 	public List departmentInfo() throws DataAccessException;
+	public List employeeInfo() throws DataAccessException;
 }
