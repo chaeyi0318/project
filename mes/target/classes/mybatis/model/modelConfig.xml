@@ -6,5 +6,11 @@
 	<typeAliases>
 		<typeAlias type="com.spring.mes.system.vo.CompanyVO" alias="companyVO" />
 		<typeAlias type="com.spring.mes.system.vo.DeptVO" alias="deptVO"/>
+		<typeAlias type="com.spring.mes.system.vo.EmpVO" alias="empVO"/>
+		<typeAlias type="com.spring.mes.system.vo.CustomerVO" alias="customerVO"/>
+		<typeAlias type="com.spring.mes.system.vo.ItemVO" alias="itemVO"/>
+		<typeAlias type="com.spring.mes.system.vo.ProcessVO" alias="processVO"/>
+		<typeAlias type="com.spring.mes.system.vo.QualityTestVO" alias="qualityTestVO"/>
+		<typeAlias type="com.spring.mes.system.vo.StorageVO" alias="storageVO"/>
 	</typeAliases>
 </configuration>

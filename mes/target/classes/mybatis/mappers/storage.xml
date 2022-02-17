@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.storage">
+	<resultMap type="storageVO" id="storageResult">
+		<result property="storageCode" column="storageCode"/>
+		<result property="storageName" column="storageName"/>
+		<result property="wSite" column="wSite"/>
+		<result property="rSite" column="rSite"/>
+		<result property="storageExplanation" column="storageExplanation"/>
+		<result property="useCheck" column="useCheck"/>
+	</resultMap>
+	
+	<select id="selectAllStorage" resultMap="storageResult">
+		<![CDATA[
+			select * from storage storageCode
+		]]>
+	</select>
+</mapper>

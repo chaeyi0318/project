@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     isELIgnored="false" %>
@@ -22,6 +23,9 @@
         margin-top: 5px;
         text-decoration: none;
     }
+    a {
+    	text-decoration: none;
+    }
 </style>
 <meta charset="UTF-8">
 <title>카테고리</title>
@@ -36,9 +40,11 @@
             <li><a href="${contextPath}/system/companyInfo.do" class="no-underline">회사등록</a></li>
             <li><a href="${contextPath}/system/departmentInfo.do"  class="no-underline">부서등록</a><br></li>
             <li><a href="${contextPath}/system/employeeInfo.do"  class="no-underline">사원등록</a><br></li>
-            <li><a href="#"  class="no-underline">품목등록</a><br></li>
-            <li><a href="#"  class="no-underline">창고/공정등록</a><br></li>
-            <li><a href="#"  class="no-underline">검사유형등록</a><br></li>
+            <li><a href="${contextPath}/system/customerInfo.do"  class="no-underline">거래처등록</a><br></li>
+            <li><a href="${contextPath}/system/itemInfo.do"  class="no-underline">품목등록</a><br></li>
+            <li><a href="${contextPath}/system/storageInfo.do"  class="no-underline">창고등록</a><br></li>
+            <li><a href="${contextPath}/system/processInfo.do"  class="no-underline">공정등록</a><br></li>
+            <li><a href="${contextPath}/system/qualityTestCodeInfo.do"  class="no-underline">검사유형등록</a><br></li>
         </ul>
     </li>
     <li class="side2">
@@ -53,6 +59,13 @@
             <li><a href="#"  class="no-underline">생산실적검사</a><br></li>
             <li><a href="#"  class="no-underline">생산품창고입고처리</a><br></li>
             <li><a href="#"  class="no-underline">작업지시마감처리</a><br></li>
+        </ul>
+    </li>
+    <li class="side3">
+        기초정보관리
+        <ul class="sub3" style="display:none">
+            <li><a href="#"  class="no-underline">BOM등록</a><br></li>
+            <li><a href="#"  class="no-underline">불량유형등록</a><br></li>
         </ul>
     </li>
     <script>
@@ -70,6 +83,14 @@
             }
             else{
                 $(".sub2").slideDown();
+            }
+        })
+        $(".side3").click(function(){
+            if($(".sub3").is(":visible")){
+                $(".sub3").slideUp();
+            }
+            else{
+                $(".sub3").slideDown();
             }
         })
     </script>

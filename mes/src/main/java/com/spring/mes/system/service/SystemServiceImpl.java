@@ -37,4 +37,46 @@ public class SystemServiceImpl implements SystemService {
 		deptList = systemDAO.departmentInfo();
 		return deptList;
 	}
+
+	@Override
+	public List employeeInfo() throws DataAccessException {
+		List empList = null;
+		empList = systemDAO.employeeInfo();
+		return empList;
+	}
+
+	@Override
+	public List customerInfo() throws DataAccessException {
+		List customerList = null;
+		customerList = systemDAO.customerInfo();
+		return customerList;
+	}
+
+	@Override
+	public List itemInfo() throws DataAccessException {
+		List itemList = null;
+		itemList = systemDAO.itemInfo();
+		return itemList;
+	}
+
+	@Override
+	public List processInfo() throws DataAccessException {
+		List processList = null;
+		processList = systemDAO.processInfo();
+		return processList;
+	}
+
+	@Override
+	public List storageInfo() throws DataAccessException {
+		List storageList = null;
+		storageList = systemDAO.storageInfo();
+		return storageList;
+	}
+
+	@Override
+	public List qualityTestInfo() throws DataAccessException {
+		List qualityTestList = null;
+		qualityTestList = systemDAO.qualityTestInfo();
+		return qualityTestList;
+	}
 }

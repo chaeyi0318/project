@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.item">
+	<resultMap type="itemVO" id="itemResult">
+		<result property="itemCode" column="itemCode"/>
+		<result property="itemName" column="itemName"/>
+		<result property="standard" column="standard"/>
+		<result property="type" column="type"/>
+		<result property="obtain" column="obtain"/>
+		<result property="inventoryUnit" column="inventoryUnit"/>
+		<result property="testCheck" column="testCheck"/>
+		<result property="useCheck" column="useCheck"/>
+		<result property="leadTime" column="leadTime"/>
+		<result property="stock" column="stock"/>
+		<result property="production" column="production"/>
+	</resultMap>
+	
+	<select id="selectAllItem" resultMap="itemResult">
+		<![CDATA[
+			select * from item order by itemCode
+		]]>
+	</select>
+</mapper>

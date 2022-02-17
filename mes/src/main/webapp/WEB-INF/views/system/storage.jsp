@@ -10,30 +10,34 @@
     .top {
         border: 1px solid black;
         float: left;
-        height: 50%;
-        width: 100%;
+        height: 49%;
+        margin-bottom: 8px;
     }
 
     .bottom {
+    	width: 100%;
         border: 1px solid red;
         float: left;
         height: 50%;
-        width: 100%;
+        overflow-x:auto;
+        white-space:nowrap;
     }
 </style>
 <body>
     <div class="top">
         <table>
-            <tr>
+            <tr align="center">
                 <td><input type="checkbox"></td>
-                <td>NO.</td>
-                <td>코드</td>
-                <td>검사유형명</td>
-                <td>비고</td>
+                <td>창고코드</td>
+                <td>창고명</td>
+                <td>입고기본위치</td>
+                <td>출고기본위치</td>
+                <td>창고설명</td>
                 <td>사용여부</td>
             </tr>
-            <tr>
+            <tr align="center">
                 <td><input type="checkbox"></td>
+                <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
@@ -44,22 +48,27 @@
     </div>
     <div class="bottom">
         <table>
-            <tr>
+            <tr align="center">
                 <td><input type="checkbox"></td>
-                <td>NO.</td>
-                <td>검사유형질문</td>
-                <td>비고</td>
-                <td>입력필수</td>
+                <td>위치코드</td>
+                <td>위치명</td>
+                <td>위치설명</td>
+                <td>가출고코드</td>
+                <td>가출고거래처명</td>
+                <td>적합여부</td>
+                <td>위치사용여부</td>
             </tr>
-            <tr>
+            <tr align="center">
                 <td><input type="checkbox"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
             </tr>
         </table>
-        
     </div>
 </body>
 </html>

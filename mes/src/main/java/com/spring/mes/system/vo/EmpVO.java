@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component("empVO")
 public class EmpVO {
-	private int	eCode;
+	private String eCode;
 	private String eName;
 	private int	dCode;
 	private String dName;
@@ -18,7 +18,7 @@ public class EmpVO {
 		
 	}
 	
-	public EmpVO(int eCode, String eName, int dCode, String	dName, Date	joinDate, Date quitDate, String	pwd) {
+	public EmpVO(String eCode, String eName, int dCode, String	dName, Date	joinDate, Date quitDate, String	pwd) {
 		this.eCode = eCode;
 		this.eName = eName;
 		this.dCode = dCode;
@@ -28,11 +28,11 @@ public class EmpVO {
 		this.pwd = pwd;
 	}
 	
-	public int getECode() {
+	public String getECode() {
 		return eCode;
 	}
 	
-	public void setECode(int eCode) {
+	public void setECode(String eCode) {
 		this.eCode = eCode;
 	}
 	

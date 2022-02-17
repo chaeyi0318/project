@@ -19,4 +19,10 @@ public interface SystemController {
 //									@RequestParam(value="closeDate", required=false) Date closeDate,
 									HttpServletRequest request, HttpServletResponse response) throws Exception;
 	public ModelAndView departmentInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView employeeInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView customerInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView itemInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView storageInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView processInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView qualityTestInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
 }

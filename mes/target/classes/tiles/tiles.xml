@@ -30,4 +30,34 @@
    		<put-attribute name="title" value="부서등록"/>
    		<put-attribute name="body" value="/WEB-INF/views/system/department.jsp"/>
    </definition>
+   
+   <definition name="/system/employeeInfo" extends="baseLayout">
+   		<put-attribute name="title" value="사원등록"/>
+   		<put-attribute name="body" value="/WEB-INF/views/system/employee.jsp"/>
+   </definition>
+   
+   <definition name="/system/customerInfo" extends="baseLayout">
+   		<put-attribute name="title" value="거래처등록"/>
+   		<put-attribute name="body" value="/WEB-INF/views/system/customer.jsp"/>
+   </definition>
+   
+   <definition name="/system/itemInfo" extends="baseLayout">
+   		<put-attribute name="title" value="품목등록"/>
+   		<put-attribute name="body" value="/WEB-INF/views/system/item.jsp"/>
+   </definition>
+   
+   <definition name="/system/storageInfo" extends="baseLayout">
+   		<put-attribute name="title" value="창고등록"/>
+   		<put-attribute name="body" value="/WEB-INF/views/system/storage.jsp"/>
+   </definition>
+   
+   <definition name="/system/processInfo" extends="baseLayout">
+   		<put-attribute name="title" value="공정등록"/>
+   		<put-attribute name="body" value="/WEB-INF/views/system/process.jsp"/>
+   </definition>
+   
+   <definition name="/system/qualityTestCodeInfo" extends="baseLayout">
+   		<put-attribute name="title" value="검사유형등록"/>
+   		<put-attribute name="body" value="/WEB-INF/views/system/qualitytestcode.jsp"/>
+   </definition>
 </tiles-definitions>
