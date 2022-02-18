@@ -6,9 +6,17 @@
 <meta charset="UTF-8">
 <title>품목 등록</title>
 <style>
+	.button {
+        width: 1200px;
+        height: 35px;
+    }
+    .button>input {
+        float: right;
+        margin: 7px;
+    }
     .list {
         border: 1px solid black;
-        height: 100%;
+        height: 93%;
         width: 48%;
         float: left;
         text-align: center;
@@ -30,6 +38,9 @@
 </style>
 </head>
 <body>
+	<form class="button">
+        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp; <input type="submit" value="조회"> &nbsp;
+    </form><br>
     <div class="list">
         <table>
             <tr>

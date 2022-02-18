@@ -24,7 +24,7 @@
         margin: 7px;
     }
     .search {
-    	margin-left: 50px;
+    	margin-left: 15px;
 		float: left;
     }
 </style>
