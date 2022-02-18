@@ -59,6 +59,16 @@
             <li><a href="#"  class="no-underline">생산실적검사</a><br></li>
             <li><a href="#"  class="no-underline">생산품창고입고처리</a><br></li>
             <li><a href="#"  class="no-underline">작업지시마감처리</a><br></li>
+            <li><a href="#"  class="no-underline">BOM등록</a><br></li>
+            <li><a href="#"  class="no-underline">불량유형등록</a><br></li>
+            
+        </ul>
+    </li>
+    <li class="side3">
+        기초정보관리
+        <ul class="sub3" style="display:none">
+            <li><a href="#"  class="no-underline">BOM등록</a><br></li>
+            <li><a href="#"  class="no-underline">불량유형등록</a><br></li>
         </ul>
     </li>
     <li class="side3">

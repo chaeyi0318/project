@@ -25,6 +25,7 @@
     }
     .search {
     	margin-left: 15px;
+    	margin-left: 50px;
 		float: left;
     }
 </style>
@@ -36,6 +37,8 @@
     <h3>사원등록</h3>
     <form class="search" action="">사원명 <input type="search"> <input type="button" value="검색"></form><br>
     <br>
+    <form class="search" action="">사원명 <input type="search"> <input type="button" value="검색"></form><br>
+    <h3>사원등록</h3><br>
     <form method="post" action="${contextPath }/system/employeeInfo.do">
     <table width="700px" align="center">
         <tr align="center">
