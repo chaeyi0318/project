@@ -32,7 +32,7 @@
 		]]>
 	</select>
 	
-<!-- 	<insert id="insertCompany" parameterType="java.util.Map">
+<!-- 	<insert id="insertCompany" parameterType="companyVO">
 		<![CDATA[
 			insert into company(comName, classification, cardinal, startDate, endDate, BRNum, CRNum, CEOName, 
 								forign, residentNum, zipCode, address, addressDetails,

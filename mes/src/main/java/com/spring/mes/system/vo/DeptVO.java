@@ -1,7 +1,7 @@
 package com.spring.mes.system.vo;
 
 import java.sql.Date;
-import java.time.LocalDate;
+
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
@@ -12,15 +12,15 @@ public class DeptVO {
 	private String dName;
 	private String comName;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private LocalDate useDate;
+	private String useDate;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private LocalDate endDate;
+	private String endDate;
 
 	public DeptVO() {
 		
 	}
 	
-	public DeptVO(int dCode, String dName, String comName, LocalDate useDate, LocalDate endDate) {
+	public DeptVO(int dCode, String dName, String comName, String useDate, String endDate) {
 		this.dCode = dCode;
 		this.dName = dName;
 		this.comName = comName;
@@ -48,19 +48,19 @@ public class DeptVO {
 		return comName;
 	}
 	
-	public LocalDate getUseDate() {
+	public String getUseDate() {
 		return useDate;
 	}
 	
-	public void setUseDate(LocalDate useDate) {
+	public void setUseDate(String useDate) {
 		this.useDate = useDate;
 	}
 	
-	public LocalDate getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
 	
-	public void setEndDate(LocalDate endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
 }
