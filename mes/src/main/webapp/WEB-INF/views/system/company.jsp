@@ -27,7 +27,7 @@
 </head>
 <body>
 	<form class="button">
-        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp; <input type="submit" value="조회"> &nbsp;
+        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp;
     </form>
     <h3>기본등록사항</h3><br>
     <c:if test="${company == null }">
@@ -37,8 +37,6 @@
                     <option value="법인">법인</option>
                     <option value="개인">개인</option>
                 </select></h4> --><br>
-                <%-- <h4>회계연도 제 <input type="text" name="cardinal" value="${company.cardinal }" size=1> 기 
-                <input type="date" name="startDate" value="${company.startDate }"> - <input type="date" name="endDate" value="${company.endDate }"></h4><br> --%>
                 <h4>사업자등록번호 <input type="text" name="BRNum" value="${company.BRNum }"></h4><br>
                 <h4>법인등록번호 <input type="text" name="CRNum" value="${company.CRNum }"></h4><br>
                 <h4>대표자성명 <input type="text" name="CEOName" value="${company.CEOName }"></h4><br>
@@ -62,16 +60,14 @@
     <c:if test="${company != null }">
         <form align="center" method="post">
             <h4>회사명 <input type="text" name="comName" value="${company.comName }" disabled>
-                <select id="classification" name="classification" class="sel">
+                <select id="classification" name="classification" class="sel" disabled>
                     <option value="corporation">법인</option>
                     <option value="soleProprietorship">개인</option>
                 </select></h4><br>
-                <%-- <h4>회계연도 제 <input type="text" name="cardinal" value="${company.cardinal }" size=1> 기 
-                <input type="date" name="startDate" value="${company.startDate }"> - <input type="date" name="endDate" value="${company.endDate }"></h4><br> --%>
                 <h4>사업자등록번호 <input type="text" name="BRNum" value="${company.BRNum }" disabled></h4><br>
                 <h4>법인등록번호 <input type="text" name="CRNum" value="${company.CRNum }" disabled></h4><br>
                 <h4>대표자성명 <input type="text" name="CEOName" value="${company.CEOName }" disabled></h4><br>
-                <h4>주민등록번호 <select id="forign" name="forign" class="sel">
+                <h4>주민등록번호 <select id="forign" name="forign" class="sel" disabled>
                                    <option value="local">내국인</option>
                                    <option value="forign">외국인</option>
                                </select> <input type="text" name="residentNum" value="${company.residentNum }" disabled></h4><br>

@@ -143,4 +143,16 @@ public class SystemControllerImpl implements SystemController {
 		mav.addObject("qualityTestList", qualityTestList);
 		return mav;
 	}
+
+	@Override
+	@RequestMapping(value="/system/insertDepartment.do", method=RequestMethod.POST)
+	public ModelAndView insertDept(@ModelAttribute("dept") DeptVO deptVO, 
+						HttpServletRequest request, HttpServletResponse response) throws Exception {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("html;text/charset=utf-8");
+		int result = 0;
+		result = systemService.insertDept(deptVO);
+		ModelAndView mav = new ModelAndView("redirect:/system/departmentInfo.do");
+		return mav;
+	}
 }

@@ -32,13 +32,11 @@
 </head>
 <body>
 	<form class="button">
-        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp; <input type="submit" value="조회"> &nbsp;
+        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp;
     </form><br>
     <h3>사원등록</h3>
     <form class="search" action="">사원명 <input type="search"> <input type="button" value="검색"></form><br>
     <br>
-    <form class="search" action="">사원명 <input type="search"> <input type="button" value="검색"></form><br>
-    <h3>사원등록</h3><br>
     <form method="post" action="${contextPath }/system/employeeInfo.do">
     <table width="700px" align="center">
         <tr align="center">

@@ -17,17 +17,16 @@
     .list {
         border: 1px solid black;
         height: 93%;
-        width: 48%;
+        width: 47%;
         float: left;
         text-align: center;
-        margin-right: 50px;
     }
     
     .section {
-        /* border: 1px solid red; */
+        border: 1px solid red;
         /* border-left: 500px; */
-        height: 100%;
-        width: 45%;
+        height: 93%;
+        width: 50%;
         /* text-align: center; */
         float: left;
     }
@@ -39,7 +38,7 @@
 </head>
 <body>
 	<form class="button">
-        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp; <input type="submit" value="조회"> &nbsp;
+        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp;
     </form><br>
     <div class="list">
         <table>

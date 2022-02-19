@@ -25,13 +25,14 @@
         margin: 7px;
     }
 </style>
+<script>
+
+</script>
 </head>
 <body>
-	<form class="button">
-        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp; <input type="submit" value="조회"> &nbsp;
-    </form>
+	<form method="post" action="${contextPath }/system/insertDepartment.do">
+    <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp;
     <h3>부서등록</h3><br>
-    <form method="post" action="${contextPath }/system/departmentInfo.do">
     <table width="700px" align="center">
 		<tr align="center">
 			<td><input type="checkbox"></td>
@@ -44,13 +45,21 @@
 		<c:forEach var="dept" items="${deptList }">
 			<tr align="center">
 		   		<td><input type="checkbox"></td>
-		    	<td><input type="text" name="dCode" value="${dept.DCode }"></td>
-		    	<td><input type="text" name="dNAme" value="${dept.DName }"></td>
-		    	<td><input type="text" name="comName" value="${dept.comName }"></td>
-		    	<td><input type="date" name="useDate" value="${dept.useDate }"></td>
-		    	<td><input type="date" name="endDate" value="${dept.endDate }"></td>
+		    	<td><input type="text" name="dCode" value="${dept.DCode }" disabled></td>
+		    	<td><input type="text" name="dName" value="${dept.DName }" disabled></td>
+		    	<td><input type="text" name="comName" value="${dept.comName }" disabled></td>
+ 		    	<td><input type="date" name="useDate" value="${dept.useDate }" disabled></td>
+		    	<td><input type="date" name="endDate" value="${dept.endDate }" disabled></td>
 			</tr>
 		</c:forEach>
+		<tr align="center">
+		   <td><input type="checkbox"></td>
+		   <td><input type="text" name="dCode"></td>
+		   <td><input type="text" name="dName"></td>
+		   <td><input type="text" name="comName"></td>
+ 		   <td><input type="date" name="useDate"></td>
+		   <td><input type="date" name="endDate"></td>
+		</tr>
 	</table>
 	</form>
 </body>

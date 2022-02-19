@@ -16,10 +16,12 @@
     }
     .list {
         border: 1px solid black;
+        width: 50%;
         height: 95.5%;
         float: left;
         text-align: center;
-        margin-right: 50px;
+        overflow-x:auto;
+        white-space:nowrap;
     }
     
     table {
@@ -27,10 +29,10 @@
     }
     
     .section {
-        /* border: 1px solid red; */
+        border: 1px solid red;
         /* border-left: 500px; */
-        width: 400px;
-        height: 700px;
+        width: 49%;
+        height: 95.5%;
         text-align: center;
         float: left;
     }
@@ -46,7 +48,7 @@
 </head>
 <body>
 	<form class="button">
-        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp; <input type="submit" value="조회"> &nbsp;
+        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp;
     </form>
     <div class="list">
         <table>
@@ -55,12 +57,14 @@
                 <td>거래처코드</td>
                 <td>거래처명</td>
                 <td>종목</td>
+                <td>업태</td>
             </tr>
             <tr>
                 <td><input type="checkbox"></td>
                 <td><input type="text" name="customerCode"></td>
                 <td><input type="text" name="customerName"></td>
                 <td><input type="text" name="businessType"></td>
+                <td><input type="text" name="businessCondition"></td>
             </tr>
         </table>
     </div>

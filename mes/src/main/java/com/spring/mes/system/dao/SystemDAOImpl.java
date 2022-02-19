@@ -81,4 +81,10 @@ public class SystemDAOImpl implements SystemDAO {
 		qualityTestList = sqlSession.selectList("mapper.qualityTest.selectAllQualityTest");
 		return qualityTestList;
 	}
+
+	@Override
+	public int insertDept(DeptVO deptVO) throws DataAccessException {
+		int result = sqlSession.insert("mapper.dept.insertDepartment", deptVO);
+		return result;
+	}
 }

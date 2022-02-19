@@ -79,4 +79,9 @@ public class SystemServiceImpl implements SystemService {
 		qualityTestList = systemDAO.qualityTestInfo();
 		return qualityTestList;
 	}
+
+	@Override
+	public int insertDept(DeptVO deptVO) throws DataAccessException {
+		return systemDAO.insertDept(deptVO);
+	}
 }
