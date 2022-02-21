@@ -2,7 +2,6 @@ package com.spring.mes.system.vo;
 
 import java.sql.Date;
 
-
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
@@ -12,15 +11,15 @@ public class DeptVO {
 	private String dName;
 	private String comName;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private String useDate;
+	private Date useDate;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private String endDate;
+	private Date endDate;
 
 	public DeptVO() {
 		
 	}
 	
-	public DeptVO(int dCode, String dName, String comName, String useDate, String endDate) {
+	public DeptVO(int dCode, String dName, String comName, Date useDate, Date endDate) {
 		this.dCode = dCode;
 		this.dName = dName;
 		this.comName = comName;
@@ -48,19 +47,19 @@ public class DeptVO {
 		return comName;
 	}
 	
-	public String getUseDate() {
+	public Date getUseDate() {
 		return useDate;
 	}
 	
-	public void setUseDate(String useDate) {
+	public void setUseDate(Date useDate) {
 		this.useDate = useDate;
 	}
 	
-	public String getEndDate() {
+	public Date getEndDate() {
 		return endDate;
 	}
 	
-	public void setEndDate(String endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
 }
