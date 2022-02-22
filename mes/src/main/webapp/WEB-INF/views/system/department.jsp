@@ -54,8 +54,8 @@
 		</c:forEach>
 		<tr align="center">
 		   <td><input type="checkbox"></td>
-		   <td><input type="text" name="dCode"></td>
-		   <td><input type="text" name="dName"></td>
+		   <td><input type="text" name="DCode"></td>
+		   <td><input type="text" name="DName"></td>
 		   <td><input type="text" name="comName"></td>
  		   <td><input type="text" name="useDate"></td>
 		   <td><input type="text" name="endDate"></td>

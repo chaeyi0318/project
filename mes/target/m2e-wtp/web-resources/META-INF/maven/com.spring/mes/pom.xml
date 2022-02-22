@@ -199,6 +199,13 @@
 	    <version>${org.aspectj-version}</version>
 	</dependency>
 
+	<!-- 제이쿼리  -->
+	<dependency>
+        <groupId>org.webjars</groupId>
+        <artifactId>jquery</artifactId>
+        <version>2.2.1</version>
+    </dependency>  
+
 	</dependencies>
 	<build>
 		<plugins>

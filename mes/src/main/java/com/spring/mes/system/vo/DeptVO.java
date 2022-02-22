@@ -7,19 +7,19 @@ import org.springframework.stereotype.Component;
 
 @Component("deptVO")
 public class DeptVO {
-	private int	dCode;
+	private Integer	dCode;
 	private String dName;
 	private String comName;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date useDate;
+	private String useDate;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date endDate;
+	private String endDate;
 
 	public DeptVO() {
 		
 	}
 	
-	public DeptVO(int dCode, String dName, String comName, Date useDate, Date endDate) {
+	public DeptVO(Integer dCode, String dName, String comName, String useDate, String endDate) {
 		this.dCode = dCode;
 		this.dName = dName;
 		this.comName = comName;
@@ -27,11 +27,11 @@ public class DeptVO {
 		this.endDate = endDate;
 	}
 	
-	public int getDCode() {
+	public Integer getDCode() {
 		return dCode;
 	}
 	
-	public void setDCode(int dCode) {
+	public void setDCode(Integer dCode) {
 		this.dCode = dCode;
 	}
 	
@@ -47,19 +47,24 @@ public class DeptVO {
 		return comName;
 	}
 	
-	public Date getUseDate() {
+	public void setComName(String comName) {
+		this.comName = comName;
+	}
+	
+	public String getUseDate() {
+		System.out.println(useDate);
 		return useDate;
 	}
 	
-	public void setUseDate(Date useDate) {
+	public void setUseDate(String useDate) {
 		this.useDate = useDate;
 	}
 	
-	public Date getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
 	
-	public void setEndDate(Date endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
 }
