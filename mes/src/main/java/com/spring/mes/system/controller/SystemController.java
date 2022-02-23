@@ -13,6 +13,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.mes.system.vo.CompanyVO;
 import com.spring.mes.system.vo.DeptVO;
+import com.spring.mes.system.vo.ItemVO;
 
 public interface SystemController {
 	public ModelAndView companyInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
@@ -28,4 +29,5 @@ public interface SystemController {
 	public ModelAndView qualityTestInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	public ModelAndView insertDept(@ModelAttribute("dept") DeptVO deptVO,
 									HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView insertItem(@ModelAttribute("item") ItemVO itemVO, HttpServletRequest request, HttpServletResponse response) throws Exception;
 }

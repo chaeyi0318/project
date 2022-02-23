@@ -13,6 +13,7 @@ import com.spring.mes.system.dao.SystemDAO;
 import com.spring.mes.system.vo.CompanyVO;
 import com.spring.mes.system.vo.CustomerVO;
 import com.spring.mes.system.vo.DeptVO;
+import com.spring.mes.system.vo.ItemVO;
 
 @Service("systemService")
 @Transactional(propagation = Propagation.REQUIRED)
@@ -83,5 +84,10 @@ public class SystemServiceImpl implements SystemService {
 	@Override
 	public int insertDept(DeptVO deptVO) throws DataAccessException {
 		return systemDAO.insertDept(deptVO);
+	}
+
+	@Override
+	public int insertItem(ItemVO itemVO) throws DataAccessException {
+		return systemDAO.insertItem(itemVO);
 	}
 }

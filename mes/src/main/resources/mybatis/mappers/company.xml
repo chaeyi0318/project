@@ -5,14 +5,14 @@
 <mapper namespace="mapper.company">
 	<resultMap id="comResult" type="companyVO">
 		<result property="comName" column="comName" />
-		<!--<result property="classification" column="classification" />
-		 <result property="cardinal" column="cardinal" />
+		<result property="classification" column="classification" />
+		<!-- <result property="cardinal" column="cardinal" />
 		<result property="startDate" column="cardstartDateinal" />
 		<result property="endDate" column="endDate" /> -->
 		<result property="BRNum" column="BRNum" />
 		<result property="CRNum" column="CRNum" />
 		<result property="CEOName" column="CEOName" />
-		<!-- <result property="forign" column="forign" /> -->
+		<result property="forign" column="forign" />
 		<result property="residentNum" column="residentNum" />
 		<result property="zipCode" column="zipCode" />
 		<result property="address" column="address" />
@@ -47,10 +47,10 @@
 	
 	<insert id="insertCompany" parameterType="companyVO">
 		<![CDATA[
-			insert into company(comName, BRNum, CRNum, CEOName, 
+			insert into company(comName, classification, BRNum, CRNum, CEOName, forign,
 								residentNum, zipCode, address, addressDetails,
 								comNumber, faxNumber, businessCondition, businessType)
-						values(#{comName}, #{BRNum}, #{CRNum}, #{CEOName}, 
+						values(#{comName}, #{classification}, #{BRNum}, #{CRNum}, #{CEOName}, #{forign},
 								 #{residentNum}, #{zipCode}, #{address}, #{addressDetails},
 								#{comNumber}, #{faxNumber}, #{businessCondition}, #{businessType})
 		]]>

@@ -4,17 +4,17 @@ import org.springframework.stereotype.Component;
 
 @Component("itemVO")
 public class ItemVO {
-	private String	itemCode;
-	private String	itemName;
-	private String	standard;
-	private String	type;
-	private String	obtain;
-	private String	inventoryUnit;
-	private String	testCheck;
-	private String	useCheck;
-	private int	leadTime;
-	private int	stock;
-	private int	production;
+	private String	itemCode;		//품번
+	private String	itemName;		//품명
+	private String	standard;		//규격
+	private String	type;			//계정구분
+	private String	obtain;			//조달구분
+	private String	inventoryUnit;		//재고단위
+	private String	testCheck;		//검사여부
+	private String	useCheck;		//사용여부
+	private int	leadTime;		//leadTime
+	private int	stock;			//안전재고량
+	private int	production;		//일별생산량
 	
 	public ItemVO() {
 		

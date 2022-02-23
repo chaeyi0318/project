@@ -87,4 +87,10 @@ public class SystemDAOImpl implements SystemDAO {
 		int result = sqlSession.insert("mapper.dept.insertDepartment", deptVO);
 		return result;
 	}
+
+	@Override
+	public int insertItem(ItemVO itemVO) throws DataAccessException {
+		int result = sqlSession.insert("mapper.item.insertItem", itemVO);
+		return result;
+	}
 }

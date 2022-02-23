@@ -8,6 +8,7 @@ import org.springframework.dao.DataAccessException;
 import com.spring.mes.system.vo.CompanyVO;
 import com.spring.mes.system.vo.CustomerVO;
 import com.spring.mes.system.vo.DeptVO;
+import com.spring.mes.system.vo.ItemVO;
 
 public interface SystemService {
 	public CompanyVO companyInfo(CompanyVO companyVO) throws DataAccessException;	//회사정보
@@ -17,6 +18,7 @@ public interface SystemService {
 	public List employeeInfo() throws DataAccessException;		//사원리스트
 	public List customerInfo() throws DataAccessException;		//거래처리스트
 	public List itemInfo() throws DataAccessException;		//품목리스트
+	public int insertItem(ItemVO itemVO) throws DataAccessException;		//품목등록
 	public List processInfo() throws DataAccessException;		//공정리스트
 	public List storageInfo() throws DataAccessException;		//창고리스트
 	public List qualityTestInfo() throws DataAccessException;		//검사유형리스트

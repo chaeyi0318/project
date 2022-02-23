@@ -57,8 +57,8 @@
 		   <td><input type="text" name="DCode"></td>
 		   <td><input type="text" name="DName"></td>
 		   <td><input type="text" name="comName"></td>
- 		   <td><input type="text" name="useDate"></td>
-		   <td><input type="text" name="endDate"></td>
+ 		   <td><input type="date" name="useDate"></td>
+		   <td><input type="date" name="endDate"></td>
 		</tr>
 	</table>
 	</form>

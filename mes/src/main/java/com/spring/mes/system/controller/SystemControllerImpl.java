@@ -24,6 +24,7 @@ import com.spring.mes.system.service.SystemService;
 import com.spring.mes.system.vo.CompanyVO;
 import com.spring.mes.system.vo.CustomerVO;
 import com.spring.mes.system.vo.DeptVO;
+import com.spring.mes.system.vo.ItemVO;
 
 @Controller("systemController")
 public class SystemControllerImpl implements SystemController {
@@ -146,13 +147,25 @@ public class SystemControllerImpl implements SystemController {
 
 	@Override
 	@RequestMapping(value="/system/insertDepartment.do", method=RequestMethod.POST)
-	public ModelAndView insertDept(@ModelAttribute("dept") DeptVO deptVO, 
-						HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public ModelAndView insertDept(@ModelAttribute("dept") DeptVO deptVO, HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html;text/charset=utf-8");
 		int result = 0;
 		result = systemService.insertDept(deptVO);
 		ModelAndView mav = new ModelAndView("redirect:/system/departmentInfo.do");
+		return mav;
+	}
+
+	@Override
+	@RequestMapping(value="/system/insertItem.do", method=RequestMethod.GET)
+	public ModelAndView insertItem(@ModelAttribute("item") ItemVO itemVO, HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("html/text;charset=utf-8");
+		int result = 0;
+		result = systemService.insertItem(itemVO);
+		ModelAndView mav = new ModelAndView("redirect:/system/itemInfo.do");
 		return mav;
 	}
 }

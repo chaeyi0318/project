@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component("companyVO")
 public class CompanyVO {
 	private String comName;		//회사명
-//	private String classification;		//구분
+	private String classification;		//구분
 //	private int	cardinal;		//기수
 //	@DateTimeFormat(pattern = "yyyy-MM-dd")
 //	private LocalDate startDate;		//회계년도 시작일
@@ -18,7 +18,7 @@ public class CompanyVO {
 	private String BRNum;		//사업자등록번호
 	private String CRNum;		//법인등록번호
 	private String CEOName;		//대표명
-//	private String forign;		//외국인구분
+	private String forign;		//외국인구분
 	private String residentNum;		//주민번호
 	private int	zipCode;		//우편번호
 	private String address;		//주소
@@ -47,7 +47,20 @@ public class CompanyVO {
 	public CompanyVO(String	comName, String	classification, String	BRNum, String	CRNum,
 			 String	CEOName, String	forign, String residentNum, int zipCode, String	address, String	addressDetails, String	comNumber,
 			 String	faxNumber, String businessCondition, String	businessType) {
-
+		this.comName = comName;
+		this.classification = classification;
+		this.BRNum = BRNum;
+		this.CRNum = CRNum;
+		this.CEOName = CEOName;
+		this.forign = forign;
+		this.residentNum = residentNum;
+		this.zipCode = zipCode;
+		this.address = address;
+		this.addressDetails = addressDetails;
+		this.comNumber = comNumber;
+		this.faxNumber = faxNumber;
+		this.businessCondition = businessCondition;
+		this.businessType = businessType;
 }
 	
 	public String getComName() {
@@ -58,14 +71,14 @@ public class CompanyVO {
 		this.comName = comName;
 	}
 	
-//	public String getClassification() {
-//		return classification;
-//	}
-//	
-//	public void setClassfication(String classfication) {
-//		this.classification = classfication;
-//	}
-//	
+	public String getClassification() {
+		return classification;
+	}
+	
+	public void setClassfication(String classification) {
+		this.classification = classification;
+	}
+	
 //	public int getCardinal() {
 //		return cardinal;
 //	}
@@ -114,13 +127,13 @@ public class CompanyVO {
 		this.CEOName = CEOName;
 	}
 	
-//	public String getForign() {
-//		return forign;
-//	}
-//	
-//	public void setForign(String forign) {
-//		this.forign = forign;
-//	}
+	public String getForign() {
+		return forign;
+	}
+	
+	public void setForign(String forign) {
+		this.forign = forign;
+	}
 	
 	public String getResidentNum() {
 		return residentNum;
