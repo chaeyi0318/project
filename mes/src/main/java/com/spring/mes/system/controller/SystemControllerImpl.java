@@ -33,9 +33,8 @@ public class SystemControllerImpl implements SystemController {
 	private SystemService systemService;
 	@Autowired
 	private CompanyVO companyVO;
-	@Autowired
-	private DeptVO deptVO;
-	
+
+	//회사정보
 	@Override
 	@RequestMapping(value="/system/companyInfo.do", method = RequestMethod.GET)
 	public ModelAndView companyInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -48,11 +47,11 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//회사등록
 	@Override
 	@RequestMapping(value="/system/insertCompany.do", method = RequestMethod.GET)
-	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO company,
-//						@RequestParam(value="closeDate", required=false) Date closeDate,
-						HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO company, HttpServletRequest request, HttpServletResponse response) 
+			throws Exception {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html/text;charset=utf-8");
 		int result = 0;
@@ -61,6 +60,7 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//부서정보
 	@Override
 	@RequestMapping(value="/system/departmentInfo.do", method = RequestMethod.GET)
 	public ModelAndView departmentInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -73,6 +73,7 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//사원정보
 	@Override
 	@RequestMapping(value="/system/employeeInfo.do", method = RequestMethod.GET)
 	public ModelAndView employeeInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -85,6 +86,7 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//거래처정보
 	@Override
 	@RequestMapping(value="/system/customerInfo.do", method=RequestMethod.GET)
 	public ModelAndView customerInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -97,6 +99,7 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//품목정보
 	@Override
 	@RequestMapping(value="/system/itemInfo.do", method=RequestMethod.GET)
 	public ModelAndView itemInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -109,6 +112,7 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//창고정보
 	@Override
 	@RequestMapping(value="/system/storageInfo.do", method=RequestMethod.GET)
 	public ModelAndView storageInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -121,6 +125,7 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//공정정보
 	@Override
 	@RequestMapping(value="/system/processInfo.do", method=RequestMethod.GET)
 	public ModelAndView processInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -133,6 +138,7 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//검사유형정보
 	@Override
 	@RequestMapping(value="/system/qualityTestCodeInfo.do", method=RequestMethod.GET)
 	public ModelAndView qualityTestInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -145,6 +151,7 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//부서등록
 	@Override
 	@RequestMapping(value="/system/insertDepartment.do", method=RequestMethod.POST)
 	public ModelAndView insertDept(@ModelAttribute("dept") DeptVO deptVO, HttpServletRequest request, HttpServletResponse response)
@@ -157,6 +164,7 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//품목등록
 	@Override
 	@RequestMapping(value="/system/insertItem.do", method=RequestMethod.GET)
 	public ModelAndView insertItem(@ModelAttribute("item") ItemVO itemVO, HttpServletRequest request, HttpServletResponse response)
@@ -166,6 +174,19 @@ public class SystemControllerImpl implements SystemController {
 		int result = 0;
 		result = systemService.insertItem(itemVO);
 		ModelAndView mav = new ModelAndView("redirect:/system/itemInfo.do");
+		return mav;
+	}
+
+	//거래처등록
+	@Override
+	@RequestMapping(value="/system/insertCustomer.do", method=RequestMethod.POST)
+	public ModelAndView insertCustomer(CustomerVO customerVO, HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("html/text;charset=utf-8");
+		int result = 0;
+		result = systemService.insertCustomer(customerVO);
+		ModelAndView mav = new ModelAndView("redirect:/system/customerInfo.do");
 		return mav;
 	}
 }

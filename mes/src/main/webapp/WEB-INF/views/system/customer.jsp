@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false" %>
+    pageEncoding="UTF-8"
+    isELIgnored="false" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="contextPath"  value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,24 +63,34 @@
                 <td>종목</td>
                 <td>업태</td>
             </tr>
+            <c:forEach var="customer" items="${customerList }">
             <tr>
                 <td><input type="checkbox"></td>
-                <td><input type="text" name="customerCode"></td>
-                <td><input type="text" name="customerName"></td>
-                <td><input type="text" name="businessType"></td>
-                <td><input type="text" name="businessCondition"></td>
+                <td><input type="text" value="${customer.customerCode }" disabled></td>
+                <td><input type="text" value="${customer.customerName }" disabled></td>
+                <td><input type="text" value="${customer.businessType }" disabled></td>
+                <td><input type="text" value="${customer.businessCondition }" disabled></td>
+            </tr>
+            </c:forEach>
+            <tr>
+            	<td><input type="checkbox" disabled></td>
+            	<td><input type="text" disabled></td>
+            	<td><input type="text" disabled></td>
+            	<td><input type="text" disabled></td>
+            	<td><input type="text" disabled></td>
             </tr>
         </table>
     </div>
-    <div class="section">
+    <form class="section" action="${contextPath }/system/insertCustomer.do" method="post">
+    <input type="submit" value="등록">
         <h4>기본등록사항</h4><br>
         <p>거래처코드 <input type="text" name="customerCode"></p><br>
         <p>거래처명 <input type="text" name="customerName"></p><br>
         <p>사업자등록번호 <input type="text" name="BRNum"></p><br>
         <p>주민등록번호 <select id="forign" name="forign">
-            <option value="내국인">내국인</option>
-            <option value="외국인">외국인</option>
-           </select> 
+            			<option value="내국인">내국인</option>
+            			<option value="외국인">외국인</option>
+           			</select> 
            <input type="text" name="residentNum"></p><br>
         <p>대표자성명 <input type="text" name="CEOName"></p><br>
         <p>업태 <input type="text" name="businessCondition"></p><br>
@@ -88,11 +102,11 @@
         <p>fax <input type="text" name="faxNumber"></p><br>
         <p>메일주소 <input type="text" name="email"></p><br>
         <p>거래시작일 <input type="date" name="startDate"></p><br>
-        <p>거래종료일 <input type="date" name="endDate"></p><br>
+        <p>거래종료일 <input type="date" name=""></p><br>
         <p>사용여부 <select id="useCheck" name="useCheck">
         			<option value="사용">사용</option>
                     <option value="미사용">미사용</option>
                  </select></p>
-    </div>
+    </form>
 </body>
 </html>

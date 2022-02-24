@@ -28,4 +28,13 @@
 			select * from customer
 		]]>
 	</select>
+	
+	<insert id="insertCustomer" parameterType="customerVO">
+		<![CDATA[
+			insert into customer(customerCode, customerName, BRNum, forign, residentNum, CEOName, businessCondition, businessType, zipCode, address,
+									addressDetails, comNumber, faxNumber, email, startDate, endDate, useCheck)
+						values(#{customerCode}, #{customerName}, #{BRNum}, #{forign}, #{residentNum}, #{CEOName}, #{businessCondition}, #{businessType}, 
+								#{zipCode}, #{address}, #{addressDetails}, #{comNumber}, #{faxNumber}, #{email}, #{startDate}, #{endDate}, #{useCheck})
+		]]>
+	</insert>
 </mapper>

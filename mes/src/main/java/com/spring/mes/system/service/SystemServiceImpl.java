@@ -21,17 +21,20 @@ public class SystemServiceImpl implements SystemService {
 	@Autowired
 	private SystemDAO systemDAO;
 	
+	//회사정보
 	@Override
 	public CompanyVO companyInfo(CompanyVO companyVO) throws DataAccessException {
 		companyVO = systemDAO.companyInfo(companyVO);
 		return companyVO;
 	}
 
+	//회사등록
 	@Override
 	public int insertCompany(CompanyVO companyVO) throws DataAccessException {
 		return systemDAO.insertCompany(companyVO);
 	}
 
+	//부서정보
 	@Override
 	public List departmentInfo() throws DataAccessException {
 		List deptList = null;
@@ -39,6 +42,7 @@ public class SystemServiceImpl implements SystemService {
 		return deptList;
 	}
 
+	//사원정보
 	@Override
 	public List employeeInfo() throws DataAccessException {
 		List empList = null;
@@ -46,6 +50,7 @@ public class SystemServiceImpl implements SystemService {
 		return empList;
 	}
 
+	//거래처정보
 	@Override
 	public List customerInfo() throws DataAccessException {
 		List customerList = null;
@@ -53,13 +58,23 @@ public class SystemServiceImpl implements SystemService {
 		return customerList;
 	}
 
+	//품목정보
 	@Override
 	public List itemInfo() throws DataAccessException {
 		List itemList = null;
 		itemList = systemDAO.itemInfo();
 		return itemList;
 	}
-
+	
+	//창고정보
+	@Override
+	public List storageInfo() throws DataAccessException {
+		List storageList = null;
+		storageList = systemDAO.storageInfo();
+		return storageList;
+	}
+	
+	//공정정보
 	@Override
 	public List processInfo() throws DataAccessException {
 		List processList = null;
@@ -67,13 +82,7 @@ public class SystemServiceImpl implements SystemService {
 		return processList;
 	}
 
-	@Override
-	public List storageInfo() throws DataAccessException {
-		List storageList = null;
-		storageList = systemDAO.storageInfo();
-		return storageList;
-	}
-
+	//검사유형정보
 	@Override
 	public List qualityTestInfo() throws DataAccessException {
 		List qualityTestList = null;
@@ -81,13 +90,21 @@ public class SystemServiceImpl implements SystemService {
 		return qualityTestList;
 	}
 
+	//부서등록
 	@Override
 	public int insertDept(DeptVO deptVO) throws DataAccessException {
 		return systemDAO.insertDept(deptVO);
 	}
 
+	//품목등록
 	@Override
 	public int insertItem(ItemVO itemVO) throws DataAccessException {
 		return systemDAO.insertItem(itemVO);
+	}
+
+	//거래처등록
+	@Override
+	public int insertCustomer(CustomerVO customerVO) throws DataAccessException {
+		return systemDAO.insertCustomer(customerVO);
 	}
 }

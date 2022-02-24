@@ -22,17 +22,20 @@ public class SystemDAOImpl implements SystemDAO {
 	@Autowired
 	private SqlSession sqlSession;
 	
+	//회사정보
 	@Override
 	public CompanyVO companyInfo(CompanyVO companyVO) throws DataAccessException {
 		return sqlSession.selectOne("mapper.company.selectCompany");
 	}
 
+	//회사등록
 	@Override
 	public int insertCompany(CompanyVO companyVO) throws DataAccessException {
 		int result = sqlSession.insert("mapper.company.insertCompany", companyVO);
 		return result;
 	}
 
+	//부서정보
 	@Override
 	public List departmentInfo() throws DataAccessException {
 		List<DeptVO> deptList = null;
@@ -40,13 +43,15 @@ public class SystemDAOImpl implements SystemDAO {
 		return deptList;
 	}
 
+	//사원정보
 	@Override
 	public List employeeInfo() throws DataAccessException {
 		List<EmpVO> empList = null;
 		empList = sqlSession.selectList("mapper.emp.selectAllEmployee");
 		return empList;
 	}
-
+	
+	//거래처정보
 	@Override
 	public List customerInfo() throws DataAccessException {
 		List<CustomerVO> customerList = null;
@@ -54,6 +59,7 @@ public class SystemDAOImpl implements SystemDAO {
 		return customerList;
 	}
 
+	//품목정보
 	@Override
 	public List itemInfo() throws DataAccessException {
 		List<ItemVO> itemList = null;
@@ -61,6 +67,15 @@ public class SystemDAOImpl implements SystemDAO {
 		return itemList;
 	}
 
+	//창고정보
+	@Override
+	public List storageInfo() throws DataAccessException {
+		List<StorageVO> storageList = null;
+		storageList = sqlSession.selectList("mapper.storage.selectAllStorage");
+		return storageList;
+	}
+	
+	//공정정보
 	@Override
 	public List processInfo() throws DataAccessException {
 		List<ProcessVO> processList = null;
@@ -68,13 +83,7 @@ public class SystemDAOImpl implements SystemDAO {
 		return processList;
 	}
 
-	@Override
-	public List storageInfo() throws DataAccessException {
-		List<StorageVO> storageList = null;
-		storageList = sqlSession.selectList("mapper.storage.selectAllStorage");
-		return storageList;
-	}
-
+	//검사유형정보
 	@Override
 	public List qualityTestInfo() throws DataAccessException {
 		List<QualityTestVO> qualityTestList = null;
@@ -82,15 +91,24 @@ public class SystemDAOImpl implements SystemDAO {
 		return qualityTestList;
 	}
 
+	//부서등록
 	@Override
 	public int insertDept(DeptVO deptVO) throws DataAccessException {
 		int result = sqlSession.insert("mapper.dept.insertDepartment", deptVO);
 		return result;
 	}
 
+	//품목등록
 	@Override
 	public int insertItem(ItemVO itemVO) throws DataAccessException {
 		int result = sqlSession.insert("mapper.item.insertItem", itemVO);
+		return result;
+	}
+
+	//거래처등록
+	@Override
+	public int insertCustomer(CustomerVO customerVO) throws DataAccessException {
+		int result = sqlSession.insert("mapper.customer.insertCustomer");
 		return result;
 	}
 }

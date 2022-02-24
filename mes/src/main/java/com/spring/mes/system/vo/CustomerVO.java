@@ -20,9 +20,9 @@ public class CustomerVO {
 	private String	comNumber;
 	private String	faxNumber;
 	private String	email;
-	private Date	startDate;
-	private Date	endDate;
-	private String	useCheck;
+	private Date startDate;
+	private Date endDate;
+	private String useCheck;
 	
 	public CustomerVO() {
 		

@@ -43,7 +43,7 @@
                 <h4>주민등록번호 <select name="forign">
                                    <option value="내국인">내국인</option>
                                    <option value="외국인">외국인</option>
-                               </select> <input type="text" name="residentNum"></h4><br>
+                             </select> <input type="text" name="residentNum"></h4><br>
                 <h4>우편번호 <input type="text" name="zipCode"></h4><br>
                 <h4>주소 <input type="text" name="address"></h4><br>
                 <h4>상세주소 <input type="text" name="addressDetails"></h4><br>
