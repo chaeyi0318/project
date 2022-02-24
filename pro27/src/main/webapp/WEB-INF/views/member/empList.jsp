@@ -65,13 +65,13 @@
                 <td><input type="text" name="eName"></td>
                 <td><input type="text" name="deptNo"></td>
                 <td><select name="dName">
-            			<option value="management">관리부</option>
-            			<option value="onSite">현장직</option>
-            			<option value="accounting">회계부</option>
-            			<option value="sales">영업부</option>
+                		<option value="ONSITE">ONSITE</option>
+                		<option value="ACCOUNTING">ACCOUNTING</option>
+                		<option value="SALES">SALES</option>
+            			<option value="MANAGEMENT">MANAGEMENT</option>
         			</select></td>
                 <td><input type="date" name="joinDate"></td>
-                <td><input type="date" name="outDate"></td>
+                <td><input type="date" name=""></td>
             </tr>
         </table>
     </form>

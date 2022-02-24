@@ -10,16 +10,14 @@ public class DeptVO {
 	private Integer	dCode;
 	private String dName;
 	private String comName;
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private String useDate;
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private String endDate;
+	private Date useDate;
+	private Date endDate;
 
 	public DeptVO() {
 		
 	}
 	
-	public DeptVO(Integer dCode, String dName, String comName, String useDate, String endDate) {
+	public DeptVO(Integer dCode, String dName, String comName, Date useDate, Date endDate) {
 		this.dCode = dCode;
 		this.dName = dName;
 		this.comName = comName;
@@ -51,20 +49,19 @@ public class DeptVO {
 		this.comName = comName;
 	}
 	
-	public String getUseDate() {
-		System.out.println(useDate);
+	public Date getUseDate() {
 		return useDate;
 	}
 	
-	public void setUseDate(String useDate) {
+	public void setUseDate(Date useDate) {
 		this.useDate = useDate;
 	}
 	
-	public String getEndDate() {
+	public Date getEndDate() {
 		return endDate;
 	}
 	
-	public void setEndDate(String endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
 }

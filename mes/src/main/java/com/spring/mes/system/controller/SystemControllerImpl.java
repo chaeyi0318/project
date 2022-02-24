@@ -49,7 +49,7 @@ public class SystemControllerImpl implements SystemController {
 	}
 
 	@Override
-	@RequestMapping(value="/system/insertCompany.do", method = RequestMethod.POST)
+	@RequestMapping(value="/system/insertCompany.do", method = RequestMethod.GET)
 	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO company,
 //						@RequestParam(value="closeDate", required=false) Date closeDate,
 						HttpServletRequest request, HttpServletResponse response) throws Exception {

@@ -24,8 +24,7 @@
         margin: 7px;
     }
     .search {
-    	margin-left: 15px;
-    	margin-left: 50px;
+		margin-left: 90px;
 		float: left;
     }
 </style>
@@ -35,10 +34,10 @@
         <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp;
     </form><br>
     <h3>사원등록</h3>
-    <form class="search" action="">사원명 <input type="search"> <input type="button" value="검색"></form><br>
+    <form class="search" action="">사원명 <input type="search" name="search"> <input type="submit" value="검색"></form><br>
     <br>
     <form method="post" action="${contextPath }/system/employeeInfo.do">
-    <table width="700px" align="center">
+    <table width="800px" align="center">
         <tr align="center">
 			<td><input type="checkbox"></td>
 			<td>사원코드</td>
@@ -47,20 +46,27 @@
 		  	<td>부서명</td>
 		  	<td>입사일</td>
 		  	<td>퇴사일</td>
-		  	<td>비밀번호</td>
 		</tr>
 		<c:forEach var="emp" items="${empList }">
 		<tr align="center">
 	   		<td><input type="checkbox"></td>
-	    	<td><input type="text" name="ECode" value="${emp.ECode }"></td>
-	    	<td><input type="text" name="EName" value="${emp.EName }"></td>
-	    	<td><input type="text" name="DCode" value="${emp.DCode }"></td>
-	    	<td><input type="text" name="DName" value="${emp.DName }"></td>
-	    	<td><input type="date" name="joinDate" value="${emp.joinDate }"></td>
-	    	<td><input type="date" name="quitDate" value="${emp.quitDate }"></td>
-	    	<td><input type="text" name="pwd" value="${emp.pwd }"></td>
+	    	<td><input type="text" name="ECode" value="${emp.ECode }" disabled></td>
+	    	<td><input type="text" name="EName" value="${emp.EName }" disabled></td>
+	    	<td><input type="text" name="DCode" value="${emp.DCode }" disabled></td>
+	    	<td><input type="text" name="DName" value="${emp.DName }" disabled></td>
+	    	<td><input type="date" name="joinDate" value="${emp.joinDate }" disabled></td>
+	    	<td><input type="date" name="quitDate" value="${emp.quitDate }" disabled></td>
 		</tr>
 		</c:forEach>
+		<tr align="center">
+	   		<td><input type="checkbox"></td>
+	    	<td><input type="text" name="ECode"></td>
+	    	<td><input type="text" name="EName"></td>
+	    	<td><input type="text" name="DCode"></td>
+	    	<td><input type="text" name="DName"></td>
+	    	<td><input type="date" name="joinDate"></td>
+	    	<td><input type="date" name=""></td>
+		</tr>
     </table>
     </form>
 </body>

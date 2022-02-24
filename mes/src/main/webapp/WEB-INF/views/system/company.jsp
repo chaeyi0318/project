@@ -31,12 +31,12 @@
     </form>
     <h3>기본등록사항</h3><br>
     <c:if test="${company == null }">
-    	<form align="center" method="post" action="${contextPath }/system/insertCompany.do">
+    	<form align="center" method="get" action="${contextPath }/system/insertCompany.do">
             <h4>회사명 <input type="text" name="comName">
                  <select name="classification">
                     <option value="법인">법인</option>
                     <option value="개인">개인</option>
-                </select></h4><br>
+                 </select></h4><br>
                 <h4>사업자등록번호 <input type="text" name="BRNum"></h4><br>
                 <h4>법인등록번호 <input type="text" name="CRNum"></h4><br>
                 <h4>대표자성명 <input type="text" name="CEOName"></h4><br>
@@ -51,16 +51,16 @@
                 <h4>fax <input type="text" name="faxNumber"></h4><br>
                 <h4>업태 <input type="text" name="businessCondition"></h4><br>
                 <h4>종목 <input type="text" name="businessType"></h4><br>
-                <%-- <h4>설립연월일 <input type="date" name="foundationDate" value="${company.foundationDate }"></h4><br>
-                <h4>개업연월일 <input type="date" name="openDate" value="${company.openDate }"></h4><br>
-                <h4>폐업연월일 <input type="date" name="closeDate" value="${company.closeDate }"></h4><br> --%>
+                <h4>설립연월일 <input type="date" name="foundationDate"></h4><br>
+                <h4>개업연월일 <input type="date" name="openDate"></h4><br>
+                <h4>폐업연월일 <input type="date" name=""></h4><br>
             <input type="submit" value="등록">
         </form>
     </c:if>
     <c:if test="${company != null }">
         <form align="center" method="post">
             <h4>회사명 <input type="text" name="comName" value="${company.comName }" disabled>
-                <input type="text" name="classification" value="${company.classification }" disabled></h4><br>
+            	<input type="text" name="classification" value="${company.classification}" disabled></h4><br>
                 <h4>사업자등록번호 <input type="text" name="BRNum" value="${company.BRNum }" disabled></h4><br>
                 <h4>법인등록번호 <input type="text" name="CRNum" value="${company.CRNum }" disabled></h4><br>
                 <h4>대표자성명 <input type="text" name="CEOName" value="${company.CEOName }" disabled></h4><br>
@@ -72,9 +72,9 @@
                 <h4>fax <input type="text" name="faxNumber" value="${company.faxNumber }" disabled></h4><br>
                 <h4>업태 <input type="text" name="businessCondition" value="${company.businessCondition }" disabled></h4><br>
                 <h4>종목 <input type="text" name="businessType" value="${company.businessType }" disabled></h4><br>
-                <%-- <h4>설립연월일 <input type="date" name="foundationDate" value="${company.foundationDate }"></h4><br>
-                <h4>개업연월일 <input type="date" name="openDate" value="${company.openDate }"></h4><br>
-                <h4>폐업연월일 <input type="date" name="closeDate" value="${company.closeDate }"></h4><br> --%>
+                <h4>설립연월일 <input type="date" name="foundationDate" value="${company.foundationDate }" disabled></h4><br>
+                <h4>개업연월일 <input type="date" name="openDate" value="${company.openDate }" disabled></h4><br>
+                <h4>폐업연월일 <input type="date" name="closeDate" value="${company.closeDate }" disabled></h4><br>
         </form>
     </c:if>
 </body>

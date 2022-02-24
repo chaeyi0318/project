@@ -45,11 +45,11 @@
 		<c:forEach var="dept" items="${deptList }">
 			<tr align="center">
 		   		<td><input type="checkbox"></td>
-		    	<td><input type="text" name="dCode" value="${dept.DCode }" disabled></td>
-		    	<td><input type="text" name="dName" value="${dept.DName }" disabled></td>
-		    	<td><input type="text" name="comName" value="${dept.comName }" disabled></td>
- 		    	<td><input type="date" name="useDate" value="${dept.useDate }" disabled></td>
-		    	<td><input type="date" name="endDate" value="${dept.endDate }" disabled></td>
+		    	<td><input type="text" value="${dept.DCode }" disabled></td>
+		    	<td><input type="text" value="${dept.DName }" disabled></td>
+		    	<td><input type="text" value="${dept.comName }" disabled></td>
+ 		    	<td><input type="date" value="${dept.useDate }" disabled></td>
+		    	<td><input type="date" value="${dept.endDate }" disabled></td>
 			</tr>
 		</c:forEach>
 		<tr align="center">
@@ -58,7 +58,7 @@
 		   <td><input type="text" name="DName"></td>
 		   <td><input type="text" name="comName"></td>
  		   <td><input type="date" name="useDate"></td>
-		   <td><input type="date" name="endDate"></td>
+		   <td><input type="date" name=""></td>
 		</tr>
 	</table>
 	</form>
