@@ -36,7 +36,7 @@
     <h3>사원등록</h3>
     <form class="search" action="">사원명 <input type="search" name="search"> <input type="submit" value="검색"></form><br>
     <br>
-    <form method="post" action="${contextPath }/system/employeeInfo.do">
+    <form method="post" action="${contextPath }/system/insertEmployee.do">
     <table width="800px" align="center">
         <tr align="center">
 			<td><input type="checkbox"></td>

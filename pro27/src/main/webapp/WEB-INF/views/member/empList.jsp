@@ -40,7 +40,7 @@
     	<input type="submit" value="등록">
         <table align="center"  width="800px" border="1px solid">
             <tr bgcolor="lightblue" width="800px" align="center">
-                <td></td>
+                <td align="center"><input type="checkbox">
                 <td>사원코드</td>
                 <td>사원명</td>
                 <td>부서코드</td>
@@ -68,7 +68,7 @@
                 		<option value="ONSITE">ONSITE</option>
                 		<option value="ACCOUNTING">ACCOUNTING</option>
                 		<option value="SALES">SALES</option>
-            			<option value="MANAGEMENT">MANAGEMENT</option>
+            			<option value="RESEARCH">RESEARCH</option>
         			</select></td>
                 <td><input type="date" name="joinDate"></td>
                 <td><input type="date" name=""></td>

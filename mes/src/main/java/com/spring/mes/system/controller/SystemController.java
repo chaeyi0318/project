@@ -16,18 +16,29 @@ import com.spring.mes.system.vo.DeptVO;
 import com.spring.mes.system.vo.ItemVO;
 
 public interface SystemController {
+	//회사정보
 	public ModelAndView companyInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
-	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO companyVO,
-//									@RequestParam(value="closeDate", required=false) Date closeDate,
+	//회사등록
+	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO companyVO, 
 									HttpServletRequest request, HttpServletResponse response) throws Exception;
+	//부서정보
 	public ModelAndView departmentInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
-	public ModelAndView employeeInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
-	public ModelAndView customerInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
-	public ModelAndView itemInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
-	public ModelAndView storageInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
-	public ModelAndView processInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
-	public ModelAndView qualityTestInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	//부서등록
 	public ModelAndView insertDept(@ModelAttribute("dept") DeptVO deptVO,
 									HttpServletRequest request, HttpServletResponse response) throws Exception;
-	public ModelAndView insertItem(@ModelAttribute("item") ItemVO itemVO, HttpServletRequest request, HttpServletResponse response) throws Exception;
+	//사원정보
+	public ModelAndView employeeInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	//거래처정보
+	public ModelAndView customerInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	//품목정보
+	public ModelAndView itemInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	
+	public ModelAndView insertItem(@ModelAttribute("item") ItemVO itemVO,
+			 						HttpServletRequest request, HttpServletResponse response) throws Exception;
+	
+	public ModelAndView storageInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	
+	public ModelAndView processInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	
+	public ModelAndView qualityTestInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
 }
