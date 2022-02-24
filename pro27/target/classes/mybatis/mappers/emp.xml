@@ -26,4 +26,12 @@
 			select * from emp order by deptNo
 		]]>
 	</select>
+	
+	<insert id="insertEmp" parameterType="empVO">
+		<![CDATA[
+			insert into emp (deptNo, dName, empNo, eName, empId, empPw, residentNum, joinDate, outDate, zipCode, address, addressDetails, phoneNum, fax, email)
+			values(#{deptNo}, #{dName}, #{empNo}, #{eName}, #{empId}, #{empPw}, #{residentNum}, #{joinDate}, #{outDate},
+					#{zipCode}, #{address}, #{addressDetails}, #{phoneNum}, #{fax}, #{email})
+		]]>
+	</insert>
 </mapper>

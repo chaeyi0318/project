@@ -20,6 +20,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.myspring.pro27.member.service.MemberService;
 import com.myspring.pro27.member.vo.CompanyVO;
+import com.myspring.pro27.member.vo.DeptVO;
+import com.myspring.pro27.member.vo.EmpVO;
 import com.myspring.pro27.member.vo.ItemVO;
 import com.myspring.pro27.member.vo.MemberVO;
 
@@ -247,5 +249,29 @@ public class MemberControllerImpl   implements MemberController {
 			viewName = viewName.substring(viewName.lastIndexOf("/", 1), viewName.length());
 		}
 		return viewName;
+	}
+
+	@Override
+	@RequestMapping(value="/member/insertDept.do", method = RequestMethod.GET)
+	public ModelAndView insertDept(@ModelAttribute("dept") DeptVO deptVO, HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html;charset=utf-8");
+		int result = 0;
+		result = memberService.insertDept(deptVO);
+		ModelAndView mav = new ModelAndView("redirect:/member/deptList.do");
+		return mav;
+	}
+
+	@Override
+	@RequestMapping(value="/member/insertEmp.do", method=RequestMethod.GET)
+	public ModelAndView insertEmp(EmpVO empVO, HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("html/text;charset=utf-8");
+		int result = 0;
+		result = memberService.insertEmp(empVO);
+		ModelAndView mav = new ModelAndView("redirect:/member/empList.do");
+		return mav;
 	}
 }

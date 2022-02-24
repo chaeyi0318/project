@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.myspring.pro27.member.dao.MemberDAO;
 import com.myspring.pro27.member.vo.CompanyVO;
+import com.myspring.pro27.member.vo.DeptVO;
+import com.myspring.pro27.member.vo.EmpVO;
 import com.myspring.pro27.member.vo.ItemVO;
 import com.myspring.pro27.member.vo.MemberVO;
 
@@ -81,7 +83,13 @@ public class MemberServiceImpl implements MemberService {
 		return memberDAO.loginById(memberVO);
 	}
 
-	
+	@Override
+	public int insertDept(DeptVO deptVO) throws DataAccessException {
+		return memberDAO.insertDept(deptVO);
+	}
 
-	
+	@Override
+	public int insertEmp(EmpVO empVO) throws DataAccessException {
+		return memberDAO.insertEmp(empVO);
+	}
 }

@@ -3,6 +3,9 @@
 	"http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+	<settings>
+        <setting name="jdbcTypeForNull" value="NULL"/>
+    </settings>
 	<typeAliases>
 		<typeAlias type="com.myspring.pro27.member.vo.MemberVO"  alias="memberVO" />
 		<typeAlias type="com.myspring.pro27.member.vo.CompanyVO" alias="companyVO" />

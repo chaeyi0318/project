@@ -13,4 +13,11 @@
 			select * from dept order by deptNo
 		]]>
 	</select>
+	
+	<insert id="insertDept" parameterType="deptVO">
+		<![CDATA[
+			insert into dept(deptNo, dName)
+			values(#{deptNo}, #{dName})
+		]]>
+	</insert>
 </mapper>

@@ -13,20 +13,26 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="button" value="부서추가">
     <div id="form">
-        <table text-align="center" border="1px">
-            <tr bgcolor="lightblue">
+    <form method="get" action="${contextPath }/member/insertDept.do">
+    	<input type="submit" value="등록">
+        <table align="center">
+            <tr bgcolor="lightblue" align="center">
                 <td>부서코드</td>
                 <td>부서명</td>
             </tr>
             <c:forEach var="dept" items="${deptList }">
-            	<tr>
+            	<tr align="center">
             		<td>${dept.deptNo }</td>
             		<td>${dept.DName }</td>
             	</tr>
             </c:forEach>
+            <tr align="center">
+            	<td><input type="text" name="deptNo"></td>
+            	<td><input type="text" name="dName"></td>
+            </tr>
         </table>
+    </form>
     </div>  
 </body>
 </html>

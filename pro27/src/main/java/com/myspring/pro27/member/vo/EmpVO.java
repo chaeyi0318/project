@@ -2,6 +2,9 @@ package com.myspring.pro27.member.vo;
 
 import java.sql.Date;
 
+import org.springframework.stereotype.Component;
+
+@Component("empVO")
 public class EmpVO {
 	private int deptNo;
 	private String dName;
@@ -42,143 +45,94 @@ public class EmpVO {
 		this.phoneNum = phoneNum;
 	}
 	
-	public int getDeptNo()
-	{
+	public int getDeptNo() {
 		return deptNo;
 	}
-	
-	public void setDeptNo(int deptNo)
-	{
+	public void setDeptNo(int deptNo) {
 		this.deptNo = deptNo;
 	}
-	
-	public String getDName()
-	{
+	public String getdName() {
 		return dName;
 	}
-	
-	public void setDName(String dName)
-	{
+	public void setdName(String dName) {
 		this.dName = dName;
 	}
-	
-	public int getEmpNo()
-	{
+	public int getEmpNo() {
 		return empNo;
 	}
-	
-	public void setEmpNo(int empNo)
-	{
+	public void setEmpNo(int empNo) {
 		this.empNo = empNo;
 	}
-	
-	public String getEName()
-	{
+	public String geteName() {
 		return eName;
 	}
-	
-	public void setEName(String eName)
-	{
+	public void seteName(String eName) {
 		this.eName = eName;
 	}
-	
-	public String getEmpId()
-	{
+	public String getEmpId() {
 		return empId;
 	}
-	
-	public void setEmpId(String empId)
-	{
+	public void setEmpId(String empId) {
 		this.empId = empId;
 	}
-	
-	public String getEmpPw()
-	{
+	public String getEmpPw() {
 		return empPw;
 	}
-	
-	public void setEmpPw(String empPw)
-	{
+	public void setEmpPw(String empPw) {
 		this.empPw = empPw;
 	}
-	
-	public String getResidentNum()
-	{
+	public String getResidentNum() {
 		return residentNum;
 	}
-	
-	public void setResidentNum(String residentNum)
-	{
+	public void setResidentNum(String residentNum) {
 		this.residentNum = residentNum;
 	}
-	
-	public Date getJoinDate()
-	{
+	public Date getJoinDate() {
 		return joinDate;
 	}
-	
-	public void setJoinDate(Date joinDate)
-	{
+	public void setJoinDate(Date joinDate) {
 		this.joinDate = joinDate;
 	}
-	
-	public Date getOutDate()
-	{
+	public Date getOutDate() {
 		return outDate;
 	}
-	
-	public int getZipCode()
-	{
+	public void setOutDate(Date outDate) {
+		this.outDate = outDate;
+	}
+	public int getZipCode() {
 		return zipCode;
 	}
-	
-	public void setZipCode(int zipCode)
-	{
+	public void setZipCode(int zipCode) {
 		this.zipCode = zipCode;
 	}
-	
-	public String getAddress()
-	{
+	public String getAddress() {
 		return address;
 	}
-	
-	public void setAddress(String address)
-	{
+	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	public String getAddressDetails()
-	{
+	public String getAddressDetails() {
 		return addressDetails;
 	}
-	
-	public String getPhoneNum()
-	{
+	public void setAddressDetails(String addressDetails) {
+		this.addressDetails = addressDetails;
+	}
+	public String getPhoneNum() {
 		return phoneNum;
 	}
-	
-	public void setPhoneNum(String phoneNum)
-	{
+	public void setPhoneNum(String phoneNum) {
 		this.phoneNum = phoneNum;
 	}
-	
-	public String getFax()
-	{
+	public String getFax() {
 		return fax;
 	}
-	
-	public void setFax(String fax)
-	{
+	public void setFax(String fax) {
 		this.fax = fax;
 	}
-	
-	public String getEmail()
-	{
+	public String getEmail() {
 		return email;
 	}
-	
-	public void setEmail(String email)
-	{
+	public void setEmail(String email) {
 		this.email = email;
 	}
 }

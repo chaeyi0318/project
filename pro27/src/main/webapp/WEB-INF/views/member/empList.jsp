@@ -18,8 +18,8 @@
     </style>
 </head>
 <body>
-    <div id="top">
-        부서 <select id="kind" name="dept" class="sel" aria-label="구분">
+    <form id="top" method="get" action="${contextPath }/member/searchEmp.do">
+        부서 <select name="dept" class="sel" aria-label="구분">
             <option value="">구분</option>
             <option value="management">
                 관리부
@@ -33,10 +33,11 @@
             <option value="sales">
                 영업부
             </option>
-        </select>
-        사원명 <input type="text" name="search">
-    </div>
-    <div id="bottom">
+        	</select>
+        사원명 <input type="text" name="search"> <input type="submit" value="검색">
+    </form>
+    <form id="bottom" method="get" action="${contextPath }/member/insertEmp.do">
+    	<input type="submit" value="등록">
         <table align="center"  width="800px" border="1px solid">
             <tr bgcolor="lightblue" width="800px" align="center">
                 <td></td>
@@ -50,16 +51,29 @@
             <c:forEach var="emp" items="${empList }">
             	<tr>
                 <td align="center"><input type="checkbox"></td>
-                <td>${emp.EName }</td>
+                <td>${emp.empNo }</td>
+                <td>${emp.eName}</td>
                 <td>${emp.deptNo}</td>
-                <td>${emp.deptNo}</td>
-                <td>${emp.DName}</td>
+                <td>${emp.dName}</td>
                 <td>${emp.joinDate }</td>
                 <td>${emp.outDate }</td>
             </tr>
             </c:forEach>
-                
+            <tr>
+            	<td align="center"><input type="checkbox"></td>
+                <td><input type="text" name="empNo"></td>
+                <td><input type="text" name="eName"></td>
+                <td><input type="text" name="deptNo"></td>
+                <td><select name="dName">
+            			<option value="management">관리부</option>
+            			<option value="onSite">현장직</option>
+            			<option value="accounting">회계부</option>
+            			<option value="sales">영업부</option>
+        			</select></td>
+                <td><input type="date" name="joinDate"></td>
+                <td><input type="date" name="outDate"></td>
+            </tr>
         </table>
-    </div>
+    </form>
 </body>
 </html>

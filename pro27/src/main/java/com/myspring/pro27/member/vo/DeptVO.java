@@ -1,5 +1,8 @@
 package com.myspring.pro27.member.vo;
 
+import org.springframework.stereotype.Component;
+
+@Component("deptVO")
 public class DeptVO {
 	private int deptNo;
 	private String dName;

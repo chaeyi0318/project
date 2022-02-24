@@ -9,6 +9,8 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.myspring.pro27.member.vo.CompanyVO;
+import com.myspring.pro27.member.vo.DeptVO;
+import com.myspring.pro27.member.vo.EmpVO;
 import com.myspring.pro27.member.vo.MemberVO;
 
 public interface MemberController {
@@ -28,4 +30,6 @@ public interface MemberController {
 	public ModelAndView company(@ModelAttribute("company") CompanyVO company,
             RedirectAttributes rAttr,
             HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView insertDept(@ModelAttribute("dept") DeptVO deptVO, HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView insertEmp(@ModelAttribute("emp") EmpVO empVO, HttpServletRequest request, HttpServletResponse response) throws Exception;
 }

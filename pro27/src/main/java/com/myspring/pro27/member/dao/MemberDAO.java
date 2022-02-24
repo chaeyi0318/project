@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.dao.DataAccessException;
 
 import com.myspring.pro27.member.vo.CompanyVO;
+import com.myspring.pro27.member.vo.DeptVO;
+import com.myspring.pro27.member.vo.EmpVO;
 import com.myspring.pro27.member.vo.ItemVO;
 import com.myspring.pro27.member.vo.MemberVO;
 
@@ -20,4 +22,6 @@ public interface MemberDAO {
 	 public List selectAllDeptList() throws DataAccessException;
 	 public ItemVO itemInfo(ItemVO itemVO) throws DataAccessException;
 	 public List selectAllqualityTest() throws DataAccessException;
+	 public int insertDept(DeptVO deptVO) throws DataAccessException;
+	 public int insertEmp(EmpVO empVO) throws DataAccessException;
 }

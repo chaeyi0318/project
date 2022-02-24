@@ -15,12 +15,6 @@
       <put-attribute name="title" value="메인페이지" />
       <put-attribute name="body" value="/WEB-INF/views/main.jsp" />
    </definition>
-   
-   <definition name="main" extends="baseLayout">
-      <put-attribute name="title" value="홈페이지" />
-      <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
-   </definition>
-
 
    <definition name="/member/listMembers" extends="baseLayout">
       <put-attribute name="title" value="회원목록창" />
