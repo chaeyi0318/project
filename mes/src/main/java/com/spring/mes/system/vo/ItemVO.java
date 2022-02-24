@@ -38,87 +38,66 @@ public class ItemVO {
 	public String getItemCode() {
 		return itemCode;
 	}
-	
 	public void setItemCode(String itemCode) {
 		this.itemCode = itemCode;
 	}
-	
 	public String getItemName() {
 		return itemName;
 	}
-	
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
 	}
-	
 	public String getStandard() {
 		return standard;
 	}
-	
 	public void setStandard(String standard) {
 		this.standard = standard;
 	}
-	
 	public String getType() {
 		return type;
 	}
-	
 	public void setType(String type) {
 		this.type = type;
 	}
-	
 	public String getObtain() {
 		return obtain;
 	}
-	
 	public void setObtain(String obtain) {
 		this.obtain = obtain;
 	}
-	
 	public String getInventoryUnit() {
 		return inventoryUnit;
 	}
-	
 	public void setInventoryUnit(String inventoryUnit) {
 		this.inventoryUnit = inventoryUnit;
 	}
-	
 	public String getTestCheck() {
 		return testCheck;
 	}
-	
 	public void setTestCheck(String testCheck) {
 		this.testCheck = testCheck;
 	}
-	
 	public String getUseCheck() {
 		return useCheck;
 	}
-	
 	public void setUseCheck(String useCheck) {
 		this.useCheck = useCheck;
 	}
-	
 	public int getLeadTime() {
 		return leadTime;
 	}
-	
 	public void setLeadTime(int leadTime) {
 		this.leadTime = leadTime;
 	}
-	
 	public int getStock() {
 		return stock;
 	}
-	
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
-	
 	public int getProduction() {
 		return production;
 	}
-	
 	public void setProduction(int production) {
 		this.production = production;
 	}

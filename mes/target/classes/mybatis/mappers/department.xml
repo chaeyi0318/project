@@ -9,6 +9,7 @@
 		<result property="comName" column="comName"/>
 		<result property="useDate" column="useDate"/>
 		<result property="endDate" column="endDate"/>
+		<result property="useCheck" column="useCheck"/>
 	</resultMap>
 	
 	<select id="selectAllDepartment" resultMap="deptResult">
@@ -19,8 +20,8 @@
 	
 	<insert id="insertDepartment" parameterType="deptVO">
 		<![CDATA[
-			insert into department(dCode, dName, comName, useDate, endDate)
-			values(#{dCode}, #{dName}, #{comName}, #{useDate}, #{endDate,jdbcType=DATE})
+			insert into department(dCode, dName, comName, useDate, endDate, useCheck)
+						values(#{dCode}, #{dName}, #{comName}, #{useDate}, #{endDate}, #{useCheck})
 		]]>
 	</insert>
 </mapper>

@@ -70,7 +70,7 @@
     <div class="section">
         <h3>품목등록</h3>
         <br>
-        <h4>품번 <input type="text" name="itemCode"></h4><br>
+        <h4>품번<input type="text" name="itemCode"></h4><br>
         <h4>품명 <input type="text" name="itemName"></h4><br>
         <h4>규격 <input type="text" name="standard"></h4><br>
         <h4>일별생산량 <input type="text" name="production"></h4><br>

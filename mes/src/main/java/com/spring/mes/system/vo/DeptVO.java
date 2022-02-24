@@ -12,17 +12,19 @@ public class DeptVO {
 	private String comName;
 	private Date useDate;
 	private Date endDate;
+	private String useCheck;
 
 	public DeptVO() {
 		
 	}
 	
-	public DeptVO(Integer dCode, String dName, String comName, Date useDate, Date endDate) {
+	public DeptVO(Integer dCode, String dName, String comName, Date useDate, Date endDate, String useCheck) {
 		this.dCode = dCode;
 		this.dName = dName;
 		this.comName = comName;
 		this.useDate = useDate;
 		this.endDate = endDate;
+		this.useCheck = useCheck;
 	}
 	
 	public Integer getDCode() {
@@ -63,5 +65,13 @@ public class DeptVO {
 	
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
+	}
+	
+	public String getUseCheck() {
+		return useCheck;
+	}
+	
+	public void setUseCheck(String useCheck) {
+		this.useCheck = useCheck;
 	}
 }

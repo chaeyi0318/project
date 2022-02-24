@@ -26,8 +26,8 @@
 	<insert id="insertItem" parameterType="itemVO">
 		<![CDATA[
 			insert into item(itemCode, itemName, standard, type, obtain, inventoryUnit, testCheck, useCheck, leadTime, stock, production)
-						values(#{itemCode}, #{itemName}, #{standard}, #{type}, #{obtain}, #{inventoryUnit},
-								#{testCheck}, #{useCheck}, #{leadTime}, #{stock}, #{production})
+							values(#{itemCode}, #{itemName}, #{standard}, #{type}, #{obtain}, 
+									#{inventoryUnit}, #{testCheck}, #{useCheck}, #{leadTime}, #{stock}, #{production})
 		]]>
 	</insert>
 </mapper>

@@ -41,6 +41,7 @@
 		  	<td>회사명</td>
 		  	<td>사용기간</td>
 		  	<td>사용기간</td>
+		  	<td>사용여부</td>
 		</tr>
 		<c:forEach var="dept" items="${deptList }">
 			<tr align="center">
@@ -50,6 +51,7 @@
 		    	<td><input type="text" value="${dept.comName }" disabled></td>
  		    	<td><input type="date" value="${dept.useDate }" disabled></td>
 		    	<td><input type="date" value="${dept.endDate }" disabled></td>
+		    	<td><input type="text" value="${dept.useCheck }" disabled></td>
 			</tr>
 		</c:forEach>
 		<tr align="center">
@@ -58,7 +60,11 @@
 		   <td><input type="text" name="DName"></td>
 		   <td><input type="text" name="comName"></td>
  		   <td><input type="date" name="useDate"></td>
-		   <td><input type="date" name=""></td>
+ 		   <td><input type="date" name=""></td>
+ 		   <td><select name="useCheck">
+                  <option value="사용">사용</option>
+                  <option value="미사용">미사용</option>
+               </select></td>
 		</tr>
 	</table>
 	</form>
