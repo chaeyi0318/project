@@ -46,16 +46,16 @@
 <body>
 <div class="container">
 	<div class="header">
-       <tiles:insertAttribute name="header"/>
+       <tiles:insertAttribute name="header" ignore="true"/>
     </div>
     <div class="side">
-        <tiles:insertAttribute name="side"/> 
+        <tiles:insertAttribute name="side" ignore="true"/> 
     </div>
     <div class="content">
-        <tiles:insertAttribute name="body"/>
+        <tiles:insertAttribute name="body" ignore="true"/>
     </div>
     <div class="footer">
-        <tiles:insertAttribute name="footer"/>
+        <tiles:insertAttribute name="footer" ignore="true"/>
     </div>
 </div>
 </body>

@@ -1,6 +1,7 @@
 package com.spring.mes.system.controller;
 
 import java.sql.Date;
+
 import java.util.List;
 
 
@@ -167,7 +168,7 @@ public class SystemControllerImpl implements SystemController {
 
 	//거래처등록
 	@Override
-	@RequestMapping(value="/system/insertCustomer.do", method=RequestMethod.POST)
+	@RequestMapping(value="/system/insertCustomer.do", method=RequestMethod.GET)
 	public ModelAndView insertCustomer(@ModelAttribute("customer") CustomerVO customerVO, HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		request.setCharacterEncoding("utf-8");
@@ -191,6 +192,7 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//회사수정
 	@Override
 	@RequestMapping(value="/system/updateCompany.do", method=RequestMethod.GET)
 	public ModelAndView updateCompany(@ModelAttribute("company") CompanyVO companyVO, HttpServletRequest request, HttpServletResponse response)
@@ -203,6 +205,7 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//회사삭제
 	@Override
 	@RequestMapping(value="/system/deleteCompany.do", method=RequestMethod.GET)
 	public ModelAndView deleteCompany(@ModelAttribute("company") CompanyVO companyVO, HttpServletRequest request, HttpServletResponse response)

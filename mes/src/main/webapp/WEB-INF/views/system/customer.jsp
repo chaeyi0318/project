@@ -4,31 +4,14 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="contextPath"  value="${pageContext.request.contextPath}"/>
+<%
+  request.setCharacterEncoding("UTF-8");
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>거래처 등록</title>
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$("#checkAll").click(function(){
-			if ($("#checkAll").prop("checked")){
-				$(".list").prop("checked",true);
-			} else {
-				$(".list").prop("checked",false)
-			}
-		});
-		
-		$(".list").click(function() {
-			if($("input[name='check']:checked").length == 4) {
-				$("checkAll").prop("checked",true);
-			} else {
-				$("checkAll").prop("checked",false);
-			}
-		});
-	});
-</script>
 <style>
 	.button {
         float: right;
@@ -70,14 +53,14 @@
 </style>
 </head>
 <body>
-	<form method="post">
+	<form method="get">
     	<input type="submit" class="button" value="삭제" onclick="javascript: form.action='${contextPath}/system/deleteCustomer.do';"/>
     	<input type="submit" class="button" value="수정" onclick="javascript: form.action='${contextPath}/system/updateCustomer.do';"/>
         <input type="submit" class="button" value="등록" onclick="javascript: form.action='${contextPath}/system/insertCustomer.do';"/>
         <br><br>
         
         <div class="list">
-        	<table>
+        	<table align="center">
         		<tr>
                 	<td><input type="checkbox"></td>
                 	<td>거래처코드</td>
@@ -85,15 +68,17 @@
                 	<td>업태</td>
                 	<td>종목</td>
             	</tr>
-            	<c:forEach var="customer" items="${customerList}">
-            	<tr>
-            		<td><input type="checkbox"></td>
-            		<td><input type="text" value="${customer.customerCode}"></td>
-            		<td><input type="text" value="${customer.customerName}"></td>
-            		<td><input type="text" value="${customer.businessCondition}"></td>
-            		<td><input type="text" value="${customer.businessType}"></td>
-            	</tr>
-            	</c:forEach>
+            	<c:if test="${customerlist !=null }">
+            		<c:forEach var="customer" items="${customerlist}">
+            			<tr>
+            				<td><input type="checkbox"></td>
+            				<td><input type="text" name="customerCode" value="${customer.customerCode }" disabled></td>
+            				<td><input type="text" name="customerName" value="${customer.customerName }" disabled></td>
+            				<td><input type="text" name="businessCondition" value="${customer.businessCondition }" disabled></td>
+            				<td><input type="text" name="businessType" value="${customer.businessType }" disabled></td>
+            			</tr>
+            		</c:forEach>
+            	</c:if>	
             	<tr>
             		<td><input type="checkbox"></td>
             		<td><input type="text"></td>
