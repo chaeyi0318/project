@@ -181,7 +181,7 @@ public class SystemControllerImpl implements SystemController {
 	//품목등록
 	@Override
 	@RequestMapping(value="/system/insertItem.do", method=RequestMethod.GET)
-	public ModelAndView insertItem(@ModelAttribute("itemVO") ItemVO itemVO, HttpServletRequest request, HttpServletResponse response)
+	public ModelAndView insertItem(@ModelAttribute("item") ItemVO itemVO, HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html/text;charset=utf-8");

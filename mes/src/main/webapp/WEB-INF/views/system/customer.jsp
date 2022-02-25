@@ -85,13 +85,13 @@
                 	<td>업태</td>
                 	<td>종목</td>
             	</tr>
-            	<c:forEach var="customer" items="${customerList }">
+            	<c:forEach var="customer" items="${customerList}">
             	<tr>
             		<td><input type="checkbox"></td>
-            		<td><input type="text" value="${customer.customerCode }"></td>
-            		<td><input type="text" value="${customer.customerName }"></td>
-            		<td><input type="text" value="${customer.businessCondition }"></td>
-            		<td><input type="text" value="${customer.businessType }"></td>
+            		<td><input type="text" value="${customer.customerCode}"></td>
+            		<td><input type="text" value="${customer.customerName}"></td>
+            		<td><input type="text" value="${customer.businessCondition}"></td>
+            		<td><input type="text" value="${customer.businessType}"></td>
             	</tr>
             	</c:forEach>
             	<tr>

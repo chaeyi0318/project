@@ -115,6 +115,7 @@ public class SystemServiceImpl implements SystemService {
 		return systemDAO.updateCompany(companyVO);
 	}
 
+	//회사삭제
 	@Override
 	public int deleteCompany(CompanyVO companyVO) throws DataAccessException {
 		return systemDAO.deleteCompany(companyVO);

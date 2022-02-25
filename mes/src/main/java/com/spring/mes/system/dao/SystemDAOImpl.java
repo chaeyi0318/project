@@ -108,7 +108,7 @@ public class SystemDAOImpl implements SystemDAO {
 	//거래처등록
 	@Override
 	public int insertCustomer(CustomerVO customerVO) throws DataAccessException {
-		int result = sqlSession.insert("mapper.customer.insertCustomer");
+		int result = sqlSession.insert("mapper.customer.insertCustomer", customerVO);
 		return result;
 	}
 
