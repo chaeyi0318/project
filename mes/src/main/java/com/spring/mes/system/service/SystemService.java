@@ -15,6 +15,10 @@ public interface SystemService {
 	public CompanyVO companyInfo(CompanyVO companyVO) throws DataAccessException;
 	//회사등록
 	public int insertCompany(CompanyVO companyVO) throws DataAccessException;
+	//회사수정
+	public int updateCompany(CompanyVO companyVO) throws DataAccessException;
+	//회사삭제
+	public int deleteCompany(CompanyVO companyVO) throws DataAccessException;
 	//부서정보
 	public List departmentInfo() throws DataAccessException;
 	//부서등록

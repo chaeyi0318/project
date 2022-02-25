@@ -8,7 +8,6 @@
 		<result property="customerName" column="customerName"/>
 		<result property="BRNum" column="BRNum"/>
 		<result property="forign" column="forign"/>
-		<result property="residentNum" column="residentNum"/>
 		<result property="CEOName" column="CEOName"/>
 		<result property="businessCondition" column="businessCondition"/>
 		<result property="businessType" column="businessType"/>
@@ -31,9 +30,9 @@
 	
 	<insert id="insertCustomer" parameterType="customerVO">
 		<![CDATA[
-			insert into customer(customerCode, customerName, BRNum, forign, residentNum, CEOName, businessCondition, businessType, zipCode, address,
+			insert into customer(customerCode, customerName, BRNum, forign, CEOName, businessCondition, businessType, zipCode, address,
 									addressDetails, comNumber, faxNumber, email, startDate, endDate, useCheck)
-						values(#{customerCode}, #{customerName}, #{BRNum}, #{forign}, #{residentNum}, #{CEOName}, #{businessCondition}, #{businessType}, 
+						values(#{customerCode}, #{customerName}, #{BRNum}, #{forign}, #{CEOName}, #{businessCondition}, #{businessType}, 
 								#{zipCode}, #{address}, #{addressDetails}, #{comNumber}, #{faxNumber}, #{email}, #{startDate}, #{endDate}, #{useCheck})
 		]]>
 	</insert>

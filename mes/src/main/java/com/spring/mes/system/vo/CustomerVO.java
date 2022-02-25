@@ -10,7 +10,6 @@ public class CustomerVO {
 	private String	customerName;
 	private String	BRNum;
 	private String	forign;
-	private String	residentNum;
 	private String	CEOName;
 	private String	businessCondition;
 	private String	businessType;
@@ -28,14 +27,13 @@ public class CustomerVO {
 		
 	}
 	
-	public CustomerVO(String customerCode, String customerName, String BRNum, String forign, String residentNum, String CEOName, String businessCondition,
+	public CustomerVO(String customerCode, String customerName, String BRNum, String forign, String CEOName, String businessCondition,
 				  String businessType, int zipCode, String address, String addressDetails, String comNumber,String faxNumber, String email, Date startDate,
 				  Date endDate, String useCheck) {
 		this.customerCode = customerCode;
 		this.customerName = customerName;
 		this.BRNum = BRNum;
 		this.forign = forign;
-		this.residentNum = residentNum;
 		this.CEOName = CEOName;
 		this.businessCondition = businessCondition;
 		this.businessType = businessType;
@@ -80,14 +78,6 @@ public class CustomerVO {
 	
 	public void setForign(String forign) {
 		this.forign = forign;
-	}
-	
-	public String getResidentNum() {
-		return residentNum;
-	}
-	
-	public void setResidentNum(String residentNum) {
-		this.residentNum = residentNum;
 	}
 	
 	public String getCEOName() {

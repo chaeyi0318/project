@@ -100,15 +100,29 @@ public class SystemDAOImpl implements SystemDAO {
 
 	//품목등록
 	@Override
-	public int insertItem(ItemVO itemVO) throws DataAccessException {
+	public int insertItme(ItemVO itemVO) throws DataAccessException {
 		int result = sqlSession.insert("mapper.item.insertItem", itemVO);
 		return result;
 	}
-
+	
 	//거래처등록
 	@Override
 	public int insertCustomer(CustomerVO customerVO) throws DataAccessException {
 		int result = sqlSession.insert("mapper.customer.insertCustomer");
+		return result;
+	}
+
+	//회사수정
+	@Override
+	public int updateCompany(CompanyVO companyVO) throws DataAccessException {
+		int result = sqlSession.update("mapper.company.updateCompany",companyVO);
+		return result;
+	}
+
+	//회사삭제
+	@Override
+	public int deleteCompany(CompanyVO companyVO) throws DataAccessException {
+		int result = sqlSession.delete("mapper.company.deleteCompany", companyVO);
 		return result;
 	}
 }

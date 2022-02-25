@@ -16,6 +16,10 @@ public interface SystemDAO {
 	public CompanyVO companyInfo(CompanyVO companyVO) throws DataAccessException;
 	//회사등록
 	public int insertCompany(CompanyVO companyVO) throws DataAccessException;
+	//회사수정
+	public int updateCompany(CompanyVO companyVO) throws DataAccessException;
+	//회사삭제
+	public int deleteCompany(CompanyVO companyVO) throws DataAccessException;
 	//부서정보
 	public List departmentInfo() throws DataAccessException;
 	//부서등록
@@ -29,7 +33,7 @@ public interface SystemDAO {
 	//품목정보
 	public List itemInfo() throws DataAccessException;
 	//품목등록
-	public int insertItem(ItemVO itemVO) throws DataAccessException;
+	public int insertItme(ItemVO itemVO) throws DataAccessException;
 	//창고정보
 	public List processInfo() throws DataAccessException;
 	//공정정보

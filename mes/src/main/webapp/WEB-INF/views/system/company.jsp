@@ -8,74 +8,83 @@
 <html>
 <head>
 <meta charset="UTF-8">
-    <title>회사등록</title>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<title>회사등록</title>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <style>
 	h3 {
         text-align: center;
         margin-top: 5px;
     }
-    .button {
-        width: 1200px;
-        height: 35px;
+    
+    h4 {
+    	text-align: center;
     }
-    .button>input {
+    
+    .button {
         float: right;
-        margin: 7px;
+        margin-left: 10px;
+        margin-top: 15px;
+        margin-right: 5px;
     }
 </style>
 </head>
 <body>
-	<form class="button">
-        <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp;
-    </form>
-    <h3>기본등록사항</h3><br>
-    <c:if test="${company == null }">
-    	<form align="center" method="get" action="${contextPath }/system/insertCompany.do">
+    <form method="get">
+    	<input type="submit" class="button" value="삭제" onclick="javascript: form.action='${contextPath}/system/deleteCompany.do';"/>
+    	<input type="submit" class="button" value="수정" onclick="javascript: form.action='${contextPath}/system/updateCompany.do';"/>
+        <input type="submit" class="button" value="등록" onclick="javascript: form.action='${contextPath}/system/insertCompany.do';"/>
+        <br><br>
+
+        <h3>기본등록사항</h3><br>
+        <c:if test="${company == null }">
             <h4>회사명 <input type="text" name="comName">
-                 <select name="classification">
+                <select name="classification" class="sel">
                     <option value="법인">법인</option>
                     <option value="개인">개인</option>
-                 </select></h4><br>
-                <h4>사업자등록번호 <input type="text" name="BRNum"></h4><br>
-                <h4>법인등록번호 <input type="text" name="CRNum"></h4><br>
-                <h4>대표자성명 <input type="text" name="CEOName"></h4><br>
-                <h4>주민등록번호 <select name="forign">
-                                   <option value="내국인">내국인</option>
-                                   <option value="외국인">외국인</option>
-                             </select> <input type="text" name="residentNum"></h4><br>
-                <h4>우편번호 <input type="text" name="zipCode"></h4><br>
-                <h4>주소 <input type="text" name="address"></h4><br>
-                <h4>상세주소 <input type="text" name="addressDetails"></h4><br>
-                <h4>전화번호 <input type="text" name="comNumber"></h4><br>
-                <h4>fax <input type="text" name="faxNumber"></h4><br>
-                <h4>업태 <input type="text" name="businessCondition"></h4><br>
-                <h4>종목 <input type="text" name="businessType"></h4><br>
-                <h4>설립연월일 <input type="date" name="foundationDate"></h4><br>
-                <h4>개업연월일 <input type="date" name="openDate"></h4><br>
-                <h4>폐업연월일 <input type="date" name=""></h4><br>
-            <input type="submit" value="등록">
-        </form>
-    </c:if>
-    <c:if test="${company != null }">
-        <form align="center" method="post">
-            <h4>회사명 <input type="text" name="comName" value="${company.comName }" disabled>
-            	<input type="text" name="classification" value="${company.classification}" disabled></h4><br>
-                <h4>사업자등록번호 <input type="text" name="BRNum" value="${company.BRNum }" disabled></h4><br>
-                <h4>법인등록번호 <input type="text" name="CRNum" value="${company.CRNum }" disabled></h4><br>
-                <h4>대표자성명 <input type="text" name="CEOName" value="${company.CEOName }" disabled></h4><br>
-                <h4>주민등록번호 <input type="text" name="forign" value="${company.forign }" disabled> <input type="text" name="residentNum" value="${company.residentNum }" disabled></h4><br>
-                <h4>우편번호 <input type="text" name="zipCode" value="${company.zipCode }" disabled></h4><br>
-                <h4>주소 <input type="text" name="address" value="${company.address }" disabled></h4><br>
-                <h4>상세주소 <input type="text" name="addressDetails" value="${company.addressDetails }" disabled></h4><br>
-                <h4>전화번호 <input type="text" name="comNumber" value="${company.comNumber }" disabled></h4><br>
-                <h4>fax <input type="text" name="faxNumber" value="${company.faxNumber }" disabled></h4><br>
-                <h4>업태 <input type="text" name="businessCondition" value="${company.businessCondition }" disabled></h4><br>
-                <h4>종목 <input type="text" name="businessType" value="${company.businessType }" disabled></h4><br>
-                <h4>설립연월일 <input type="date" name="foundationDate" value="${company.foundationDate }" disabled></h4><br>
-                <h4>개업연월일 <input type="date" name="openDate" value="${company.openDate }" disabled></h4><br>
-                <h4>폐업연월일 <input type="date" name="closeDate" value="${company.closeDate }" disabled></h4><br>
-        </form>
-    </c:if>
+                </select>
+            </h4><br>
+            <h4>사업자등록번호 <input type="text" name="BRNum"></h4><br>
+            <h4>법인등록번호 <input type="text" name="CRNum"></h4><br>
+            <h4>대표자성명 <input type="text" name="CEOName"></h4><br>
+            <h4>주민등록번호 
+                <select name="forign">
+                    <option value="내국인">내국인</option>
+                    <option value="외국인">외국인</option>
+                </select> 
+                <input type="text" name="residentNum">
+            </h4><br>
+            <h4>우편번호 <input type="text" name="zipCode"></h4><br>
+            <h4>주소 <input type="text" name="address"></h4><br>
+            <h4>상세주소 <input type="text" name="addressDetails"></h4><br>
+            <h4>전화번호 <input type="text" name="comNumber"></h4><br>
+            <h4>fax <input type="text" name="faxNumber"></h4><br>
+            <h4>업태 <input type="text" name="businessCondition"></h4><br>
+            <h4>종목 <input type="text" name="businessType"></h4><br>
+            <h4>설립연월일 <input type="date" name="foundationDate"></h4><br>
+            <h4>개업연월일 <input type="date" name="openDate"></h4><br>
+        </c:if>
+        
+        <c:if test="${company != null }">
+            <h4>회사명 <input type="text" id="comName" name="comName" value="${company.comName }" > 
+                <input type="text" id="classification" name="classification" value="${company.classification }" >
+            </h4><br>
+            <h4>사업자등록번호 <input type="text" name="BRNum" value="${company.BRNum }" ></h4><br>
+            <h4>법인등록번호 <input type="text" name="CRNum" value="${company.CRNum }" ></h4><br>
+            <h4>대표자성명 <input type="text" name="CEOName" value="${company.CEOName }" ></h4><br>
+            <h4>주민등록번호 
+                <input type="text" name="forign" value="${company.forign }" >
+                <input type="text" name="residentNum" value="${company.residentNum }" >
+            </h4><br>
+            <h4>우편번호 <input type="text" name="zipCode" value="${company.zipCode }" ></h4><br>
+            <h4>주소 <input type="text" name="address" value="${company.address }" ></h4><br>
+            <h4>상세주소 <input type="text" name="addressDetails" value="${company.addressDetails }" ></h4><br>
+            <h4>전화번호 <input type="text" name="comNumber" value="${company.comNumber }" ></h4><br>
+            <h4>fax <input type="text" name="faxNumber" value="${company.faxNumber }" ></h4><br>
+            <h4>업태 <input type="text" name="businessCondition" value="${company.businessCondition }" ></h4><br>
+            <h4>종목 <input type="text" name="businessType" value="${company.businessType }" ></h4><br>
+            <h4>설립연월일 <input type="date" name="foundationDate" value="${company.foundationDate }" ></h4><br>
+            <h4>개업연월일 <input type="date" name="openDate" value="${company.openDate }" ></h4><br>
+        </c:if>
+    </form>
 </body>
 </html>

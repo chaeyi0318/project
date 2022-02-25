@@ -21,7 +21,13 @@ public interface SystemController {
 	public ModelAndView companyInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	//회사등록
 	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO companyVO, 
-									HttpServletRequest request, HttpServletResponse response) throws Exception;
+										HttpServletRequest request, HttpServletResponse response) throws Exception;
+	//회사수정
+	public ModelAndView updateCompany(@ModelAttribute("company") CompanyVO companyVO, 
+										HttpServletRequest request, HttpServletResponse response) throws Exception;
+	//회사삭제
+	public ModelAndView deleteCompany(@ModelAttribute("company") CompanyVO companyVO, 
+										HttpServletRequest request, HttpServletResponse response) throws Exception;
 	//부서정보
 	public ModelAndView departmentInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	//부서등록
@@ -38,7 +44,7 @@ public interface SystemController {
 	public ModelAndView itemInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	//품목등록
 	public ModelAndView insertItem(@ModelAttribute("item") ItemVO itemVO,
-			 						HttpServletRequest request, HttpServletResponse response) throws Exception;
+									HttpServletRequest request, HttpServletResponse response) throws Exception;
 	//창고정보
 	public ModelAndView storageInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	//공정정보

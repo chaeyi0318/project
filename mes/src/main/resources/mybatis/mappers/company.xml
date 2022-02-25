@@ -20,7 +20,6 @@
 		<result property="businessType" column="businessType" />
 		<result property="foundationDate" column="foundationDate" />
 		<result property="openDate" column="openDate" />
-		<result property="closeDate" column="closeDate" />
 	</resultMap>
 	
 	<!-- 회사정보출력 -->
@@ -36,11 +35,29 @@
 			insert into company(comName, classification, BRNum, CRNum, CEOName, 
 								forign, residentNum, zipCode, address, addressDetails,
 								comNumber, faxNumber, businessCondition, businessType, 
-								foundationDate, openDate, closeDate)
+								foundationDate, openDate)
 						values(#{comName}, #{classification}, #{BRNum}, #{CRNum}, #{CEOName}, 
 								#{forign}, #{residentNum}, #{zipCode}, #{address}, #{addressDetails},
 								#{comNumber}, #{faxNumber}, #{businessCondition}, #{businessType},
-								#{foundationDate}, #{openDate}, #{closeDate})
+								#{foundationDate}, #{openDate})
 		]]>
 	</insert>
+	
+	<!-- 회사정보수정 -->
+	<update id="updateCompany" parameterType="companyVO">
+		<![CDATA[
+			update company
+			set comName=#{comName}, classification=#{classification}, BRNum=#{BRNum}, CRNum=#{CRNum}, CEOName=#{CEOName}, 
+				forign= #{forign}, residentNum=#{residentNum}, zipCode=#{zipCode}, address=#{address}, addressDetails=#{addressDetails},
+				comNumber=#{comNumber}, faxNumber=#{faxNumber}, businessCondition=#{businessCondition}, businessType=#{businessType},
+				foundationDate=#{foundationDate}, openDate=#{openDate}
+		]]>
+	</update>
+	
+	<!-- 회사정보삭제 -->
+	<delete id="deleteCompany" parameterType="companyVO">
+		<![CDATA[
+			delete from company
+		]]>
+	</delete>
 </mapper>

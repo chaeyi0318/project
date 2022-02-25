@@ -23,11 +23,11 @@
 		]]>
 	</select>
 	
-	<insert id="insertItem" parameterType="itemVO">
+	<insert id="insertItem" parameterType="itemVo">
 		<![CDATA[
 			insert into item(itemCode, itemName, standard, type, obtain, inventoryUnit, testCheck, useCheck, leadTime, stock, production)
-							values(#{itemCode}, #{itemName}, #{standard}, #{type}, #{obtain}, 
-									#{inventoryUnit}, #{testCheck}, #{useCheck}, #{leadTime}, #{stock}, #{production})
+						values(#{itemCode}, #{itemName}, #{standard}, #{type}, #{obtain}, #{inventoryUnit}, 
+								#{testCheck}, #{useCheck}, #{leadTime}, #{stock}, #{production})
 		]]>
 	</insert>
 </mapper>

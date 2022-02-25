@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -164,10 +165,23 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
+	//거래처등록
+	@Override
+	@RequestMapping(value="/system/insertCustomer.do", method=RequestMethod.POST)
+	public ModelAndView insertCustomer(@ModelAttribute("customer") CustomerVO customerVO, HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("html/text;charset=utf-8");
+		int result = 0;
+		result = systemService.insertCustomer(customerVO);
+		ModelAndView mav = new ModelAndView("redirect:/system/customerInfo.do");
+		return mav;
+	}
+
 	//품목등록
 	@Override
 	@RequestMapping(value="/system/insertItem.do", method=RequestMethod.GET)
-	public ModelAndView insertItem(@ModelAttribute("item") ItemVO itemVO, HttpServletRequest request, HttpServletResponse response)
+	public ModelAndView insertItem(@ModelAttribute("itemVO") ItemVO itemVO, HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html/text;charset=utf-8");
@@ -177,16 +191,27 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
-	//거래처등록
 	@Override
-	@RequestMapping(value="/system/insertCustomer.do", method=RequestMethod.POST)
-	public ModelAndView insertCustomer(CustomerVO customerVO, HttpServletRequest request, HttpServletResponse response)
+	@RequestMapping(value="/system/updateCompany.do", method=RequestMethod.GET)
+	public ModelAndView updateCompany(@ModelAttribute("company") CompanyVO companyVO, HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html/text;charset=utf-8");
 		int result = 0;
-		result = systemService.insertCustomer(customerVO);
-		ModelAndView mav = new ModelAndView("redirect:/system/customerInfo.do");
+		result = systemService.updateCompany(companyVO);
+		ModelAndView mav = new ModelAndView("redirect:/system/companyInfo.do");
+		return mav;
+	}
+
+	@Override
+	@RequestMapping(value="/system/deleteCompany.do", method=RequestMethod.GET)
+	public ModelAndView deleteCompany(@ModelAttribute("company") CompanyVO companyVO, HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("html/text;charset=utf-8");
+		int result = 0;
+		result = systemService.deleteCompany(companyVO);
+		ModelAndView mav = new ModelAndView("redirect:/system/companyInfo.do");
 		return mav;
 	}
 }

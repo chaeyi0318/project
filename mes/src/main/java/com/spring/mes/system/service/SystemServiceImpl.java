@@ -96,15 +96,27 @@ public class SystemServiceImpl implements SystemService {
 		return systemDAO.insertDept(deptVO);
 	}
 
-	//품목등록
-	@Override
-	public int insertItem(ItemVO itemVO) throws DataAccessException {
-		return systemDAO.insertItem(itemVO);
-	}
 
 	//거래처등록
 	@Override
 	public int insertCustomer(CustomerVO customerVO) throws DataAccessException {
 		return systemDAO.insertCustomer(customerVO);
+	}
+
+	//품목등록
+	@Override
+	public int insertItem(ItemVO itemVO) throws DataAccessException {
+		return systemDAO.insertItme(itemVO);
+	}
+	
+	//회사수정
+	@Override
+	public int updateCompany(CompanyVO companyVO) throws DataAccessException {
+		return systemDAO.updateCompany(companyVO);
+	}
+
+	@Override
+	public int deleteCompany(CompanyVO companyVO) throws DataAccessException {
+		return systemDAO.deleteCompany(companyVO);
 	}
 }

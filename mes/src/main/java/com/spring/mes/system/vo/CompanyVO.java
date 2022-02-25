@@ -24,7 +24,6 @@ public class CompanyVO {
 	private String businessType;		//종목
 	private Date foundationDate;		//설립연월일
 	private Date openDate;		//개업연월일
-	private Date closeDate;		//폐업연월일
 	
 	public CompanyVO() {
 		
@@ -32,7 +31,7 @@ public class CompanyVO {
 	
 	public CompanyVO(String	comName, String	classification, String	BRNum, String CRNum, String	CEOName, String	forign, String residentNum,
 						int zipCode, String	address, String	addressDetails, String	comNumber, String faxNumber, String businessCondition,
-						String businessType, Date foundationDate, Date openDate, Date closeDate) {
+						String businessType, Date foundationDate, Date openDate) {
 		this.comName = comName;
 		this.classification = classification;
 		this.BRNum = BRNum;
@@ -49,7 +48,6 @@ public class CompanyVO {
 		this.businessType = businessType;
 		this.foundationDate = foundationDate;
 		this.openDate = openDate;
-		this.closeDate = closeDate;
 		
 	}
 	
@@ -148,11 +146,5 @@ public class CompanyVO {
 	}
 	public void setOpenDate(Date openDate) {
 		this.openDate = openDate;
-	}
-	public Date getCloseDate() {
-		return closeDate;
-	}
-	public void setCloseDate(Date closeDate) {
-		this.closeDate = closeDate;
 	}
 }
