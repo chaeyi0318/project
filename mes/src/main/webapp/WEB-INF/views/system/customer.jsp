@@ -68,17 +68,16 @@
                 	<td>업태</td>
                 	<td>종목</td>
             	</tr>
-            	<c:if test="${customerlist !=null }">
-            		<c:forEach var="customer" items="${customerlist}">
-            			<tr>
-            				<td><input type="checkbox"></td>
-            				<td><input type="text" name="customerCode" value="${customer.customerCode }" disabled></td>
-            				<td><input type="text" name="customerName" value="${customer.customerName }" disabled></td>
-            				<td><input type="text" name="businessCondition" value="${customer.businessCondition }" disabled></td>
-            				<td><input type="text" name="businessType" value="${customer.businessType }" disabled></td>
-            			</tr>
-            		</c:forEach>
-            	</c:if>	
+            	<c:forEach var="customer" items="${customerList}">
+	           		<tr>
+	           			<td><input type="checkbox"></td>
+	           			<%-- <td><input type="text" name="customerCode" value="${customer.customerCode}" disabled></td> --%>
+	           			<td><input type="text" name="customerName" value="${customer.customerName}" disabled></td>
+	           			<td><input type="text" name="businessCondition" value="${customer.businessCondition}" disabled></td>
+	           			<td><input type="text" name="businessType" value="${customer.businessType}" disabled></td>
+	           			<td><input type="submit" name="button" value="조회">
+	           		</tr>
+	           	</c:forEach>
             	<tr>
             		<td><input type="checkbox"></td>
             		<td><input type="text"></td>

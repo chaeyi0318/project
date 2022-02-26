@@ -36,4 +36,6 @@
 								#{zipCode}, #{address}, #{addressDetails}, #{comNumber}, #{faxNumber}, #{email}, #{startDate}, #{endDate}, #{useCheck})
 		]]>
 	</insert>
+	
+	
 </mapper>
