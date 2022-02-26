@@ -27,9 +27,12 @@ public interface MemberController {
 	public ModelAndView listDept(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	public ModelAndView itemInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	public ModelAndView qualityTest(HttpServletRequest request, HttpServletResponse response) throws Exception;
-	public ModelAndView company(@ModelAttribute("company") CompanyVO company,
+	public ModelAndView insertCompany(@ModelAttribute("company") CompanyVO companyVO,
             RedirectAttributes rAttr,
             HttpServletRequest request, HttpServletResponse response) throws Exception;
 	public ModelAndView insertDept(@ModelAttribute("dept") DeptVO deptVO, HttpServletRequest request, HttpServletResponse response) throws Exception;
 	public ModelAndView insertEmp(@ModelAttribute("emp") EmpVO empVO, HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView deleteCompany(@ModelAttribute("company") CompanyVO companyVO, HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView updateCompany(@ModelAttribute("company") CompanyVO companyVO, HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public ModelAndView updateEmp(@ModelAttribute("emp") EmpVO empVO, HttpServletRequest request, HttpServletResponse response) throws Exception;
 }

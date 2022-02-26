@@ -23,4 +23,8 @@ public interface MemberService {
 	 public List qualityTest() throws DataAccessException;
 	 public int insertDept(DeptVO deptVO) throws DataAccessException;
 	 public int insertEmp(EmpVO empVO) throws DataAccessException;
+	 public int insertCompany(CompanyVO companyVO) throws DataAccessException;
+	 public int deleteCompany(CompanyVO companyVO) throws DataAccessException;
+	 public int updateCompany(CompanyVO companyVO) throws DataAccessException;
+	 public int updateEmp(EmpVO empVO) throws DataAccessException; 
 }

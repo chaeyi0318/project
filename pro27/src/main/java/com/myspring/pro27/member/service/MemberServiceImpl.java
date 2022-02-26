@@ -92,4 +92,24 @@ public class MemberServiceImpl implements MemberService {
 	public int insertEmp(EmpVO empVO) throws DataAccessException {
 		return memberDAO.insertEmp(empVO);
 	}
+
+	@Override
+	public int insertCompany(CompanyVO companyVO) throws DataAccessException {
+		return memberDAO.insertCompany(companyVO);
+	}
+
+	@Override
+	public int deleteCompany(CompanyVO companyVO) throws DataAccessException {
+		return memberDAO.deleteCompany(companyVO);
+	}
+
+	@Override
+	public int updateCompany(CompanyVO companyVO) throws DataAccessException {
+		return memberDAO.updateCompany(companyVO);
+	}
+
+	@Override
+	public int updateEmp(EmpVO empVO) throws DataAccessException {
+		return memberDAO.updateEmp(empVO);
+	}
 }
