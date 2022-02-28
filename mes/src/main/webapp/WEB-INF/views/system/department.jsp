@@ -16,13 +16,12 @@
         text-align: center;
         margin-top: 5px;
     }
+
     .button {
-        width: 1200px;
-        height: 35px;
-    }
-    .button>input {
         float: right;
-        margin: 7px;
+        margin-left: 10px;
+        margin-top: 15px;
+        margin-right: 5px;
     }
 </style>
 <script>
@@ -31,7 +30,9 @@
 </head>
 <body>
 	<form method="post" action="${contextPath }/system/insertDepartment.do">
-    <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp;
+    	<input type="submit" class="button" value="삭제" onclick="javascript: form.action='${contextPath}/system/deleteCustomer.do';"/>
+    	<input type="submit" class="button" value="수정" onclick="javascript: form.action='${contextPath}/system/updateCustomer.do';"/>
+        <input type="submit" class="button" value="등록" onclick="javascript: form.action='${contextPath}/system/insertCustomer.do';"/><br><br>
     <h3>부서등록</h3><br>
     <table width="700px" align="center">
 		<tr align="center">
@@ -46,12 +47,12 @@
 		<c:forEach var="dept" items="${deptList }">
 			<tr align="center">
 		   		<td><input type="checkbox"></td>
-		    	<td><input type="text" value="${dept.DCode }" disabled></td>
-		    	<td><input type="text" value="${dept.DName }" disabled></td>
-		    	<td><input type="text" value="${dept.comName }" disabled></td>
- 		    	<td><input type="date" value="${dept.useDate }" disabled></td>
-		    	<td><input type="date" value="${dept.endDate }" disabled></td>
-		    	<td><input type="text" value="${dept.useCheck }" disabled></td>
+		    	<td><input type="text" value="${dept.DCode }"></td>
+		    	<td><input type="text" value="${dept.DName }"></td>
+		    	<td><input type="text" value="${dept.comName }"></td>
+ 		    	<td><input type="date" value="${dept.useDate }"></td>
+		    	<td><input type="date" value="${dept.endDate }"></td>
+		    	<td><input type="text" value="${dept.useCheck }"></td>
 			</tr>
 		</c:forEach>
 		<tr align="center">

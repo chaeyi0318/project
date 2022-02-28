@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.planning">
+	<resultMap type="planningVO" id="planResult">
+		<result property="itemCode" column="itemCode"/>
+		<result property="itemName" column="itemName"/>
+		<result property="standard" column="standard"/>
+		<result property="inventoryUnit" column="inventoryUnit"/>
+		<result property="output" column="output"/>
+		<result property="turn" column="turn"/>
+		<result property="schedule" column="schedule"/>
+		<result property="quantity" column="quantity"/>
+		<result property="note" column="note"/>
+	</resultMap>
+	
+	<select id="selectAllPlanning" resultMap="planResult">
+		<![CDATA[
+			select * from planning
+		]]>
+	</select>
+	
+	<insert id="insertPlanning" parameterType="planningVO">
+		<![CDATA[
+			insert into planning(itemCode, itemName, standard, inventoryUnit, output, turn, schedule, quantity, note)
+						values(#{itemCode}, #{itemName}, #{standard}, #{inventoryUnit}, #{output}, #{turn}, #{schedule}, #{quantity}, #{note})
+		]]>
+	</insert>
+</mapper>

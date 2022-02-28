@@ -13,4 +13,5 @@
 	<select id="selectAllQualityTest" resultMap="qualityTestResult">
 		select * from quality_test_code order by testCode
 	</select>
+	
 </mapper>

@@ -55,4 +55,9 @@
    		<put-attribute name="title" value="검사유형등록"/>
    		<put-attribute name="body" value="/WEB-INF/views/system/qualitytestcode.jsp"/>
    </definition>
+   
+   <definition name="/production/planningInfo" extends="baseLayout">
+   		<put-attribute name="title" value="생산계획등록"/>
+   		<put-attribute name="body" value="/WEB-INF/views/production/planning.jsp"/>
+   </definition>
 </tiles-definitions>

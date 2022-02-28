@@ -71,7 +71,7 @@
             	<c:forEach var="customer" items="${customerList}">
 	           		<tr>
 	           			<td><input type="checkbox"></td>
-	           			<%-- <td><input type="text" name="customerCode" value="${customer.customerCode}" disabled></td> --%>
+	           			<td><input type="text" name="customerCode" value="${customer.customerCode}" disabled></td>
 	           			<td><input type="text" name="customerName" value="${customer.customerName}" disabled></td>
 	           			<td><input type="text" name="businessCondition" value="${customer.businessCondition}" disabled></td>
 	           			<td><input type="text" name="businessType" value="${customer.businessType}" disabled></td>

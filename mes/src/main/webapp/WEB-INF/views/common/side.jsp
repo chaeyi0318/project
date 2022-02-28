@@ -49,7 +49,7 @@
     <li class="side2">
         생산관리
         <ul class="sub2" style="display:none">
-            <li><a href="#" class="no-underline">생산계획등록</a></li>
+            <li><a href="${contextPath}/production/planningInfo.do" class="no-underline">생산계획등록</a></li>
             <li><a href="#"  class="no-underline">작업지시등록</a><br></li>
             <li><a href="#"  class="no-underline">작업지시확정</a><br></li>
             <li><a href="#"  class="no-underline">생산자재출고</a><br></li>
@@ -58,9 +58,6 @@
             <li><a href="#"  class="no-underline">생산실적검사</a><br></li>
             <li><a href="#"  class="no-underline">생산품창고입고처리</a><br></li>
             <li><a href="#"  class="no-underline">작업지시마감처리</a><br></li>
-            <li><a href="#"  class="no-underline">BOM등록</a><br></li>
-            <li><a href="#"  class="no-underline">불량유형등록</a><br></li>
-            
         </ul>
     </li>
     <li class="side3">

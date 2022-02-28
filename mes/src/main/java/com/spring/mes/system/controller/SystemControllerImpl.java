@@ -31,6 +31,7 @@ import com.spring.mes.system.vo.ItemVO;
 @Controller("systemController")
 public class SystemControllerImpl implements SystemController {
 	private static final Logger logger = LoggerFactory.getLogger(SystemControllerImpl.class);
+	
 	@Autowired
 	private SystemService systemService;
 	@Autowired
