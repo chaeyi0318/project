@@ -29,10 +29,10 @@
 </script>
 </head>
 <body>
-	<form method="post" action="${contextPath }/system/insertDepartment.do">
-    	<input type="submit" class="button" value="삭제" onclick="javascript: form.action='${contextPath}/system/deleteCustomer.do';"/>
-    	<input type="submit" class="button" value="수정" onclick="javascript: form.action='${contextPath}/system/updateCustomer.do';"/>
-        <input type="submit" class="button" value="등록" onclick="javascript: form.action='${contextPath}/system/insertCustomer.do';"/><br><br>
+	<form method="get">
+    	<input type="submit" class="button" value="삭제" onclick="javascript: form.action='${contextPath}/system/deleteDepartment.do';"/>
+    	<input type="submit" class="button" value="수정" onclick="javascript: form.action='${contextPath}/system/updateDepartment.do';"/>
+        <input type="submit" class="button" value="등록" onclick="javascript: form.action='${contextPath}/system/insertDepartment.do';"/><br><br>
     <h3>부서등록</h3><br>
     <table width="700px" align="center">
 		<tr align="center">

@@ -28,7 +28,8 @@ public class PlanningControllerImpl implements PlanningController{
 	public ModelAndView selectAllPlanning(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html;test/charset=utf-8");
-		String viewName = (String) request.getAttribute("viewName");
+		String viewName = (String)request.getAttribute("viewName");
+		System.out.println(viewName);
 		List planList = planningService.selectAllPlanning();
 		ModelAndView mav = new ModelAndView(viewName);
 		mav.addObject("planList", planList);
@@ -37,10 +38,15 @@ public class PlanningControllerImpl implements PlanningController{
 
 	//생산계획등록
 	@Override
+	@RequestMapping(value="/production/insertPlanning.do", method= {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView insertPlanning(PlanningVO planningVO, HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("html;test/charset=utf-8");
+		int result = 0;
+		result = planningService.insertPlanning(planningVO);
+		ModelAndView mav = new ModelAndView("redirect:/production/planningInfo.do");
+		return mav;
 	}
 
 }

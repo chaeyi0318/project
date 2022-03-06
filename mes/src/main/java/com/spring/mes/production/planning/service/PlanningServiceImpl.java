@@ -31,5 +31,4 @@ public class PlanningServiceImpl implements PlanningService{
 	public int insertPlanning(PlanningVO planningVO) throws DataAccessException {
 		return planningDAO.insertPlanning(planningVO);
 	}
-
 }

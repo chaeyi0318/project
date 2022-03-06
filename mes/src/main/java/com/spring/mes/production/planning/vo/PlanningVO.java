@@ -6,15 +6,15 @@ import org.springframework.stereotype.Component;
 
 @Component("planningVO")
 public class PlanningVO {
-	private String itemCode;
-	private String itemName;
-	private String standard;
-	private String inventoryUnit;
-	private int	output;
-	private int	turn;
-	private Date schedule;
-	private int	quantity;
-	private String note;
+	private String itemCode;		//품번
+	private String itemName;		//품명
+	private String standard;		//규격
+	private String inventoryUnit;		//단위
+	private int	output;		//일생산량
+	private int	turn;		//순서
+	private Date schedule;		//작업예정일
+	private int	quantity;		//수량
+	private String note;		//비고
 
 	public PlanningVO() {
 		

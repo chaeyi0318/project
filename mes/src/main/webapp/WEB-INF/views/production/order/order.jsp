@@ -12,7 +12,7 @@
     }
 
     function planList() {
-        window.open("planList.html","planning","width=700,height=500")
+        window.open("/production/planning/planPop.jsp","planning","width=700,height=500")
     }
 </script>
 <body>

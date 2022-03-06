@@ -156,7 +156,7 @@ public class SystemControllerImpl implements SystemController {
 
 	//부서등록
 	@Override
-	@RequestMapping(value="/system/insertDepartment.do", method=RequestMethod.POST)
+	@RequestMapping(value="/system/insertDepartment.do", method= {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView insertDept(@ModelAttribute("dept") DeptVO deptVO, HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		request.setCharacterEncoding("utf-8");
