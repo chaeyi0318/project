@@ -60,4 +60,9 @@
    		<put-attribute name="title" value="생산계획등록"/>
    		<put-attribute name="body" value="/WEB-INF/views/production/planning/planning.jsp"/>
    </definition>
+   
+   <definition name="/production/orderInfo" extends="baseLayout">
+   		<put-attribute name="title" value="작업지시등록"/>
+   		<put-attribute name="body" value="/WEB-INF/views/production/order/order.jsp"></put-attribute>
+   </definition>
 </tiles-definitions>
