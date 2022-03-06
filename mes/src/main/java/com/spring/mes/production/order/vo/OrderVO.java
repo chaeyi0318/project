@@ -4,5 +4,5 @@ import org.springframework.stereotype.Component;
 
 @Component("orderVO")
 public class OrderVO {
-
+	
 }
