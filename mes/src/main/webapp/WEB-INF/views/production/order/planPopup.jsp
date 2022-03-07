@@ -25,7 +25,6 @@
             <td>계획잔량</td>
             <td>작업예정일</td>
             <td>비고</td>
-            <td></td>
         </tr>
         <tr align="center">
             <td><input type="text" name="itemCode" id="cInput" size=5></td>
@@ -35,9 +34,9 @@
             <td><input type="text" name="itemCode" id="" size=5></td>
             <td><input type="date" name="itemCode" id="" size=5></td>
             <td><input type="text" name="itemCode" id="" size=5></td>
-            <td><a href="#">등록</a></td>
         </tr>
     </table>
+    <br>
     <input type="button" value="등록" onclick="setParentText()">
 </body>
 </html>
