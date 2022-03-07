@@ -11,4 +11,6 @@ public interface PlanningService {
 	public List selectAllPlanning() throws DataAccessException;
 	//생산계획등록
 	public int insertPlanning(PlanningVO planningVO) throws DataAccessException;
+	//생산계획팝업
+	public List planningPopup() throws DataAccessException;
 }

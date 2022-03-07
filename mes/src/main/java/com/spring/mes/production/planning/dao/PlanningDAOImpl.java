@@ -29,4 +29,12 @@ public class PlanningDAOImpl implements PlanningDAO{
 		return result;
 	}
 
+	//생산계획팝업
+	@Override
+	public List planningPopup() throws DataAccessException {
+		List<PlanningVO> popupList = null;
+		popupList = sqlSession.selectList("mapper.planning.selectAllPlanning");
+		return popupList;
+	}
+
 }

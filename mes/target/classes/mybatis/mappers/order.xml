@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.order">
+	<resultMap type="orderVO" id="orderResult">
+		<result property="orderCode" column="orderCode"/>
+		<result property="orderDate" column="orderDate"/>
+		<result property="dueDate" column="dueDate"/>
+		<result property="itemCode" column="itemCode"/>
+		<result property="itemName" column="itemName"/>
+		<result property="standard" column="standard"/>
+		<result property="unit" column="unit"/>
+		<result property="orderQuantity" column="orderQuantity"/>
+		<result property="state" column="state"/>
+		<result property="testCheck" column="testCheck"/>
+		<result property="customerName" column="customerName"/>
+		<result property="equipment" column="equipment"/>
+		<result property="team" column="team"/>
+		<result property="processGroup" column="processGroup"/>
+		<result property="note" column="note"/>
+	</resultMap>
+	
+	<select id="selectAllOrder" resultMap="orderResult">
+		select * from work_order order by orderCode
+	</select>
+	
+	<insert id="insertOrder" parameterType="orderVO">
+		insert into work_order(orderCode, orderDate, dueDate, itemCode, itemName, standard, unit, orderQuantity, state, testCheck, customerName, equipment, team, processGroup, note)
+					values(#{orderCode}, #{orderDate}, #{dueDate}, #{itemCode}, #{itemName}, #{standard}, #{unit}, #{orderQuantity}, 
+							#{state}, #{testCheck}, #{customerName}, #{equipment}, #{team}, #{processGroup}, #{note})
+	</insert>
+</mapper>

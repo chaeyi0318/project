@@ -10,7 +10,12 @@
       <put-attribute name="body" value="" />
       <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
    </definition>
-
+   
+   <definition name="popUp" template="/WEB-INF/views/common/popUp.jsp">
+   		<put-attribute name="title" value="" />
+   		<put-attribute name="body" value="" />
+   </definition>
+   	
    <definition name="home" extends="baseLayout">
    		<put-attribute name="title" value="홈페이지"/>
       	<put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
@@ -64,5 +69,10 @@
    <definition name="/production/orderInfo" extends="baseLayout">
    		<put-attribute name="title" value="작업지시등록"/>
    		<put-attribute name="body" value="/WEB-INF/views/production/order/order.jsp"></put-attribute>
+   </definition>
+   
+   <definition name="/production/planPopup" extends="">
+   		<put-attribute name="title" value="생산계획조회"/>
+   		<put-attribute name="body" value="/WEB-INF/views/production/order/planPopup.jsp"/>
    </definition>
 </tiles-definitions>

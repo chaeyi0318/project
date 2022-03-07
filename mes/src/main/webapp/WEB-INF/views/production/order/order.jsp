@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,23 +10,42 @@
 <title>작업지시등록</title>
 </head>
 <script language="javascript">
-    function processList() {
-        window.open("processList.html","process","width=400,height=500")
-    }
-
+	var openWin;
+	
     function planList() {
-        window.open("/production/planning/planPop.jsp","planning","width=700,height=500")
+    	var url = "planPopup.do";
+    	var name = "생산계획조회";
+        openWin = window.open(url , name, "width=700, height=500, left=300");
     }
 </script>
+<style>
+.button {
+
+	float: right;
+	margin-left: 10px;
+	margin-top: 15px;
+	margin-right: 5px;
+}
+
+.list {
+	width: 100%;
+	height: 730px;
+	overflow-x:auto;
+    white-space:nowrap;
+    margin:0 auto;
+}
+</style>
 <body>
-    <div class="top">
-        공정 <input type="button" value="*" onclick="processList();">
-        <input type="button" value="생산계획조회" onclick="planList();">
-    </div>
-    <div class="bottom">
+    <form>
+    	<input type="submit" class="button" value="삭제" onclick="javascript: form.action='${contextPath}/production/deleteOrder.do';"/>
+    	<input type="submit" class="button" value="수정" onclick="javascript: form.action='${contextPath}/production/updateOrder.do';"/>
+        <input type="submit" class="button" value="등록" onclick="javascript: form.action='${contextPath}/production/insertOrder.do';"/>
+        <input type="button" class="button" id="plan" value="생산계획조회" onclick="planList();"/>
+    <br><br><br>
+    <div class="list">
         <table>
-            <tr>
-                <td><input type="checkbox"></td>
+            <tr align="center">
+            	<td><input type="checkbox"></td>
                 <td>작업지시번호</td>
                 <td>지시일</td>
                 <td>납기일</td>
@@ -40,25 +62,46 @@
                 <td>작업조</td>
                 <td>비고</td>
             </tr>
-            <tr>
+            <c:forEach var="order" items="${orderList}">
+            	<tr align="center">
+            		<td><input type="checkbox"></td>
+            		<td><input type="text" value="${order.orderCode }"></td>    
+            		<td><input type="date" value="${order.orderDate }"></td>    
+            		<td><input type="date" value="${order.dueDate }"></td>    
+            		<td><input type="text" value="${order.itemCode }"></td>    
+            		<td><input type="text" value="${order.itemName }"></td>    
+            		<td><input type="text" value="${order.standard }"></td>    
+            		<td><input type="text" value="${order.unit }"></td>    
+            		<td><input type="text" value="${order.orderQuantity }"></td>    
+            		<td><input type="text" value="${order.state }"></td>    
+            		<td><input type="text" value="${order.testCheck }"></td>    
+            		<td><input type="text" value="${order.customerName }"></td>    
+            		<td><input type="text" value="${order.equipment }"></td>    
+            		<td><input type="text" value="${order.team }"></td>    
+            		<td><input type="text" value="${order.processGroup }"></td>    
+            		<td><input type="text" value="${order.note }"></td>    
+            	</tr>
+            </c:forEach>
+            <tr align="center">
                 <td><input type="checkbox"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input type="text" id="pInput" name="orderCode"></td>
+                <td><input type="date" name="orderDate"></td>
+                <td><input type="date" name="dueDate"></td>
+                <td><input type="text" name="itemCode"></td>
+                <td><input type="text" name="itemName"></td>
+                <td><input type="text" name="standard"></td>
+                <td><input type="text" name="unit"></td>
+                <td><input type="text" name="orderQuantity"></td>
+                <td><input type="text" name="state"></td>
+                <td><input type="text" name="testCheck"></td>
+                <td><input type="text" name="customerName"></td>
+                <td><input type="text" name="equipment"></td>
+                <td><input type="text" name="team"></td>
+                <td><input type="text" name="processGroup"></td>
+                <td><input type="text" name="note"></td>
             </tr>
         </table>
     </div>
+    </form>
 </body>
 </html>

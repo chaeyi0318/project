@@ -31,4 +31,12 @@ public class PlanningServiceImpl implements PlanningService{
 	public int insertPlanning(PlanningVO planningVO) throws DataAccessException {
 		return planningDAO.insertPlanning(planningVO);
 	}
+
+	//생산계획팝업
+	@Override
+	public List planningPopup() throws DataAccessException {
+		List popupList = null;
+		popupList = planningDAO.planningPopup();
+		return popupList;
+	}
 }

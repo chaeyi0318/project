@@ -13,4 +13,6 @@ public interface PlanningController {
 	public ModelAndView selectAllPlanning(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	//생산계획등록
 	public ModelAndView insertPlanning(@ModelAttribute("plan") PlanningVO planningVO, HttpServletRequest request, HttpServletResponse response) throws Exception;
+	//생산계획팝업
+	public ModelAndView planningPopup(HttpServletRequest request, HttpServletResponse response) throws Exception;
 }

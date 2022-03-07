@@ -17,5 +17,6 @@
 		<typeAlias type="com.spring.mes.system.vo.QualityTestVO" alias="qualityTestVO"/>
 		<typeAlias type="com.spring.mes.system.vo.StorageVO" alias="storageVO"/>
 		<typeAlias type="com.spring.mes.production.planning.vo.PlanningVO" alias="planningVO"/>
+		<typeAlias type="com.spring.mes.production.order.vo.OrderVO" alias="OrderVO"/>
 	</typeAliases>
 </configuration>

@@ -22,9 +22,10 @@ public class PlanningControllerImpl implements PlanningController{
 
 	@Autowired
 	private PlanningService planningService;
+	
 	//생산계획리스트
 	@Override
-	@RequestMapping(value="/production/planningInfo.do", method= {RequestMethod.GET, RequestMethod.POST})
+	@RequestMapping(value="/production/planningInfo.do", method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView selectAllPlanning(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html;test/charset=utf-8");
@@ -43,9 +44,25 @@ public class PlanningControllerImpl implements PlanningController{
 			throws Exception {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html;test/charset=utf-8");
+		String viewName = (String)request.getAttribute("viewName");
+		System.out.println(viewName);
 		int result = 0;
 		result = planningService.insertPlanning(planningVO);
 		ModelAndView mav = new ModelAndView("redirect:/production/planningInfo.do");
+		return mav;
+	}
+
+	//생산계획팝업
+	@Override
+	@RequestMapping(value = "/production/planPopup.do", method = {RequestMethod.GET, RequestMethod.POST})
+	public ModelAndView planningPopup(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("html;text/charset=utf-8");
+		String viewName = (String) request.getAttribute("viewName");
+		System.out.println(viewName);
+		List popupList = planningService.planningPopup();
+		ModelAndView mav = new ModelAndView(viewName);
+		mav.addObject("popupList", popupList);
 		return mav;
 	}
 

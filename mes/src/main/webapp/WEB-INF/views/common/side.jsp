@@ -50,7 +50,7 @@
         생산관리
         <ul class="sub2" style="display:none">
             <li><a href="${contextPath}/production/planningInfo.do" class="no-underline">생산계획등록</a></li>
-            <li><a href="#"  class="no-underline">작업지시등록</a><br></li>
+            <li><a href="${contextPath}/production/orderInfo.do"  class="no-underline">작업지시등록</a><br></li>
             <li><a href="#"  class="no-underline">작업지시확정</a><br></li>
             <li><a href="#"  class="no-underline">생산자재출고</a><br></li>
             <li><a href="#"  class="no-underline">작업실적등록</a><br></li>
