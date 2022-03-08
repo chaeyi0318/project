@@ -22,11 +22,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.spring.mes.system.item.vo.ItemVO;
 import com.spring.mes.system.service.SystemService;
 import com.spring.mes.system.vo.CompanyVO;
 import com.spring.mes.system.vo.CustomerVO;
 import com.spring.mes.system.vo.DeptVO;
-import com.spring.mes.system.vo.ItemVO;
 
 @Controller("systemController")
 public class SystemControllerImpl implements SystemController {
@@ -102,19 +102,6 @@ public class SystemControllerImpl implements SystemController {
 		return mav;
 	}
 
-	//품목정보
-	@Override
-	@RequestMapping(value="/system/itemInfo.do", method=RequestMethod.GET)
-	public ModelAndView itemInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		request.setCharacterEncoding("utf-8");
-		response.setContentType("html;text/charset=utf-8");
-		String viewName = (String) request.getAttribute("viewName");
-		List itemList = systemService.itemInfo();
-		ModelAndView mav = new ModelAndView(viewName);
-		mav.addObject("itemList", itemList);
-		return mav;
-	}
-
 	//창고정보
 	@Override
 	@RequestMapping(value="/system/storageInfo.do", method=RequestMethod.GET)
@@ -177,19 +164,6 @@ public class SystemControllerImpl implements SystemController {
 		int result = 0;
 		result = systemService.insertCustomer(customerVO);
 		ModelAndView mav = new ModelAndView("redirect:/system/customerInfo.do");
-		return mav;
-	}
-
-	//품목등록
-	@Override
-	@RequestMapping(value="/system/insertItem.do", method=RequestMethod.GET)
-	public ModelAndView insertItem(@ModelAttribute("item") ItemVO itemVO, HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
-		request.setCharacterEncoding("utf-8");
-		response.setContentType("html/text;charset=utf-8");
-		int result = 0;
-		result = systemService.insertItem(itemVO);
-		ModelAndView mav = new ModelAndView("redirect:/system/itemInfo.do");
 		return mav;
 	}
 

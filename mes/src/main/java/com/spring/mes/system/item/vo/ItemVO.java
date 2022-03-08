@@ -1,4 +1,4 @@
-package com.spring.mes.system.vo;
+package com.spring.mes.system.item.vo;
 
 import org.springframework.stereotype.Component;
 

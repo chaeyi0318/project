@@ -25,11 +25,19 @@
 		margin-top: 15px;
 		text-align: center;
 	}
+	
+	.list {
+		text-align: center;
+	}
+	
+	.button {
+		float: left;
+	}
 </style>
 </head>
 <body>
     <form class="search">계획기간 <input type="date"> - <input type="date"> <input type="button" value="조회"></form><br><br>
-    <table>
+    <table class="list">
         <tr align="center" bgcolor="lightblue">
         	<td><input type="checkbox"></td>
         	<td>계획코드</td>
@@ -56,6 +64,6 @@
         </c:forEach>
     </table>
     <br>
-    <input type="button" value="등록" onclick="setParentText()">
+    <input type="button" class="button" value="등록" onclick="setParentText()">
 </body>
 </html>

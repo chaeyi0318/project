@@ -10,10 +10,10 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.mes.system.dao.SystemDAO;
+import com.spring.mes.system.item.vo.ItemVO;
 import com.spring.mes.system.vo.CompanyVO;
 import com.spring.mes.system.vo.CustomerVO;
 import com.spring.mes.system.vo.DeptVO;
-import com.spring.mes.system.vo.ItemVO;
 
 @Service("systemService")
 @Transactional(propagation = Propagation.REQUIRED)
@@ -58,14 +58,6 @@ public class SystemServiceImpl implements SystemService {
 		return customerList;
 	}
 
-	//품목정보
-	@Override
-	public List itemInfo() throws DataAccessException {
-		List itemList = null;
-		itemList = systemDAO.itemInfo();
-		return itemList;
-	}
-	
 	//창고정보
 	@Override
 	public List storageInfo() throws DataAccessException {
@@ -103,12 +95,6 @@ public class SystemServiceImpl implements SystemService {
 		return systemDAO.insertCustomer(customerVO);
 	}
 
-	//품목등록
-	@Override
-	public int insertItem(ItemVO itemVO) throws DataAccessException {
-		return systemDAO.insertItme(itemVO);
-	}
-	
 	//회사수정
 	@Override
 	public int updateCompany(CompanyVO companyVO) throws DataAccessException {

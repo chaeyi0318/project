@@ -40,7 +40,7 @@
             <li><a href="${contextPath}/system/departmentInfo.do"  class="no-underline">부서등록</a><br></li>
             <li><a href="${contextPath}/system/employeeInfo.do"  class="no-underline">사원등록</a><br></li>
             <li><a href="${contextPath}/system/customerInfo.do"  class="no-underline">거래처등록</a><br></li>
-            <li><a href="${contextPath}/system/itemInfo.do"  class="no-underline">품목등록</a><br></li>
+            <li><a href="${contextPath}/information/itemInfo.do"  class="no-underline">품목등록</a><br></li>
             <li><a href="${contextPath}/system/storageInfo.do"  class="no-underline">창고등록</a><br></li>
             <li><a href="${contextPath}/system/processInfo.do"  class="no-underline">공정등록</a><br></li>
             <li><a href="${contextPath}/system/qualityTestCodeInfo.do"  class="no-underline">검사유형등록</a><br></li>

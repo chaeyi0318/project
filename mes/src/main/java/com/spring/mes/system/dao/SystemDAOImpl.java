@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
+import com.spring.mes.system.item.vo.ItemVO;
 import com.spring.mes.system.vo.CompanyVO;
 import com.spring.mes.system.vo.CustomerVO;
 import com.spring.mes.system.vo.DeptVO;
 import com.spring.mes.system.vo.EmpVO;
-import com.spring.mes.system.vo.ItemVO;
 import com.spring.mes.system.vo.ProcessVO;
 import com.spring.mes.system.vo.QualityTestVO;
 import com.spring.mes.system.vo.StorageVO;
@@ -59,14 +59,6 @@ public class SystemDAOImpl implements SystemDAO {
 		return customerList;
 	}
 
-	//품목정보
-	@Override
-	public List itemInfo() throws DataAccessException {
-		List<ItemVO> itemList = null;
-		itemList = sqlSession.selectList("mapper.item.selectAllItem");
-		return itemList;
-	}
-
 	//창고정보
 	@Override
 	public List storageInfo() throws DataAccessException {
@@ -98,13 +90,6 @@ public class SystemDAOImpl implements SystemDAO {
 		return result;
 	}
 
-	//품목등록
-	@Override
-	public int insertItme(ItemVO itemVO) throws DataAccessException {
-		int result = sqlSession.insert("mapper.item.insertItem", itemVO);
-		return result;
-	}
-	
 	//거래처등록
 	@Override
 	public int insertCustomer(CustomerVO customerVO) throws DataAccessException {

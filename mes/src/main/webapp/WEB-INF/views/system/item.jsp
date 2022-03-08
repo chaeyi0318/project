@@ -44,7 +44,7 @@
 </style>
 </head>
 <body>
-	<form class="button" action="${contextPath}/system/insertItem.do">
+	<form class="button" action="${contextPath}/information/insertItem.do">
         <input type="submit" value="삭제"> &nbsp; <input type="submit" value="수정"> &nbsp; <input type="submit" value="등록"> &nbsp;
     </form><br>
     <div class="list">
@@ -66,7 +66,7 @@
             </c:forEach>
         </table>
     </div>
-   	<form method="get" action="${contextPath}/system/insertItem.do">
+   	<form method="get" action="${contextPath}/information/insertItem.do">
     <div class="section">
         <h3>품목등록</h3>
         <br>

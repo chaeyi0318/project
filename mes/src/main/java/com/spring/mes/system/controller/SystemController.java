@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.spring.mes.system.item.vo.ItemVO;
 import com.spring.mes.system.vo.CompanyVO;
 import com.spring.mes.system.vo.CustomerVO;
 import com.spring.mes.system.vo.DeptVO;
-import com.spring.mes.system.vo.ItemVO;
 
 public interface SystemController {
 	//회사정보
@@ -40,11 +40,6 @@ public interface SystemController {
 	//거래처등록
 	public ModelAndView insertCustomer(@ModelAttribute("customer") CustomerVO customerVO,
 										HttpServletRequest request, HttpServletResponse response) throws Exception;
-	//품목정보
-	public ModelAndView itemInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
-	//품목등록
-	public ModelAndView insertItem(@ModelAttribute("item") ItemVO itemVO,
-									HttpServletRequest request, HttpServletResponse response) throws Exception;
 	//창고정보
 	public ModelAndView storageInfo(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	//공정정보

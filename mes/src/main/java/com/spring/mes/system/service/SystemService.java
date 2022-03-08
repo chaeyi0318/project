@@ -5,10 +5,10 @@ import java.util.List;
 
 import org.springframework.dao.DataAccessException;
 
+import com.spring.mes.system.item.vo.ItemVO;
 import com.spring.mes.system.vo.CompanyVO;
 import com.spring.mes.system.vo.CustomerVO;
 import com.spring.mes.system.vo.DeptVO;
-import com.spring.mes.system.vo.ItemVO;
 
 public interface SystemService {
 	//회사정보
@@ -29,10 +29,6 @@ public interface SystemService {
 	public List customerInfo() throws DataAccessException;
 	//거래처등록
 	public int insertCustomer(CustomerVO customerVO) throws DataAccessException;
-	//품목정보
-	public List itemInfo() throws DataAccessException;
-	//품목등록
-	public int insertItem(ItemVO itemVO) throws DataAccessException;
 	//창고정보
 	public List processInfo() throws DataAccessException;
 	//공정정보

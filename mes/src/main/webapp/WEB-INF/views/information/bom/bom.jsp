@@ -9,10 +9,10 @@
 <script language="javascript">
 	var openWin;
 	
-    function bomPopup() {
-    	var url = "bomPopup.do";
+    function itemPopup() {
+    	var url = "itemPopup.do";
     	var name = "모품목조회";
-        openWin = window.open(url , name, "width=740, height=500, left=600");
+        openWin = window.open(url , name, "width=300, height=500, left=600");
     }
 </script>
 <style>
@@ -32,7 +32,7 @@
     <form class="list" action="">
         <div class="top">
         <br>
-            모품목 <input type="text"> <input type="button" class="button" id="plan" value="모품목조회" onclick="bomPopup();"/>
+            모품목 <input type="text" id="itemCode" size="4"> <input type="text" id="itemName" size="4"> <input type="text" id="standard" size="4"> <input type="button" class="button" id="plan" value="모품목조회" onclick="itemPopup();"/>
         </div><br><br>
         <table>
             <tr bgcolor="lightblue" align="center">
