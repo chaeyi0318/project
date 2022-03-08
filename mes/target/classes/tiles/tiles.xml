@@ -69,4 +69,9 @@
    <definition name="/production/planPopup" template="/WEB-INF/views/production/order/planPopup.jsp">
    		<put-attribute name="title" value="생산계획조회"/>
    </definition>
+   
+   <definition name="/information/bomPage" extends="baseLayout">
+   		<put-attribute name="title" value="BOM등록"/>
+   		<put-attribute name="body" value="/WEB-INF/views/information/bom/bom.jsp"/>
+   </definition>
 </tiles-definitions>

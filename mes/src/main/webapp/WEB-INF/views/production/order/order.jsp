@@ -15,7 +15,7 @@
     function planList() {
     	var url = "planPopup.do";
     	var name = "생산계획조회";
-        openWin = window.open(url , name, "width=700, height=500, left=300");
+        openWin = window.open(url , name, "width=740, height=500, left=600");
     }
 </script>
 <style>
@@ -34,6 +34,10 @@
     white-space:nowrap;
     margin:0 auto;
 }
+
+.list>table {
+	position: center;
+}
 </style>
 <body>
     <form>
@@ -44,7 +48,7 @@
     <br><br><br>
     <div class="list">
         <table>
-            <tr align="center">
+            <tr align="center" bgcolor="lightblue">
             	<td><input type="checkbox"></td>
                 <td>작업지시번호</td>
                 <td>지시일</td>
@@ -84,21 +88,21 @@
             </c:forEach>
             <tr align="center">
                 <td><input type="checkbox"></td>
-                <td><input type="text" id="pInput" name="orderCode"></td>
-                <td><input type="date" name="orderDate"></td>
+                <td><input type="text" id="planCode" name="orderCode"></td>
+                <td><input type="date" id="schedule" name="orderDate"></td>
                 <td><input type="date" name="dueDate"></td>
-                <td><input type="text" name="itemCode"></td>
-                <td><input type="text" name="itemName"></td>
-                <td><input type="text" name="standard"></td>
-                <td><input type="text" name="unit"></td>
-                <td><input type="text" name="orderQuantity"></td>
+                <td><input type="text" id="itemCode" name="itemCode"></td>
+                <td><input type="text" id="itemName" name="itemName"></td>
+                <td><input type="text" id="standard" name="standard"></td>
+                <td><input type="text" id="unit" name="unit"></td>
+                <td><input type="text" id="quantity" name="orderQuantity"></td>
                 <td><input type="text" name="state"></td>
                 <td><input type="text" name="testCheck"></td>
                 <td><input type="text" name="customerName"></td>
                 <td><input type="text" name="equipment"></td>
                 <td><input type="text" name="team"></td>
                 <td><input type="text" name="processGroup"></td>
-                <td><input type="text" name="note"></td>
+                <td><input type="text" id="note" name="note"></td>
             </tr>
         </table>
     </div>

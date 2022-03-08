@@ -6,18 +6,26 @@ import org.springframework.stereotype.Component;
 
 @Component("planningVO")
 public class PlanningVO {
+	private String planCode;		//계획코드
 	private String itemCode;		//품번
 	private String itemName;		//품명
 	private String standard;		//규격
-	private String inventoryUnit;		//단위
+	private String unit;		//단위
 	private int	output;		//일생산량
-	private int	turn;		//순서
 	private Date schedule;		//작업예정일
 	private int	quantity;		//수량
 	private String note;		//비고
 
 	public PlanningVO() {
 		
+	}
+	
+	public String getPlanCode() {
+		return planCode;
+	}
+	
+	public void setPlanCode(String planCode) {
+		this.planCode = planCode;
 	}
 
 	public String getItemCode() {
@@ -44,12 +52,12 @@ public class PlanningVO {
 		this.standard = standard;
 	}
 
-	public String getInventoryUnit() {
-		return inventoryUnit;
+	public String getUnit() {
+		return unit;
 	}
 
-	public void setInventoryUnit(String inventoryUnit) {
-		this.inventoryUnit = inventoryUnit;
+	public void setUnit(String unit) {
+		this.unit = unit;
 	}
 
 	public int getOutput() {
@@ -58,14 +66,6 @@ public class PlanningVO {
 
 	public void setOutput(int output) {
 		this.output = output;
-	}
-
-	public int getTurn() {
-		return turn;
-	}
-
-	public void setTurn(int turn) {
-		this.turn = turn;
 	}
 
 	public Date getSchedule() {

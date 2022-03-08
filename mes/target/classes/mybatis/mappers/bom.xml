@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.bom">
+	<resultMap type="bomVO" id="bomResult">
+		<result property="parentItem" column="parentItem"/>
+		<result property="itemCode" column="itemCode"/>
+		<result property="itemName" column="itemName"/>
+		<result property="standard" column="standard"/>
+		<result property="unit" column="unit"/>
+		<result property="quantity" column="quantity"/>
+		<result property="loss" column="loss"/>
+		<result property="needQuantity" column="needQuantity"/>
+		<result property="startDate" column="startDate"/>
+		<result property="endDate" column="endDate"/>
+		<result property="useCheck" column="useCheck"/>
+		<result property="type" column="type"/>
+		<result property="obtain" column="obtain"/>
+		<result property="note" column="note"/>
+	</resultMap>
+	
+	<select id="searchBomList" resultMap="bomResult" parameterType="String">
+		<![CDATA[
+			select * from bom where parentItem like '#{parentItem}';
+		]]>
+	</select>
+	
+	<insert id="insertBom" parameterType="bomVO">
+		<![CDATA[
+			insert into bom(parentItem, itemCode, itemName, standard, unit, quantity, loss, needQuantity, startDate, endDate, useCheck, note, type, obtain)
+						values(#{parentItem}, #{itemCode}, #{itemName}, #{standard}, #{unit}, #{quantity}, #{loss}, 
+								#{needQuantity}, #{startDate}, #{endDate}, #{useCheck}, #{note}, #{type}, #{obtain})
+			
+		]]>
+	</insert>
+</mapper>

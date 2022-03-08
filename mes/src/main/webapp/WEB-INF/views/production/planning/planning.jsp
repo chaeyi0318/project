@@ -32,6 +32,16 @@
         window.open("itemList.html","itemList","width=400,height=500")
     }
 </script> -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	function checkAll(){
+	    if( $("#th_checkAll").is(':checked') ){
+	      $("input[name=checkRow]").prop("checked", true);
+	    }else{
+	      $("input[name=checkRow]").prop("checked", false);
+	    }
+	}
+</script>
 </head>
 <body>
 <!--     <form class="top">
@@ -44,27 +54,27 @@
     	<input type="submit" class="button" value="등록" onclick="javascript: form.action='${contextPath}/production/insertPlanning.do';"/>
     	<br><br><br>
         <table>
-            <tr align="center">
-                <td><input type="checkbox"></td>
+            <tr align="center" bgcolor="lightblue">
+                <td><input type="checkbox" name="checkAll" id="th_checkAll" onclick="checkAll();"></td>
+				<td>계획코드</td>
                 <td>품번</td>
                 <td>품명</td>
                 <td>규격</td>
                 <td>단위</td>
                 <td>일생산량</td>
-                <td>순서</td>
                 <td>작업예정일</td>
                 <td>수량</td>
                 <td>비고</td>
             </tr>
             <c:forEach var="plan" items="${planList }">
             <tr>
-                <td><input type="checkbox"></td>
+                <td><input type="checkbox" name="checkRow" value="${content.IDX}"></td>
+                <td><input type="text" value="${plan.planCode }"></td>
                 <td><input type="text" value="${plan.itemCode }"></td>
                 <td><input type="text" value="${plan.itemName }"></td>
                 <td><input type="text" value="${plan.standard }"></td>
-                <td><input type="text" value="${plan.inventoryUnit }"></td>
+                <td><input type="text" value="${plan.unit }"></td>
                 <td><input type="text" value="${plan.output }"></td>
-                <td><input type="text" value="${plan.turn }"></td>
                 <td><input type="date" value="${plan.schedule }"></td>
                 <td><input type="text" value="${plan.quantity }"></td>
                 <td><input type="text" value="${plan.note }"></td>
@@ -72,12 +82,12 @@
             </c:forEach>
             <tr>
                 <td><input type="checkbox"></td>
+                <td><input type="text" name="planCode"></td>
                 <td><input type="text" name="itemCode"></td>
                 <td><input type="text" name="itemName"></td>
                 <td><input type="text" name="standard"></td>
-                <td><input type="text" name="inventoryUnit"></td>
+                <td><input type="text" name="unit"></td>
                 <td><input type="text" name="output"></td>
-                <td><input type="text" name="turn"></td>
                 <td><input type="date" name="schedule"></td>
                 <td><input type="text" name="quantity"></td>
                 <td><input type="text" name="note"></td>

@@ -63,7 +63,7 @@
     <li class="side3">
         기초정보관리
         <ul class="sub3" style="display:none">
-            <li><a href="#"  class="no-underline">BOM등록</a><br></li>
+            <li><a href="${contextPath}/information/bomPage.do"  class="no-underline">BOM등록</a><br></li>
             <li><a href="#"  class="no-underline">불량유형등록</a><br></li>
         </ul>
     </li>
