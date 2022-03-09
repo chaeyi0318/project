@@ -21,4 +21,11 @@ public class BomDAOImpl implements BomDAO{
 		bomList = sqlSession.selectList("mapper.bom.searchBomList", parentItem);
 		return bomList;
 	}
+
+	//BOM등록
+	@Override
+	public int insertBom(BomVO bomVO) throws DataAccessException {
+		int result = sqlSession.insert("mapper.bom.insertBom", bomVO);
+		return result;
+	}
 }
