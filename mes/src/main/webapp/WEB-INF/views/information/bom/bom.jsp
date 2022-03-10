@@ -106,6 +106,26 @@
                 <td><input type="text" name="obtain"></td>
                 <td><input type="text" name="note"></td>
             </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td><input type="text" name="itemCode"></td>
+                <td><input type="text" name="itemName"></td>
+                <td><input type="text" name="standard"></td>
+                <td><input type="text" name="unit"></td>
+                <td><input type="text" name="quantity"></td>
+                <td><input type="text" name="loss"></td>
+                <td><input type="text" name="needQuantity"></td>
+                <td><input type="date" name="startDate"></td>
+                <td><input type="date" name="endDate"></td>
+                <td><select name="useCheck">
+                        <option value="사용">사용</option>
+                        <option value="미사용">미사용</option>
+                    </select>
+                </td>
+                <td><input type="text" name="type"></td>
+                <td><input type="text" name="obtain"></td>
+                <td><input type="text" name="note"></td>
+            </tr>
         </table>
     </form>
 </body>
