@@ -92,4 +92,10 @@
    <definition name="/information/itemPopup" template="/WEB-INF/views/information/bom/itemPopup.jsp">
    		<put-attribute name="title" value="품목조회"/>
    </definition>
+   
+   <!-- 작업지시등록 -->
+   <definition name="/production/decideInfo" extends="baseLayout">
+   		<put-attribute name="title" value="작업시지확정"/>
+   		<put-attribute name="body" value="/WEB-INF/views/production/decide/decide.jsp"/>
+   </definition>
 </tiles-definitions>

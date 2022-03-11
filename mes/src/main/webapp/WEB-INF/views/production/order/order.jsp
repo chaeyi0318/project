@@ -19,25 +19,24 @@
     }
 </script>
 <style>
-.button {
-
-	float: right;
-	margin-left: 10px;
-	margin-top: 15px;
-	margin-right: 5px;
-}
-
-.list {
-	width: 100%;
-	height: 730px;
-	overflow-x:auto;
-    white-space:nowrap;
-    margin:0 auto;
-}
-
-.list>table {
-	position: center;
-}
+	.button {
+		float: right;
+		margin-left: 10px;
+		margin-top: 15px;
+		margin-right: 5px;
+	}
+	
+	.list {
+		width: 100%;
+		height: 730px;
+		overflow-x:auto;
+	    white-space:nowrap;
+	    margin:0 auto;
+	}
+	
+	.list>table {
+		position: center;
+	}
 </style>
 <body>
     <form>

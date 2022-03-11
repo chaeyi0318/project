@@ -16,9 +16,9 @@ public class BomDAOImpl implements BomDAO{
 	
 	//BOM리스트
 	@Override
-	public List bomList(String parentItem) throws DataAccessException {
+	public List bomList() throws DataAccessException {
 		List<BomVO> bomList = null;
-		bomList = sqlSession.selectList("mapper.bom.searchBomList", parentItem);
+		bomList = sqlSession.selectList("mapper.bom.searchBomList");
 		return bomList;
 	}
 

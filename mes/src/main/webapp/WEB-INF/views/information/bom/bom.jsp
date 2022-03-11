@@ -19,34 +19,13 @@
     }
 </script>
 <style>
-	form>:nth-child(1) {
+	.button {
 		float: right;
 		margin-left: 10px;
 		margin-top: 15px;
 		margin-right: 5px;
 	}
-	
-	form>:nth-child(2) {
-		float: right;
-		margin-left: 10px;
-		margin-top: 15px;
-		margin-right: 5px;
-	}
-	
-	form>:nth-child(3) {
-		float: right;
-		margin-left: 10px;
-		margin-top: 15px;
-		margin-right: 5px;
-	}
-	
-	form>:nth-child(4) {
-		float: right;
-		margin-left: 10px;
-		margin-top: 15px;
-		margin-right: 5px;
-	}
-	
+		
 	.list {
 		width: 100%;
 		height: 100%;
@@ -65,9 +44,9 @@
     	<input type="submit" class="button" value="수정" onclick="javascript: form.action='${contextPath}/information/updateBom.do';"/>
         <input type="submit" class="button" value="등록" onclick="javascript: form.action='${contextPath}/information/insertBom.do';"/>
         <input type="submit" class="button" value="조회" onclick="javascript: form.action='${contextPath}/information/selectBom.do';"/>
-        <div class="top">
         <br>
-            모품목 <input type="text" id="itemCode" name="parentItem" size="4" readonly> <input type="text" id="itemName" size="4" readonly> <input type="text" id="standard" size="4" readonly> <input type="button" class="button" id="plan" value="모품목조회" onclick="itemPopup();"/>
+        <div class="top">
+            모품목 <input type="text" id="itemCode" name="parentItem" size="4" readonly> <input type="text" id="itemName" size="4" readonly> <input type="text" id="standard" size="4" readonly> <input type="button" id="plan" value="모품목조회" onclick="itemPopup();"/>
         </div><br><br>
         <table>
             <tr bgcolor="lightblue" align="center">
@@ -85,26 +64,6 @@
                 <td>계정구분</td>
                 <td>조달구분</td>
                 <td>비고</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td><input type="text" name="itemCode"></td>
-                <td><input type="text" name="itemName"></td>
-                <td><input type="text" name="standard"></td>
-                <td><input type="text" name="unit"></td>
-                <td><input type="text" name="quantity"></td>
-                <td><input type="text" name="loss"></td>
-                <td><input type="text" name="needQuantity"></td>
-                <td><input type="date" name="startDate"></td>
-                <td><input type="date" name="endDate"></td>
-                <td><select name="useCheck">
-                        <option value="사용">사용</option>
-                        <option value="미사용">미사용</option>
-                    </select>
-                </td>
-                <td><input type="text" name="type"></td>
-                <td><input type="text" name="obtain"></td>
-                <td><input type="text" name="note"></td>
             </tr>
             <tr>
                 <td><input type="checkbox"></td>

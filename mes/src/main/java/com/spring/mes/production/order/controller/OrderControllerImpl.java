@@ -26,7 +26,7 @@ public class OrderControllerImpl implements OrderController{
 	
 	//작업지시리스트
 	@Override
-	@RequestMapping(value="/production/orderInfo.do", method = {RequestMethod.GET, RequestMethod.POST})
+	@RequestMapping(value={"/production/orderInfo.do", "/production/decideInfo.do"}, method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView selectAllOrder(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html;text/charset=utf-8");
