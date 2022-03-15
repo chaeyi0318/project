@@ -11,11 +11,11 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
 	var len = $("input[id=checking]:checked").length;
-	if(len > 1){
+	if(len > 0){
 	    $("input[id=checking]:checked").each(function(e){
 	        console.log($(this).val())
 	    })
-	}		//다중 체크값
+	}		//체크값
 	
 </script>
 <style type="text/css">
