@@ -8,6 +8,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	var len = $("input[id=checking]:checked").length;
+	if(len > 1){
+	    $("input[id=checking]:checked").each(function(e){
+	        console.log($(this).val())
+	    })
+	}		//다중 체크값
+	
+</script>
 <style type="text/css">
 	.order {
 		width: 100%;
@@ -52,7 +62,7 @@
             </tr>
             <c:forEach var="order" items="${orderList}">
             	<tr align="center">
-            		<td><input type="checkbox"></td>
+            		<td><input type="checkbox" id="checking" value="${order.orderCode }"></td>
             		<td><input type="text" value="${order.orderCode }"></td>  
             		<td><select>
             				<option value="출고대기">출고대기</option>
@@ -83,7 +93,7 @@
             </c:forEach>
     	</table>
     </form>
-    <form class="decide" action="">
+    <form class="bom" action="">
         
     </form>
 </body>
