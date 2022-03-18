@@ -16,7 +16,6 @@
 	        console.log($(this).val())
 	    })
 	}		//체크값
-	
 </script>
 <style type="text/css">
 	.order {
