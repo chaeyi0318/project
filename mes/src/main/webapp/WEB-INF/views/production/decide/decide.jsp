@@ -10,9 +10,10 @@
 <title>Insert title here</title>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
+	/* 자품목 조회 */
 	$(function(){
 		$("#view").click(function(){
-			alert("조회 완료되었습니다.");
+			alert("조회 되었습니다.");
 			
 			var len = $("input[id=checking]:checked").length;
 			if(len > 0){
@@ -22,13 +23,34 @@
 			};
 		});
 	});
-
-/* 	var len = $("input[id=checking]:checked").length;
-	if(len > 0){
-	    $("input[id=checking]:checked").each(function(e){
-	        console.log($(this).val())
-	    })
-	} */
+	
+	/* 작업지시확정 */
+	$(function() {
+		$("#decide").click(function(){
+			alert("확정 되었습니다.");
+			
+			var len = $("input[id=checking]:checked").length;
+			if(len > 0){
+				$("input[id=checking]:checked").each(function(e){
+					console.log($(this).val())
+				});
+			};
+		});
+	});
+	
+	/* 작업지시취소 */
+	$(function() {
+		$("#cancel").click(function(){
+			alert("취소 되었습니다.");
+			
+			var len = $("input[id=checking]:checked").length;
+			if(len > 0){
+				$("input[id=checking]:checked").each(function(e){
+					console.log($(this).val())
+				});
+			};
+		});
+	});
 </script>
 <style type="text/css">
 	.order {
@@ -48,8 +70,8 @@
 </head>
 <body>
     <form class="order" action="">
-        <input type="submit" class="button" value="취소" onclick="javascript: form.action='${contextPath}/production/insertOrder.do';"/>
-        <input type="submit" class="button" value="확정" onclick="javascript: form.action='${contextPath}/production/insertOrder.do';"/>
+        <input type="button" class="button" id="cancel" value="취소"/>
+        <input type="button" class="button" id="decide" value="확정"/>
         <input type="button" class="button" id="view" value="조회"/>
 		<br><br><br>        
 		<table>

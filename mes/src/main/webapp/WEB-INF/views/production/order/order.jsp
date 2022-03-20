@@ -76,8 +76,16 @@
             		<td><input type="text" value="${order.standard }"></td>    
             		<td><input type="text" value="${order.unit }"></td>    
             		<td><input type="text" value="${order.orderQuantity }"></td>    
-            		<td><input type="text" value="${order.state }"></td>    
-            		<td><input type="text" value="${order.testCheck }"></td>    
+            		<td><select name="state">
+            				<option value="${order.state }">${order.state }</option>
+            				<option value="확정">확정</option>
+            			</select>
+            		</td>
+                	<td><select name="testCheck">
+            				<option value="검사">검사</option>
+            				<option value="무검사">무검사</option>
+            			</select>
+            		</td>    
             		<td><input type="text" value="${order.customerName }"></td>    
             		<td><input type="text" value="${order.equipment }"></td>    
             		<td><input type="text" value="${order.team }"></td>    
@@ -95,8 +103,14 @@
                 <td><input type="text" id="standard" name="standard"></td>
                 <td><input type="text" id="unit" name="unit"></td>
                 <td><input type="text" id="quantity" name="orderQuantity"></td>
-                <td><input type="text" name="state"></td>
-                <td><input type="text" name="testCheck"></td>
+                <td><select name="state">
+            			<option value="계획">계획</option>
+            			<option value="확정">확정</option>
+            		</select></td>
+                <td><select name="testCheck">
+            			<option value="검사">검사</option>
+            			<option value="무검사">무검사</option>
+            		</select></td>
                 <td><input type="text" name="customerName"></td>
                 <td><input type="text" name="equipment"></td>
                 <td><input type="text" name="team"></td>
