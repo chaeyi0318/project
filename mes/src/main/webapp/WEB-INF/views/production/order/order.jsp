@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <title>작업지시등록</title>
 </head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 <script language="javascript">
 	var openWin;
 	
@@ -76,14 +77,14 @@
             		<td><input type="text" value="${order.standard }"></td>    
             		<td><input type="text" value="${order.unit }"></td>    
             		<td><input type="text" value="${order.orderQuantity }"></td>    
-            		<td><select name="state">
-            				<option value="${order.state }">${order.state }</option>
-            				<option value="확정">확정</option>
+            		<td><select class="form-control" name="state" id="state" onChange="">
+            				<option value="계획" ${order.state == '계획' ? 'selected="selected"' : '' }>계획</option>
+            				<option value="확정" ${order.state == '확정' ? 'selected="selected"' : '' }>확정</option>
             			</select>
             		</td>
                 	<td><select name="testCheck">
-            				<option value="검사">검사</option>
-            				<option value="무검사">무검사</option>
+            				<option value="검사" ${order.testCheck == '검사' ? 'selected="selected"' : '' }>검사</option>
+            				<option value="무검사" ${order.testCheck == '무검사' ? 'selected="selected"' : ''}>무검사</option>
             			</select>
             		</td>    
             		<td><input type="text" value="${order.customerName }"></td>    

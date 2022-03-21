@@ -111,12 +111,12 @@
             		<td><input type="text" value="${order.unit }" size=3></td>    
             		<td><input type="text" value="${order.orderQuantity }" size=4></td>    
             		<td><select>
-            				<option value="계획">계획</option>
-            				<option value="확정">확정</option>
+            				<option value="계획" ${order.state == '계획' ? 'selected="selected"' : '' }>계획</option>
+            				<option value="확정" ${order.state == '확정' ? 'selected="selected"' : '' }>확정</option>
             			</select></td>    
             		<td><select>
-            				<option value="검사">검사</option>
-            				<option value="무검사">무검사</option>
+            				<option value="검사" ${order.testCheck == '검사' ? 'selected="selected"' : '' }>검사</option>
+            				<option value="무검사" ${order.testCheck == '무검사' ? 'selected="selected"' : ''}>무검사</option>
             			</select></td>    
             		<td><input type="text" value="${order.customerName }"></td>    
             		<td><input type="text" value="${order.equipment }"></td>    

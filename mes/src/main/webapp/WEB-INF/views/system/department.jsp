@@ -52,7 +52,10 @@
 		    	<td><input type="text" value="${dept.comName }"></td>
  		    	<td><input type="date" value="${dept.useDate }"></td>
 		    	<td><input type="date" value="${dept.endDate }"></td>
-		    	<td><input type="text" value="${dept.useCheck }"></td>
+		    	<td><select>
+                  <option value="사용" ${dept.useCheck == '사용' ? 'selected="selected"' : '' }>사용</option>
+                  <option value="미사용" ${dept.useCheck == '미사용' ? 'selected="selected"' : '' }>미사용</option>
+               </select></td>
 			</tr>
 		</c:forEach>
 		<tr align="center">

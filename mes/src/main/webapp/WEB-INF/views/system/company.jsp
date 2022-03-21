@@ -48,8 +48,8 @@
             <h4>대표자성명 <input type="text" name="CEOName"></h4><br>
             <h4>주민등록번호 
                 <select name="forign">
-                    <option value="내국인">내국인</option>
-                    <option value="외국인">외국인</option>
+                    <option value="내국인" ${company.classification == '내국인' ? 'selected="selected"' : ''}>내국인</option>
+                    <option value="외국인" ${company.classification == '외국인' ? 'selected="selected"' : ''}>외국인</option>
                 </select> 
                 <input type="text" name="residentNum">
             </h4><br>
@@ -66,13 +66,19 @@
         
         <c:if test="${company != null }">
             <h4>회사명 <input type="text" id="comName" name="comName" value="${company.comName }" > 
-                <input type="text" id="classification" name="classification" value="${company.classification }" >
+                <select name="classification">
+            		<option value="법인" ${company.classification == '법인' ? 'selected="selected"' : ''}>법인</option>
+            		<option value="개인" ${company.classification == '개인' ? 'selected="selected"' : ''}>개인</option>
+            	</select>
             </h4><br>
             <h4>사업자등록번호 <input type="text" name="BRNum" value="${company.BRNum }" ></h4><br>
             <h4>법인등록번호 <input type="text" name="CRNum" value="${company.CRNum }" ></h4><br>
             <h4>대표자성명 <input type="text" name="CEOName" value="${company.CEOName }" ></h4><br>
             <h4>주민등록번호 
-                <input type="text" name="forign" value="${company.forign }" >
+                <select name="forign">
+            		<option value="내국인" ${company.forign == '내국인' ? 'selected="selected"' : '' }>내국인</option>
+            		<option value="외국인" ${company.forign == '외국인' ? 'selected="selected"' : '' }>외국인</option>
+            	</select>
                 <input type="text" name="residentNum" value="${company.residentNum }" >
             </h4><br>
             <h4>우편번호 <input type="text" name="zipCode" value="${company.zipCode }" ></h4><br>
