@@ -14,13 +14,18 @@
 		text-align: center;
 	}
 </style>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript">
 	 function setParentText() {
-		opener.document.getElementById("itemCode").value = document.getElementById("itemCode").value	/* 품번 */
-		opener.document.getElementById("itemName").value = document.getElementById("itemName").value    /* 품명 */
-		opener.document.getElementById("standard").value = document.getElementById("standard").value    /* 규격 */
+		if(!$("input[name='itemCode']:checked").val()) {
+    		alert('최소한 하나를 선택하십시오.');
+    		return false;
+		}else {
+    		var ipc=$("input[name='itemCode']:checked").val();
+    		$("#itemCode",opener.document).val(ipc);
+    		window.close();
+		}
 	} 
-	
 </script>
 <body>
 	<table>
