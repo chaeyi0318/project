@@ -15,7 +15,7 @@
     function itemPopup() {
     	var url = "itemPopup.do";
     	var name = "모품목조회";
-        openWin = window.open(url , name, "width=300, height=500, left=600");
+        openWin = window.open(url , name, "width=400, height=500, left=600");
     }
 </script>
 <style>
@@ -46,7 +46,7 @@
         <input type="submit" class="button" value="조회" onclick="javascript: form.action='${contextPath}/information/selectBom.do';"/>
         <br>
         <div class="top">
-            모품목 <input type="text" id="itemCode" name="parentItem" size="4" readonly> <input type="text" id="itemName" size="4" readonly> <input type="text" id="standard" size="4" readonly> <input type="button" id="plan" value="모품목조회" onclick="itemPopup();"/>
+            모품목 <input type="text" id="itemCode" size="7" readonly> <input type="text" id="itemName" size="7" readonly> <input type="text" id="standard" size="7" readonly> <input type="button" id="plan" value="모품목조회" onclick="itemPopup();"/>
         </div><br><br>
         <table>
             <tr bgcolor="lightblue" align="center">

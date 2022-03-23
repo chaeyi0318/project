@@ -11,7 +11,14 @@
 </head>
 <style>
 	table {
+		margin-top: 15px;
+	}
+	
+	p {
 		text-align: center;
+	}
+	.button {
+		float: right;
 	}
 </style>
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -23,12 +30,14 @@
 		}else {
     		var ipc=$("input[name='itemCode']:checked").val();
     		$("#itemCode",opener.document).val(ipc);
+    		//$(,opner.document).val(ipc);
     		window.close();
 		}
 	} 
 </script>
 <body>
-	<table>
+	<p>품목 리스트</p>
+	<table align="center">
         <tr bgcolor="lightblue">
         	<td></td>
             <td>품번</td>
@@ -37,10 +46,10 @@
         </tr>
         <c:forEach var="list" items="${itemList }">
         <tr>
-			<td><input type="checkbox" name="itemCode" value="${list.itemCode}"></td>
-            <td><input type="text" id=itemCode value="${list.itemCode}" size=5></td>
-            <td><input type="text" id=itemName value="${list.itemName}" size=3></td>
-            <td><input type="text" id=standard value="${list.standard}" size=3></td>
+			<td><input type="checkbox" name="itemCode" value="${list.itemCode}, ${list.itemName}, ${list.standard}" ></td>
+            <td><input type="text" id=itemCode value="${list.itemCode}" size=7></td>
+            <td><input type="text" id=itemName name="itemName" value="${list.itemName}" size=5></td>
+            <td><input type="text" id=standard name="" value="${list.standard}" size=5></td>
         </tr>
         </c:forEach>
     </table>
