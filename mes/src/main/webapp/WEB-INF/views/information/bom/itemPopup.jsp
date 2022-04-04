@@ -28,8 +28,8 @@
     		alert('최소한 하나를 선택하십시오.');
     		return false;
 		}else {
-    		var ipc=$("input[name='itemCode']:checked").val();
-    		$("#itemCode",opener.document).val(ipc);
+    		var ipc=$("input[name='chk_res']:checked").val();
+    		$("#chk_res",opener.document).val(ipc);
     		//$(,opner.document).val(ipc);
     		window.close();
 		}
@@ -44,9 +44,9 @@
             <td>품명</td>
             <td>규격</td>
         </tr>
-        <c:forEach var="list" items="${itemList }">
+        <c:forEach var="list" items="${itemList}">
         <tr>
-			<td><input type="checkbox" name="itemCode" value="${list.itemCode}, ${list.itemName}, ${list.standard}" ></td>
+			<td><input type="checkbox" name="chk_res"></td>
             <td><input type="text" id=itemCode value="${list.itemCode}" size=7></td>
             <td><input type="text" id=itemName name="itemName" value="${list.itemName}" size=5></td>
             <td><input type="text" id=standard name="" value="${list.standard}" size=5></td>
