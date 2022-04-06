@@ -22,7 +22,8 @@
 	}
 </style>
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script type="text/javascript">
+<script type="text/javascript">		//부모창으로 넘기ㅣㄱ
+
 	 function setParentText() {
 		if(!$("input[name='itemCode']:checked").val()) {
     		alert('최소한 하나를 선택하십시오.');
