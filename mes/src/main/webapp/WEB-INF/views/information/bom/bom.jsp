@@ -10,6 +10,8 @@
 <title>Insert title here</title>
 </head>
 <script language="javascript">
+/* 	var path = "${pageContext.request.contextPath }"; */
+
 	var openWin;
 	
     function itemPopup() {

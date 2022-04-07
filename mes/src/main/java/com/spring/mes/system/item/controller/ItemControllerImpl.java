@@ -47,7 +47,4 @@ public class ItemControllerImpl implements ItemController {
 		ModelAndView mav = new ModelAndView("redirect:/information/itemInfo.do");
 		return mav;
 	}
-	
-	//BOM품목팝업
-	
 }
