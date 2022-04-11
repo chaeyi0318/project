@@ -22,7 +22,7 @@
 	}
 </style>
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script type="text/javascript">
+<script type="text/javascript">		//
 	/* var path = "${pageContext/request.contextPath}"; */
 	
 	/* function setParentText() {
