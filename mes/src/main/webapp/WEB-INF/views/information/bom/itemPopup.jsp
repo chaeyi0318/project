@@ -101,9 +101,9 @@
 	}
 </style>
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script type="text/javascript">		//부모창으로 넘기ㅣㄱ
+<script type="text/javascript">
 
-	 function setParentText() {
+	 /* function setParentText() {
 		if(!$("input[name='itemCode']:checked").val()) {
     		alert('최소한 하나를 선택하십시오.');
     		return false;
@@ -113,13 +113,21 @@
     		//$(,opner.document).val(ipc);
     		window.close();
 		}
-	} 
+	}  */
+	var path = "${pageContext.request.contextPath}";
+	$(function(){
+		$("#check_all").click(function(){
+		var chk = $(this).is(":checked");
+		if(chk) $("#resTb input[name='chk_res']").prop('checked', true);
+		else  $("#resTb input[name='chk_res']").prop('checked', false); 
+		});
+		});		//전체선택
 </script>
 <body>
 	<p>품목 리스트</p>
-	<table align="center">
+	<table id="resTb" align="center">
         <tr bgcolor="lightblue">
-        	<td></td>
+        	<td><input type="checkbox" id="check_all"></td>
             <td>품번</td>
             <td>품명</td>
             <td>규격</td>
