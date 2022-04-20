@@ -122,6 +122,25 @@
 		else  $("#resTb input[name='chk_res']").prop('checked', false); 
 		});
 		});		//전체선택
+		
+	function selectItem() {
+			if($("#resTb input[name='chk_res']:checked").length == 0) {
+				alert("모품목을 선택해주세요.");
+				return false;
+			}
+			
+ 			var resArr = new Array();
+			$("#resTb input[name='chk_res']:checked").each(function(index) {
+				var itemCode = $(this).val();
+				var resObj = new Object();
+				resObj.itemCode = tr.find("input[name='itemCode']").val();
+				resObj.itemName = tr.find("input[name='itemName']").val();
+				resObj.standard = tr.find("input[name='standard']").val();
+				resArr.push(resObj);
+			});
+			window.opener.setResList(resArr);
+			window.close();
+		}
 </script>
 <body>
 	<p>품목 리스트</p>
@@ -134,13 +153,13 @@
         </tr>
         <c:forEach var="list" items="${itemList}">
         <tr>
-			<td><input type="checkbox" name="chk_res"></td>
-            <td><input type="text" id=itemCode value="${list.itemCode}" size=7></td>
+			<td><input type="checkbox" name="chk_res" value="${list.itemCode}"></td>
+            <td><input type="text" id=itemCode name="itemCode" value="${list.itemCode}" size=7></td>
             <td><input type="text" id=itemName name="itemName" value="${list.itemName}" size=5></td>
-            <td><input type="text" id=standard name="" value="${list.standard}" size=5></td>
+            <td><input type="text" id=standard name="standard" value="${list.standard}" size=5></td>
         </tr>
         </c:forEach>
     </table>
-    <input type="button" class="button" value="등록" onclick="setParentText()">
+    <input type="button" class="button" value="등록" onclick="selectItem();return false;">
 </body>
 </html>
